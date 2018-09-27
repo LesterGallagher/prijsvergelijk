@@ -18,4 +18,5 @@ fields:
   label: banner image
   description: Banner image
 pages:
+- vergelijken/wellness.html
 - vergelijken/sim-only.html
