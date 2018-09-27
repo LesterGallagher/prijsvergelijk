@@ -17,3 +17,5 @@ fields:
   name: banner_image
   label: banner image
   description: Banner image
+pages:
+- vergelijken/zorgvezekering.html
