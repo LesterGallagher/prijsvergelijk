@@ -64,6 +64,7 @@ enforce_ssl: bespaarmaar.esstudio.site
 plugins:
 - jekyll-sitemap
 - jekyll-seo-tag
+- jekyll-feed
 markdown: kramdown
 highlighter: rouge
 kramdown:
@@ -71,7 +72,7 @@ kramdown:
 theme: minima
 author: Sem Postma
 designer: Sem Postma
-lang: en
+lang: nl
 humanstxt_author:
   name: Sem Postma
   from: Oosterhout, Noord Brabant, The Netherlands
@@ -82,4 +83,4 @@ humanstxt_designer:
   from: Oosterhout, Noord Brabant, The Netherlands
   role: Developer
   email: sem.postma@gmail.com
-google_analytics: UA-90014538-4
+google_analytics: UA-90014538-18
