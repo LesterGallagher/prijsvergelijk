@@ -1,15 +1,14 @@
 ---
-title: Echo Sierra Studio
+title: BespaarMaar
 timezone: Europe/Amsterdam
-volledige-titel: Echo Sierra Studio
+volledige-titel: BespaarMaar
 image_src: "/assets/img/image_src.png"
 logo: "/assets/img/image_src.png"
-keywords: Polyism Studio Sem Postma Echo Sierra Studio Web Software Code Programming
-  Hub
+keywords: Bespaar, Vergelijk, Bespaartips, Zorgverzekering, Energie, Geld verdienen, Inkomen, Budget 
 exclude:
 - vendor
-description: Web, app and tooling development and graphic design studio. View all
-  websites made by Echo Sierra Studio and contact us if your interested.
+description: BespaarMaar geeft je tips over besparen en helpt helpt je met het vergelijken van verzekering, abonnementen, etc ✅ 
+    Wij bieden een groot aantal verschillende onafhankelijke vergelijkings tools aan die je kunt gebruiken om de beste leverancier te vinden. 
 theme_color: "#fb5353"
 baseurl: 
 collections:
@@ -60,8 +59,8 @@ twitter:
 sass:
   style: compressed
   sass_dir: _sass
-url: https://esstudio.site
-enforce_ssl: esstudio.site
+url: https://bespaarmaar.esstudio.site
+enforce_ssl: bespaarmaar.esstudio.site
 plugins:
 - jekyll-sitemap
 - jekyll-seo-tag
