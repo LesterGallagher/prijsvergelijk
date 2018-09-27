@@ -1,0 +1,63 @@
+---
+layout: default
+title: Kortings Codes
+description: Kortingscodes zijn een goed manier om geld te besparen.
+    Bekijk de pagina om de belangrijkste couponcodes en coupon websites in de gaten te houden.
+---
+
+<div class="banner-coupon">
+    <div class="container">
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.description }}</p>
+    </div>
+</div>
+
+<div class="container">
+    <h2>Coupon aanbieders</h2>
+    <p>&nbsp;</p>
+    <ul>
+        <li>
+            <h4><a href="https://ds1.nl/c/?si=7645&amp;li=1357392&amp;wi=303265&amp;ws=prijsvergelijk" rel="nofollow"
+                    target="_blank">DealeXtreme - (50% Korting)</a>
+        </li>
+        <li>
+            <h4><a href="https://ds1.nl/c/?si=3758&amp;li=1488474&amp;wi=303265&amp;ws=prijsvergelijk" rel="nofollow"
+                    target="_blank">Vouchervandaag.nl - De nieuwste coupon codes</a></h4>
+        </li>
+        <li>
+            <h4><a href="https://ds1.nl/c/?si=7630&amp;li=1566982&amp;wi=303265&amp;ws=" rel="nofollow" target="_blank">Aliexpress.com
+                    - Coupon codes</a></h4>
+        </li>
+        <li>
+            <h4><a href="https://lt45.net/c/?si=12906&amp;li=1568103&amp;wi=303265&amp;ws=prijsvergelijk" rel="nofollow"
+                    target="_blank">Cashze.nl - Bespaar elke keer, dat je online shopt!</a></h4>
+        </li>
+    </ul>
+    <p>&nbsp;</p>
+    <div id="product-feed"></div>
+    <script>
+        function processFeed(data) {
+            var products = data.datafeed.programs[0].products;
+            for (var i = 0; i < products.length; i++) {
+                (function (product) {
+                    $('#product-feed').append($(
+'<a class="col col-xxs-12 col-xs-6 col-sm-4 col-lg-3" target="_blank" href="' + product.product_info.link + '">\
+<article class="panel panel-primary">\
+<div class="panel-heading">' + product.product_info.title + '</div>\
+<img alt="' + product.product_info.images[0].type + '" \
+src="' + product.product_info.images[0].location + '" \
+style="width: 100%" class="img-responsive">\
+<div class="panel-body">' + product.product_info.description + '<br><br><br>\
+<span class="price-wrapper">\
+<span class="price">' + product.product_info.price + '</span>\
+<span class="priceold">' + product.product_info.price_old + '</span>\
+</span>\
+</div>\
+</article></a>'
+                    ));
+                })(products[i]);
+            }
+        }
+    </script>
+    <script async defer src="https://ess-server.herokuapp.com/daisycon-proxy-jsonp/?filter_id=46953&settings_id=7178&sub_id=prijsvergelijk&callback=processFeed"></script>
+</div>

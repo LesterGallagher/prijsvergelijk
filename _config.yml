@@ -1,0 +1,86 @@
+---
+title: Echo Sierra Studio
+timezone: Europe/Amsterdam
+volledige-titel: Echo Sierra Studio
+image_src: "/assets/img/image_src.png"
+logo: "/assets/img/image_src.png"
+keywords: Polyism Studio Sem Postma Echo Sierra Studio Web Software Code Programming
+  Hub
+exclude:
+- vendor
+description: Web, app and tooling development and graphic design studio. View all
+  websites made by Echo Sierra Studio and contact us if your interested.
+theme_color: "#fb5353"
+baseurl: 
+collections:
+  posts:
+    title: Posts
+    output: true
+    permalink: /blog/:title
+defaults:
+- scope:
+    path: ''
+  values:
+    image: ''
+    description: ''
+    title: ''
+    layout: default
+- scope:
+    path: ''
+    type: posts
+  values:
+    image: ''
+    description: ''
+    title: ''
+    layout: post
+abbrv: ESS
+dribbble_username: es_studio
+facebook_username: ES-Studio-2052606714783317
+flickr_username: es_studio
+github_username: LesterGallagher
+instagram_username: 
+linkedin_username: 
+pinterest_username: eestudio0040
+twitter_username: esstudio_site
+youtube_username: 9Wereld
+googleplus_username: 
+rss: true
+facebook:
+  app_id: 1015809515263840
+  publisher: 2052606714783317
+  admins: 100028399686104
+webmaster_verifications:
+  google: 
+  bing: 
+  alexa: 
+  yandex: 
+  baidu: 
+twitter:
+  username: esstudio_site
+sass:
+  style: compressed
+  sass_dir: _sass
+url: https://esstudio.site
+enforce_ssl: esstudio.site
+plugins:
+- jekyll-sitemap
+- jekyll-seo-tag
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
+theme: minima
+author: Sem Postma
+designer: Sem Postma
+lang: en
+humanstxt_author:
+  name: Sem Postma
+  from: Oosterhout, Noord Brabant, The Netherlands
+  role: Developer
+  email: sem.postma@gmail.com
+humanstxt_designer:
+  name: Sem Postma
+  from: Oosterhout, Noord Brabant, The Netherlands
+  role: Developer
+  email: sem.postma@gmail.com
+google_analytics: UA-90014538-4

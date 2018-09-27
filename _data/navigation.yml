@@ -1,0 +1,35 @@
+- title: Geld Verdienen
+  url: /geld-verdienen.html
+- title: Besparings apps
+  url: /besparen/apps.html
+- title: Korting codes
+  url: /besparen/coupons.html
+- title: Vergelijken
+  url: /vergelijken
+  sublinks:
+  - title: Overzicht
+    url: /vergelijken/overzicht.html
+  - title: separator
+  - title: Alles in één
+    url: /vergelijken/alles-in-een.html
+  - title: Dating
+    url: /vergelijken/dating.html
+  - title: Loterijen
+    url: /vergelijken/loterijen.html
+  - title: Telecom
+    url: /vergelijken/telecom.html
+  - title: Vakantie
+    url: /vergelijken/vakantie.html
+  - title: Whitelabeled Energie
+    url: /vergelijken/whitelabeled-energie.html
+  - title: Boekhouden
+    url: /vergelijken/boekhouden.html
+  - title: Sim-only
+    url: /vergelijken/sim-only.html
+  - title: Uitvaartkosten
+    url: /vergelijken/uitvaartkosten.html
+  - title: Wellness
+    url: /vergelijken/wellness.html
+  - title: Zorgverzkering
+    url: /vergelijken/zorgvezekering.html
+

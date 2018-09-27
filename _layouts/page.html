@@ -1,0 +1,12 @@
+---
+layout: default
+---
+{% if page.banner_image %}
+<div class="banner-custom" style="background-image: url('{{ page.banner_image }}')'">
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.description }}</p>
+</div>
+{% endif %}
+<div class="container">
+    {{ content }}
+</div>

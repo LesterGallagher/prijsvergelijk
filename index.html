@@ -1,0 +1,94 @@
+---
+title: Welkom
+layout: default
+description: Overzicht van alle manieren op te besparen ✅
+---
+
+<div class="banner-main">
+    <div class="container">
+        <div class="banner-content">
+            <h1>Vergelijk en bespaar!</h1>
+            <p></p>
+            <p><a class="btn btn-default btn-lg" href="/vergelijken/overzicht.html" role="button">Vergelijk</a></p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+
+
+
+        <div class="col-xs-12 col-sm-6">
+            <h2>Besparen</h2>
+            <p>
+                Geld besparen kun je op veel verschillende manieren doen. Hieronder hebben we een lijstje met stappen
+                gemaakt waarmee je kunt beginnen. Deze stappen kun je gebruiken om om meer geld te besparen.
+            </p>
+            <ul>
+                <li><a href="/besparen/apps.html">Apps die je kunnen helpen besparen</a></li>
+                <li><a href="/besparen/coupons.html">Gebruik kortings codes</a></li>
+                <li><a href="/vergelijken/zorgvezekering.html">Kies de goedkoopste zorgverzekering</a></li>
+                <li><a href="/vergelijken/alles-in-een.html">Kies het meest voordelige alles in één pakket</a></li>
+                <li><a href="/vergelijken/energie.html">Gebruik onze energie vergelijker</a></li>
+                <li><a href="/vergelijken/energie.html">Bekijk de blog posts hieronder voor besparings tips</a></li>
+            </ul>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-6">
+            <h2>Vergelijken</h2>
+            <div class="container-fluid">
+                <div class="row">
+                    <a href="/vergelijken/alles-in-een.html" class="col-xs-4 col-sm-6 col-md-4 col-lg-3 col col-xxs-6 homepage-vergelijker">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">Alles in één Vergelijker</div>
+                            <img class="img-responsive" src="/assets/img/alles-in-een.png">
+                        </div>
+                    </a>
+                    <a href="/vergelijken/energie.html" class="col-xs-4 col-sm-6 col-md-4 col-lg-3 col col-xxs-6 homepage-vergelijker">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">Energie Vergelijker</div>
+                            <img class="img-responsive" src="/assets/img/energie.png">
+                        </div>
+                    </a>
+                    <a href="/vergelijken/zorgvezekering.html" class="col-xs-4 col-sm-6 col-md-4 col-lg-3 col col-xxs-6 homepage-vergelijker">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">Zorgverzekering Vergelijker</div>
+                            <img class="img-responsive" src="/assets/img/zorgverzekeringen.png">
+                        </div>
+                    </a>
+                    <a href="/vergelijken/sim-only.html" class="col-xs-4 col-sm-6 col-md-4 col-lg-3 col col-xxs-6 homepage-vergelijker">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">Sim-only Vergelijker</div>
+                            <img class="img-responsive" src="/assets/img/sim-only.png">
+                        </div>
+                    </a>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <a href="/vergelijken/overzicht.html">Bekijk alle vergelijksers</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Blog</h2>
+            {% for post in site.posts %}
+            <article class="{% if forloop.first %}first{% elsif forloop.last %}last{% else %}middle{% endif %}">
+                <div class="article-head">
+                    <h3 class="title"><a href="/{{ post.url }}/" class="">{{ post.title }}</a></h3>
+                    <p class="date">{{ post.date | date: "%b %d, %Y" }}</p>
+                </div>
+                <div class="article-content">
+                    {{ post.description }}
+                    <a href="/{{ post.url }}/" class="full-post-link">Read more</a>
+                </div>
+            </article>
+            {% if forloop.last %}{% else %}<div class="post-separater"></div>{% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
