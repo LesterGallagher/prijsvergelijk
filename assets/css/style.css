@@ -55,27 +55,20 @@ main {
     height: 450px;
 }
 
-.banner-apps {
-    background: url('../img/visa-orange-glow.png') no-repeat center center;
-    
-    background-size: cover;
-    height: 450px;
-    margin-bottom: 50px;
-}
-
 .banner-custom {
-    background: #ccc no-repeat center center;
+    background: rgba(255,255,255,0) no-repeat center center;
     background-size: cover;
     height: 450px;
     margin-bottom: 50px;
+    overflow: hidden;
 }
 
-.banner-apps * {
+.banner-custom * {
     color: #fff;
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
 }
 
-.banner-apps h1 {
+.banner-custom h1 {
     margin-top: 170px;
 }
 

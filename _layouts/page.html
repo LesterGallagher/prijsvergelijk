@@ -2,9 +2,15 @@
 layout: default
 ---
 {% if page.banner_image %}
-<div class="banner-custom" style="background-image: url('{{ page.banner_image }}')'">
-    <h1>{{ page.title }}</h1>
-    <p>{{ page.description }}</p>
+{% if page.banner_image_contain %}
+<div class="banner-custom" style="background-color: #FF8201; background-size: contain; background-image: url('{{ page.banner_image }}')">
+{% else %}
+<div class="banner-custom" style="background-image: url('{{ page.banner_image }}')">
+{% endif %}
+    <div class="container">
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.description }}</p>
+    </div>
 </div>
 {% endif %}
 <div class="container">
