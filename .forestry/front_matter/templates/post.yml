@@ -1,0 +1,19 @@
+---
+label: Post
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  label: title
+  name: title
+- type: textarea
+  name: description
+  label: description
+- type: file
+  name: image
+  label: image
+  description: Pagina logo
+- type: tag_list
+  name: categories
+  label: categories
+  description: pagina catagorien
