@@ -9,7 +9,7 @@ exclude:
 - vendor
 description: BespaarMaar geeft je tips over besparen en helpt helpt je met het vergelijken van verzekering, abonnementen, etc ✅ 
     Wij bieden een groot aantal verschillende onafhankelijke vergelijkings tools aan die je kunt gebruiken om de beste leverancier te vinden. 
-theme_color: "#fb5353"
+theme_color: '#FF8201'
 baseurl: 
 collections:
   posts:
