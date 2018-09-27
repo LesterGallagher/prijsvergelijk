@@ -3,21 +3,31 @@ layout: default
 ---
 {% if page.banner_image %}
 <div class="banner-custom" style="background-image: url('{{ page.banner_image }}')'">
-    <h1>{{ page.title }}</h1>
-    <p>{{ page.description }}</p>
+  <h1>{{ page.title }}</h1>
+  <p>{{ page.description }}</p>
 </div>
 {% endif %}
-<div class="blog-details container">
-  <article>
-    <header class="blog-header text-center">
-      <h3>
-        <span>{{ page.date | date: '%d' }}</span> {{ page.date | date: '%B %Y' }}
-        <h2> {{ page.title }}</h2>
-    </header>
-    <figure>
-      <img src="{{ page.image  | absolute_url }}" alt="{{ page.title }} image" class="img-responsive" /> </figure>
-    <div class="enter-content">
-      {{ content }}
+
+<div class="container">
+  <div class="row">
+    {% include besparen-vergelijken.html %}
+  </div>
+  <div class="col-xs-12 col-md-9">
+    <div class="container-fluid">
+      <article class="row">
+        <header class="blog-header text-center">
+          <h3>
+            <span>{{ page.date | date: '%d' }}</span> {{ page.date | date: '%B %Y' }}
+            <h2> {{ page.title }}</h2>
+        </header>
+        {% if post.image %}
+        <figure>
+          <img src="{{ page.image  | absolute_url }}" alt="{{ page.title }} image" class="img-responsive" /> </figure>
+        {% endif %}
+        <div class="enter-content">
+          {{ content }}
+        </div>
+      </article>
     </div>
-  </article>
+  </div>
 </div>
