@@ -1,0 +1,19 @@
+---
+label: page
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: textarea
+  label: description
+  name: description
+- type: file
+  name: image
+  label: image
+  description: Pagina logo
+- type: file
+  name: banner_image
+  label: banner image
+  description: Banner image
