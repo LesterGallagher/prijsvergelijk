@@ -17,6 +17,11 @@ fields:
   name: banner_image
   label: banner image
   description: Banner image
+- type: text
+  name: layout
+  label: layout
+  default: page
+  hidden: true
 pages:
 - vergelijken/wellness.html
 - vergelijken/sim-only.html
