@@ -23,6 +23,7 @@ fields:
   default: page
   hidden: true
 pages:
+- geld-verdienen.html
 - vergelijken/loterijen.html
 - vergelijken/wellness.html
 - vergelijken/sim-only.html
