@@ -17,3 +17,5 @@ fields:
   name: categories
   label: categories
   description: pagina catagorien
+pages:
+- _posts/bespaartips-een-vaatwasser-of-met-de-hand-afwassen.md
