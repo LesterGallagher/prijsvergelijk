@@ -19,11 +19,62 @@
                             <ons-icon icon="{{ link.icon }}"></ons-icon>&nbsp; {{ link.title }}
                         </ons-list-item>
                         {% endfor %}
+                        <ons-list-item onclick="fn.load('/about.html')" tappable>
+                            <ons-icon icon="fa-cog"></ons-icon>&nbsp; Overview
+                        </ons-list-item>
                     </ons-list>
                 </ons-page>
             </ons-splitter-side>
             <ons-splitter-content id="content" page="/"></ons-splitter-content>
         </ons-splitter>
+    </ons-page>
+</template>
+
+<template style="display: none" id="/about.html">
+    <ons-page class="app-page about" id="about-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button class="hidden page-toolbar-back-button" onclick="fn.open()">
+                    <ons-icon icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+                <ons-back-button class="hidden">Back</ons-back-button>
+            </div>
+            <div class="center">About</div>
+        </ons-toolbar>
+        <div style="padding: 0 10px">
+            <h2>About</h2>
+            <p>
+                {{ site.description }}
+            </p>
+            <p>
+                <ons-button onclick="window.open('https://bespaarmaar.esstudio.site/', '_system')">Open de Website</ons-button>
+            </p>
+            <ons-card style="margin: 0;">
+                <div>
+                    <a target="_system" href="https://esstudio.site/contact/">Contact opnemen met de ontwikkelaar</a>
+                </div>
+                <div>
+                    <a target="_system" href="https://esstudio.site">Website van de ontwikkelaar</a>
+                </div>
+                <div>
+                    <a href="mailto:polyismstudio@gmail.com?subject=BespaarMaar&body=Uw%20bericht." target="_top">Stuur
+                        Email</a>
+                </div>
+                <div>
+                    <a target="_system" href="https://echosierrastudio.github.io/EchoSierraStudio/privacy-policy.html">Privacy
+                        Policy</a>
+                </div>
+                <p>
+                    Als u de website versie van deze app gebruikt. Dan worden er geanonimiseerde Google Analytics
+                    cookies ingeladen. Meer informatie
+                    over cookies en de EU cookies wet kunt u
+                    <a href="http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm">hier</a> vinden.
+                </p>
+                <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"
+                        title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
+                        title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+            </ons-card>
+        </div>
     </ons-page>
 </template>
 
@@ -96,7 +147,8 @@
         </ons-toolbar>
         <div>
             <div class="page-content">
-                <iframe class="vergelijker-iframe" src="https://bespaarmaar.esstudio.site/onsen_dist/iframe-{{ page.name }}" frameborder="0"></iframe>
+                <iframe class="vergelijker-iframe" src="https://bespaarmaar.esstudio.site/onsen_dist/iframe-{{ page.name }}"
+                    frameborder="0"></iframe>
             </div>
         </div>
     </ons-page>
@@ -128,4 +180,3 @@
 </template>
 {% if forloop.last %}{% else %}{% endif %}
 {% endfor %}
-

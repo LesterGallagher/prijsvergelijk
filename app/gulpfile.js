@@ -34,7 +34,7 @@ gulp.task('copy', () => {
         gulp
             .src('../_site/assets/minima-social-icons.svg')
             .pipe(gulp.dest('./www/assets')),
-        gulp.src('../_site/assets/img/*')
+        gulp.src('../_site/assets/img/**/*')
             .pipe(gulp.dest('www/assets/img'))
     );
 });

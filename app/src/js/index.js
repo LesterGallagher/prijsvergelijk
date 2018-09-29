@@ -37,10 +37,10 @@ document.addEventListener('init', function (event) {
 	var page = event.target;
 
 	if (page.classList.contains('app-page')) {
-		console.log(fn.navigator.pages);
-		page.querySelector(fn.navigator.pages.length > 1
+		var control = page.querySelector(fn.navigator.pages.length > 1
 			? 'ons-back-button'
-			: '.page-toolbar-back-button').classList.remove('hidden');
+			: '.page-toolbar-back-button')
+		if (control) control.classList.remove('hidden');
 		initPage(page);
 	}
 });
@@ -112,7 +112,7 @@ function initPage(page) {
 			var checkbox = document.createElement('ons-checkbox');
 			checkbox.checked = checked;
 			checkbox.oninput = function(e) {
-				localStorage.setItem('checkboxes-' + li.getAttribute('data-checkbox'), e.checked);
+				localStorage.setItem('checkboxes-' + li.getAttribute('data-checkbox'), e.target.checked ? 'set' : '');
 			}
 			left.appendChild(checkbox);
 			li.appendChild(left);
@@ -170,18 +170,6 @@ function initPage(page) {
 			vergelijker.appendChild(right);
 		});
 	});
-
-	var onProductFeedDone = function () {
-		page.querySelectorAll('#product-feed').forEach(function (productFeed) {
-			productFeed.querySelectorAll('.panel').forEach(function (panel) {
-				panel.classList.add('card', 'card--material');
-				panel.querySelector('.panel-heading').classList.add('card__title', 'card--material__title');
-				panel.querySelector('.panel-body').classList.add('card__content', 'card--material__content');
-			});
-		});
-		document.removeEventListener('productfeed', onProductFeedDone);
-	}
-	document.addEventListener('productfeed', onProductFeedDone);
 }
 
 

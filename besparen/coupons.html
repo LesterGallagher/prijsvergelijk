@@ -41,12 +41,14 @@ description: Kortingscodes zijn een goed manier om geld te besparen.
                 (function (product) {
                     document.getElementById('product-feed').innerHTML =
                         '<a class="col col-xxs-12 col-xs-6 col-sm-4 col-lg-3" target="_system" href="' + product.product_info.link + '">\
-<article class="panel panel-primary">\
-<div class="panel-heading">' + product.product_info.title + '</div>\
+<article class="panel panel-primary card card--material">\
+<div class="panel-heading card__title card--material__title">' 
++ product.product_info.title + '</div>\
 <img alt="' + product.product_info.images[0].type + '" \
 src="' + product.product_info.images[0].location + '" \
 style="width: 100%" class="img-responsive">\
-<div class="panel-body">' + product.product_info.description + '<br><br><br>\
+<div class="panel-body card__content card--material__content">' 
++ product.product_info.description + '<br><br><br>\
 <span class="price-wrapper">\
 <span class="price">' + product.product_info.price + '</span>\
 <span class="priceold">' + product.product_info.price_old + '</span>\
@@ -55,10 +57,6 @@ style="width: 100%" class="img-responsive">\
 </article></a>';
                 })(products[i]);
             }
-            // Create the event.
-            var event = document.createEvent('Event');
-            event.initEvent('productfeed', true, true);
-            document.dispatchEvent(event);
         }
     </script>
     <script async defer src="https://ess-server.herokuapp.com/daisycon-proxy-jsonp/?filter_id=46958&settings_id=7178&sub_id=prijsvergelijk&callback=processFeed"></script>

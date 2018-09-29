@@ -193,6 +193,10 @@ footer a {
     }
 }
 
+.clearfix {
+    clear: both;
+}
+
 .vergelijk-widget-container {
     padding-top: 10px;
     padding-bottom: 40px;
@@ -265,5 +269,14 @@ footer a {
     padding-top: 30px;
 }
 
+.col-visible-xxs-6 {
+    display: none;
+}
+
+@media screen and (max-width: 512px) {
+    .col-visible-xxs-6 {
+        display: block;
+    }
+}
 
 
