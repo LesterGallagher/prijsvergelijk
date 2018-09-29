@@ -11,6 +11,21 @@ main {
     border-bottom: 5px solid #FF8201;
 }
 
+.navbar-brand {
+    padding: 0;
+}
+
+.navbar-brand * {
+    vertical-align: middle;
+}
+
+.navbar-brand img {
+    height: 50px;
+    display: inline-block;
+    margin-top: -1px;;
+    margin-right: 7px;
+}
+
 .navbar .dropdown-menu li.active a {
 }
 
@@ -146,7 +161,6 @@ footer a {
 .vergelijkers-overzicht .panel {
     max-width: 300px;
     margin: 20px auto;
-
 }
 
 .vergelijkers-overzicht .panel img {
@@ -154,7 +168,7 @@ footer a {
 }
 
 .vergelijkers-overzicht .panel .text {
-    min-height: 50px;
+    min-height: 85px;
 }
 
 @media screen and (min-width: 892px) {
@@ -237,4 +251,19 @@ footer a {
     color: #ccc;
     text-decoration: line-through;
 }
+
+[data-show-on-site=false] {
+    display: none;
+}
+
+.vergelijk-widget-container .row {
+    padding: 10px;
+    padding-top: 5px;
+}
+
+.geld-verdienen-row {
+    padding-top: 30px;
+}
+
+
 

@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+
+<head>
+
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src ws: 'unsafe-inline' 'self' data: gap: https://ssl.gstatic.com http://*.tile.osm.org https://*.googleapis.com; 
+        style-src 'self' http://code.komparu.com https://daisycon.io http://developers.affiliateprogramma.eu 'unsafe-inline' https://*.gstatic.com http://*.tile.osm.org https://*.googleapis.com;
+        media-src *; 
+        font-src 'self' https://s3.amazonaws.com https://*.gstatic.com http://*.tile.osm.org https://*.googleapis.com;
+        img-src 'self' http://code.komparu.com https://stats.g.doubleclick.net http://developers.affiliateprogramma.eu https://www.google-analytics.com http://daisycon.io https://cdn.vouchervandaag.nl https://mproxy.banner.linksynergy.com https://ad.linksynergy.com https://*.openstreetmap.org https://*.google.com https://*.nationaalgeoregister.nl https://*.gstatic.com https://*.googleapis.com data: content:;
+        script-src https://developers.google.com https://code.jquery.com/jquery-3.3.1.js https://www.google-analytics.com https://www.googletagmanager.com https://code.komparu.com http://developers.affiliateprogramma.eu https://daisycon-energie.whitelabeled.nl 'self' https://daisycon.io https://developers.affiliateprogramma.eu https://ess-server.herokuapp.com 'unsafe-inline' 'unsafe-eval' https://*.polyfill.io https://*.gstatic.com http://*.tile.osm.org https://maps.googleapis.com;
+        connect-src 'self' http://code.komparu.com https://daisycon.io https://*.teleport.org https://epsg.io https://*.nationaalgeoregister.nl https://*.gstatic.com https://*.googleapis.com; ">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="apple-touch-icon" href="images/meta-icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon-precomposed" href="images/meta-icons/apple-touch-icon-precomposed.png">
+    <link size="76x76" rel="apple-touch-icon" href="images/meta-icons/apple-touch-icon-76x76.png">
+    <link size="76x76" rel="apple-touch-icon-precomposed" href="images/meta-icons/apple-touch-icon-76x76-precomposed.png">
+    <link size="72x72" rel="apple-touch-icon" href="images/meta-icons/apple-touch-icon-72x72.png">
+    <link size="72x72" rel="apple-touch-icon-precomposed" href="images/meta-icons/apple-touch-icon-72x72-precomposed.png">
+    <link size="60x60" rel="apple-touch-icon" href="images/meta-icons/apple-touch-icon-60x60.png">
+    <link size="60x60" rel="apple-touch-icon-precomposed" href="images/meta-icons/apple-touch-icon-60x60-precomposed.png">
+    <link size="57x57" rel="apple-touch-icon" href="images/meta-icons/apple-touch-icon-57x57.png">
+    <link size="57x57" rel="apple-touch-icon-precomposed" href="images/meta-icons/apple-touch-icon-57x57-precomposed.png">
+    <link size="180x180" rel="apple-touch-icon" href="images/meta-icons/apple-touch-icon-180x180.png">
+    <link size="180x180" rel="apple-touch-icon-precomposed" href="images/meta-icons/apple-touch-icon-180x180-precomposed.png">
+    <link size="152x152" rel="apple-touch-icon" href="images/meta-icons/apple-touch-icon-152x152.png">
+    <link size="152x152" rel="apple-touch-icon-precomposed" href="images/meta-icons/apple-touch-icon-152x152-precomposed.png">
+    <link size="144x144" rel="apple-touch-icon" href="images/meta-icons/apple-touch-icon-144x144.png">
+    <link size="144x144" rel="apple-touch-icon-precomposed" href="images/meta-icons/apple-touch-icon-144x144-precomposed.png">
+    <link size="120x120" rel="apple-touch-icon" href="images/meta-icons/apple-touch-icon-120x120.png">
+    <link size="120x120" rel="apple-touch-icon-precomposed" href="images/meta-icons/apple-touch-icon-120x120-precomposed.png">
+    <link size="114x114" rel="apple-touch-icon" href="images/meta-icons/apple-touch-icon-114x114.png">
+    <link size="114x114" rel="apple-touch-icon-precomposed" href="images/meta-icons/apple-touch-icon-114x114-precomposed.png">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="images/meta-icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/meta-icons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/meta-icons/favicon-16x16.png">
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="images/meta-icons/safari-pinned-tab.svg" color="#1e88e5">
+    <link rel="shortcut icon" href="images/meta-icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta name="description" content="Met de Kadaster kaart app/website kunt u gemakkelijk informatie opzoeken over percelen die geregistreerd staan bij het Kadaster.">
+    <meta name="author" content="Sem Postma, sem.postma@gmail.com">
+    <meta name="keywords" content="Kadaster, App, Informatie, Percelen, Perceel, Browser, Google, Play">
+
+    <link rel="stylesheet" href="css/lib/onsen/css/onsenui.min.css" />
+    <link rel="stylesheet" href="css/lib/onsen/css/onsen-css-components.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+
+    <link rel="preload" as="script" href="cordova.js">
+    <link rel="preload" as="script" href="js/app.min.js">
+
+<script>
+    document.write('<base href="' + window.location.href + '">');
+</script>
+
+    <title>Kadaster Kaart</title>
+</head>
+
+<body>
+    <ons-navigator id="navigator" page="splitter"></ons-navigator>
+
+    <!-- [if IE]>
+            <div id="oldbrowser-modal" class="modal" role="dialog" aria-expanded="true" style="position: fixed; z-index: 200000; padding-top: 100px; left: 0px; top: 0px; width: 100%; height: 100%; overflow: auto; background-color: rgba(0, 0, 0, 0.9); transition: padding-top 100ms ease-out; box-sizing: border-box; font-family: 'Ubuntu', sans-serif, Verdana, Geneva, Tahoma;">
+                <div class="modal-content" style="margin: auto; display: block; width: 80%; max-width: 700px; padding: 40px; background: white; box-sizing: border-box; ;">
+                    <h2 class="text-danger mt-1 mb-4" style="color: rgb(236, 78, 32); margin-top: 6px; margin-bottom: 36px; box-sizing: border-box; ;">Belangrijk!</h2>
+                    <p class="noscript-msg" style="box-sizing: border-box;">
+                        Je gebruikt een oudere
+                        <strong class="text-danger">outdated</strong> browser.
+                        <a href="http://browsehappy.com/" class="text-success" style="style="background-color: transparent; color: rgb(1, 111, 185); box-sizing: border-box; text-decoration: none;">Update je browser</a> om je ervaring te verbeteren.
+                    </p>
+                </div>
+            </div>
+    <![endif] -->
+
+    <!-- splitter -->
+<template style="display: none" id="splitter">
+    <ons-page id="splitter-page">
+        <ons-splitter>
+            <ons-splitter-side id="menu" side="left" width="220px" collapse>
+                <ons-page>
+                    <ons-list>
+                        <ons-list-item onclick="fn.load('/')" tappable>
+                            <ons-icon icon="md-home"></ons-icon>&nbsp; Overview
+                        </ons-list-item>
+                        
+                        
+                        
+                        <ons-list-item onclick="fn.load('/geld-verdienen')" tappable>
+                            <ons-icon icon="ion-cash"></ons-icon>&nbsp; Geld Verdienen
+                        </ons-list-item>
+                        
+                        
+                        <ons-list-item onclick="fn.load('/besparen/apps')" tappable>
+                            <ons-icon icon="ion-leaf"></ons-icon>&nbsp; Besparings apps
+                        </ons-list-item>
+                        
+                        
+                        <ons-list-item onclick="fn.load('/besparen/coupons')" tappable>
+                            <ons-icon icon="fa-scissors"></ons-icon>&nbsp; Korting codes
+                        </ons-list-item>
+                        
+                        
+                        <ons-list-item onclick="fn.load('/vergelijken/overzicht')" tappable>
+                            <ons-icon icon="fa-balance-scale"></ons-icon>&nbsp; Vergelijken
+                        </ons-list-item>
+                        
+                    </ons-list>
+                </ons-page>
+            </ons-splitter-side>
+            <ons-splitter-content id="content" page="/"></ons-splitter-content>
+        </ons-splitter>
+    </ons-page>
+</template>
+
+<!-- posts -->
+
+
+<template style="display: none" id="/blog/bespaartips-een-vaatwasser-of-met-de-hand-afwassen/">
+    <ons-page class="app-page post" id="/blog/bespaartips-een-vaatwasser-of-met-de-hand-afwassen-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-back-button>Back</ons-back-button>
+            </div>
+            <div class="center">
+                Bespaartips: Een vaatwasser of met de hand afwassen?
+            </div>
+        </ons-toolbar>
+        <div style="padding: 0 10px">
+            <div class="article-head">
+                <h1 class="title">Bespaartips: Een vaatwasser of met de hand afwassen?</h1>
+                <p class="date">Sep 29, 2018</p>
+            </div>
+            <div class="article-content">
+                <p>Wie zegt dat besparen niet leuk kan zijn heeft het mis! Je zou denken dat met de hand afwassen je meer geld bespaard maar dat blijkt niet het geval te zijn. Over het algemeen kunt u het beste een vaatwassen gebruiken in plaats van met de hand afwassen. We verspillen onnodig veel kostbare tijd, water en energie aan de afwas terwijl een vaatwasser dit veel zuiniger kan.</p>
+
+<p>Als je alleenstaande bent is het natuurlijk logisch dat met de hand afwassen in de meeste gevallen veel zuiniger is als met een vaatwasser. Maar als u zoveel borden vuil maakt dat u elke keer een vaatwasser goed zou kunnen vullen, dan is het uiteraard beter een vaatwasser te nemen. Waarom? Dat leest u hier.</p>
+
+<p><strong>Hoe doet u de afwas?</strong></p>
+
+<p>Allereerst heeft de mate van uw verbruik het meeste te maken met hoe u daadwerkelijk de afwas doet. Als u afwast met een lopende kraan is het natuurlijk vanzelfsprekend dat u onnodig veel water verbruikt. Het is dus zuiniger om in een teiltje afwassen. Ook het feit of u de afwas elke keer opspaart is van invloed op hoeveel water u verbruikt. Als u keer op keer kleine hoeveelheden afwast doet dan moet u steeds de juiste temperatuur water blijven zoeken en ga zo maar door. Tijdens dit soort processen wordt er echt onnodig veel water verbruikt, er zijn natuurlijk wel speciale kranen die u kunt kopen waarbij u de warmte van het water meteen kunt regelen maar dat zal in elk geval niet nodig zijn omdat wij gaan uitleggen waarom de vaatwasser veel beter en zuiniger is.</p>
+
+<p><strong>Afwasmiddel</strong></p>
+
+<p>Afwasmiddel is een belangrijk punt als het gaat om besparen, zoals bij bijna elk product is er een goedkope en dure versie, dit is ook het geval bij afwasmiddel. Over het algemeen zijn de duurdere afwasmiddelen veel beter en duurzamer, neem bijvoorbeeld Dreft van wie we altijd horen: “Wast een berg en kost een beetje”, nou ja “Kost een beetje?” In de schappen is Dreft wel duurder dan de meeste andere merken, maar met Dreft kunt u zoveel wassen dat u het geld makkelijk terugverdiend heeft. </p>
+
+<p>Een noodzaak is dan ook om niet te veel afwasmiddel te gebruikt wat op zich voor zichzelf spreekt want veel afwasmiddel gebruiken is nergens voor nodig. Per keer heeft u maar enkele druppels nodig, in tegenstelling tot de goedkopere merken waarbij u vaker een redelijke “kneep” uit moet halen om hetzelfde te krijgen. Ook is het natuurlijk beter voor het milieu als u minder flessen weg moet gooien, dat is natuurlijk een bijzaak met het is leuk meegenomen.</p>
+
+<p><strong>Waarom een vaatwasser?</strong></p>
+
+<p>Het gebruik van een vaatwasser kan enorm veel voordelen met zich mee brengen, al denken mensen vaak het tegenovergestelde, afwassen met de vaatwasser is namelijk veel zuiniger. Over het algemeen nemen machines het over en zijn ze veel efficiënter dan wij en in dit geval kunnen wij hier goed gebruik van maken aangezien we bijna allemaal een hekel hebben aan de afwas doen en we een reden hebben om de vaatwasser te gebruiken.</p>
+
+<p> </p>
+
+<p>De efficiëntie van een vaatwasser is dat deze is ingesteld om de juiste hoeveelheden water, wasmiddel, warmte, en ga zo maar door te gebruiken. De vaatwasser bespaart het meeste als deze goed gevuld is, u kunt dus gerust een tijdje de afwas opsparen (niet te lang natuurlijk, dat zou niet heel hygiënisch zijn).</p>
+
+<p> </p>
+
+<p>Wat ik net al schreef is dat u goed moet opletten dat de vaatwasser goed gevuld is, ga dus niet wassen met een paar bordjes maar vul de vaatwasser zo goed als maar kan. Ook hoeft u uw afwas niet af te spoelen, maar is het wel verstandig om de grovere etensresten te verwijderen aangezien het filter hierdoor vol kan lopen. Zorg er ook voor dat u het juiste afwas programma instelt. Voor de zware afwas het grove geschut, en voor de licht vuile afwas de spaarstand of een lagere temperatuur.</p>
+
+<p><strong>Pannen en potten</strong></p>
+
+<p>De pannen, potten en dergelijke kunt u makkelijk in een vaatwasser doen. Dit is mooi aangezien dat een vervelend en zeer tijdrovende karweitje is om met te hand te doen en dan maar te zwijgen over de verspilling van water bij het wassen van met name (grote) pannen. Zorg er wel voor dat u de grofste resten verwijdert zijn voordat u pannen en/of potten in de vaatwasser stopt.</p>
+
+<p><strong>Belangrijk om te onthouden</strong></p>
+
+<p>Natuurlijk wilt u het liefst dat uw vaatwasser zo lang mogelijk efficiënt blijft. Als u uw vaatwasser niet onderhoudt, dan wordt deze steeds inefficiënter. Probeer dit zo veel mogelijk te voorkomen door:</p>
+
+<ul>
+  <li>Nadat u de afwas eruit haalt kijken of er nog resten zijn achtergebleven, zo ja deze verwijderen. </li>
+  <li>Het filter op tijd te reinigen i.v.m. verstoppingen. </li>
+  <li>Bekijk zo nu en dan of de sproeiarmen niet verstopt zijn geraakt. </li>
+  <li>Zo’n 2 keer per jaar zult u uw vaatwasser moeten ontkalken. </li>
+</ul>
+
+<p>Door met beleid af te wassen, en water niet onnodig te verspillen bespaart u vanzelf op geld en milieu. Met alle apparaten, dus ook de vaatwassers geldt over het algemeen: hoe nieuwer hoe zuiniger. En met een van de nieuwere vaatwassers hoeft u nooit meer zelf af te wassen.</p>
+
+
+            </div>
+        </div>
+    </ons-page>
+</template>
+
+
+<!-- pages -->
+
+
+<template style="display: none" id="/404">
+    <ons-page class="plain-page app-page" id="/404-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button class="hidden page-toolbar-back-button" onclick="fn.open()">
+                    <ons-icon icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+                <ons-back-button class="hidden">Back</ons-back-button>
+            </div>
+            <div class="center">
+                Niet gevonden
+            </div>
+        </ons-toolbar>
+        <div style="padding: 0 10px">
+            <div class="page-content">
+                <h2><b>404</b></h2>
+<p><br />
+<a class="btn btn-danger" href="#" onclick="window.history.back()">Back to safety</a></p>
+
+            </div>
+        </div>
+    </ons-page>
+</template>
+
+
+<template style="display: none" id="/about/">
+    <ons-page class="plain-page app-page" id="/about/-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button class="hidden page-toolbar-back-button" onclick="fn.open()">
+                    <ons-icon icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+                <ons-back-button class="hidden">Back</ons-back-button>
+            </div>
+            <div class="center">
+                About
+            </div>
+        </ons-toolbar>
+        <div style="padding: 0 10px">
+            <div class="page-content">
+                <p>My main focus when I’m writing a web-app, is to make the web-app responsive, learn about new tools and trying to use new techniques. SPA’s, Build tools and other front-end tools are things i would like to learn more about. I mostly end up using some sort of combination of Node js tools to build the front-end of a web-app.</p>
+
+
+            </div>
+        </div>
+    </ons-page>
+</template>
+
+
+<template style="display: none" id="/besparen/apps">
+    <ons-page class="plain-page app-page" id="/besparen/apps-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button class="hidden page-toolbar-back-button" onclick="fn.open()">
+                    <ons-icon icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+                <ons-back-button class="hidden">Back</ons-back-button>
+            </div>
+            <div class="center">
+                11 Handige apps die je helpen met besparen
+            </div>
+        </ons-toolbar>
+        <div style="padding: 0 10px">
+            <div class="page-content">
+                <div class="banner-apps">
+    <div class="container">
+        <h1>11 Handige apps die je helpen met besparen</h1>
+        <p>Het gebruik van deze apps is een goede manier om geld te besparen. Er zijn apps die je helpen coupons te vinden, marktplaats apps of apps die je helpen om een budget bij te houden. Dit zijn allemaal goede tools waarmee je veel geld kunt besparen.</p>
+    </div>
+</div>
+
+<div class="container">
+    <img style="width: 90px; float: left; margin-right: 10px;" src="./assets/img/money-app.png" alt="" class="img-responsive" />
+    <h3 style="margin-top: 0">Besparings Apps</h3>
+    <p>
+        Het gebruik van deze apps is een goede manier om geld te besparen.
+        Er zijn apps die je helpen coupons te vinden, marktplaats apps of apps die je helpen om een budget bij te
+        houden.
+        Dit zijn allemaal goede tools waarmee je veel geld kunt besparen.
+    </p>
+
+    <div class="clearfix"></div>
+
+    <ul class="list-style-none">
+        <li>
+            <h3><a target="blank" href="https://www.peerby.com">1. Peerby</a></h3>
+            <p>
+                Met Peerby kun je makkelijk spullen lenen van mensen in de buurt.
+                Je hoeft dus bijvoorbeeld niet meer een beamer of partytent te kopen als u die maar één keer gaat
+                gebuiken.
+                Je kunt ook spullen uitlenen aan je buren.
+                De Peerby app is beschikbaar op de iOS en Android stores.
+            </p>
+        </li>
+
+        <li>
+            <h3><a target="blank" href="http://www.jip.nl/benzine/">2. Jip</a></h3>
+            <p>
+                Met Jip kun je de prijs van benzine in de gaten houden. De prijs van benzine schommelt voortdurent heen en weer en verschild ook op per plaats of per penzinestation.
+                Met deze app kun je heel gemakkelijk het goedkoopste benzinestation vinden.
+
+            </p>
+        </li>
+
+        <li>
+            <h3><a target="blank" href="https://hangouts.google.com/">3. Hangouts</a></h3>
+            <p>
+                Google hangouts is helemaal gratis en is makkelijk te gebruiken met andere google producten.
+                Nu Whatsapp betaald is geworden, is Hangouts een goed alternatief om gratis berichten te sturen. Ook kun je gratis bestanden en foto's sturen.
+            </p>
+        </li>
+
+        <li>
+            <h3><a target="blank" href="https://www.voedingscentrum.nl/nl/nieuws/voedingscentrum-lanceert-unieke-receptenapp-slim-koken-.aspx">4. Slim Koken App</a></h3>
+
+            <p>
+                Met deze app van het Voedingscentrum kunt u voedselverspilling tegen gaan. 
+                De app geeft bewaartips, goede recepten, en de juiste bereidingshoeveelheden.
+            </p>
+        </li>
+
+        <li>
+            <h3><a target="blank" href="https://scoupy.com/nl">5. Scoupy</a></h3>
+            <p>
+                Scoupy is een nederlandse app waarmee je kortingsacties van bedrijven kunt vinden.
+                Wanneer u scoupy opstart ziet u automatisch een lijst met kortingscodes voor bedrijven bij u in de buurt.
+
+            </p>
+
+        </li>
+
+        <li>
+            <h3><a target="blank" href="https://www.groupon.nl/">6. Groupon</a></h3>
+            <p>
+                Groupon de meest populaire coupon website van nederland. 
+                Je kunt er alle soorten kortingen vinden. De groupon app is beschikbaar op alle bekende platforms.
+            </p>
+        </li>
+
+        <li>
+            <h3><a target="blank" href="https://esstudio.site/ov-fiets-app/">7. OV Fiets App</a></h3>
+            <p>
+                Met deze app kun je gemakkelijk kijken hoeveel ov fietsen er op een ov fiets locaatie staan.
+                De ov fiets pakken kan heel voordelig zijn wanneer je al een ov chip kaart hebt. 
+                Het kan ook veel tijd schelen, je hoeft niet te lopen of te wachten op een bus wanneer je al in de buurt bent.
+            </p>
+        </li>
+
+        <li>
+            <h3><a href="https://toogoodtogo.nl/nl" target="blank">8. Too Good To Go</a></h3>
+            <p>
+                Veel bedrijven zoals supermarkten, restaurants en traiteurs gooien hun overtollige voedsel weg.
+                Met deze app kunnen gebruikers paketten voor een zeer lage prijs bij deze bedrijven kopen.
+            </p>
+        </li>
+
+        <li>
+            <h3><a target="_system" href="https://www.joinhoney.com/">9. Honey</a></h3>
+            <p>
+                Honey is eigenlijk geen app maar we zetten deze chrome extensie toch in dit lijstje.
+                Honey voegt automatisch de beste coupon codes toe aan je shopping cart. 
+                Dit kan je echt honderden per jaar schelen als je veel op internet besteld. 
+                Je kunt honey met twee klikken installeren op je extensie balk.
+            </p>
+        </li>
+
+        <li><h3><a target="_system" href="https://www.reclamefolder.nl/app">10. Reclamefolder App</a></h3>
+            <p>
+                Inplaats van de kilo's papier die u normaal in uw brievenbus krijgt kunt ook deze app gebruiken om reclamefolders te gebruiken.
+                De app gebruikt je GPS locatie om meteen te achterhalen welke reclamefolders er bij jou in de wijk verspreid worden.
+            </p>
+        </li>
+        
+
+        <li>
+            <h3><a target="blank" href="https://www.marktplaats.nl/">11. Marktplaats</a></h3>
+            <p>
+                Marktplaats kun je natuurlijk niet over het hooft zien. 
+                Met marktplaats kun je zonder winkel dingen aan elkaar verkopen. Auto's, fietsen, desktops, huisdieren, je kunt er bijna alles vinden.
+            </p>
+        </li>
+       
+    </ul>
+</div>
+
+            </div>
+        </div>
+    </ons-page>
+</template>
+
+
+<template style="display: none" id="/geld-verdienen">
+    <ons-page class="plain-page app-page" id="/geld-verdienen-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button class="hidden page-toolbar-back-button" onclick="fn.open()">
+                    <ons-icon icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+                <ons-back-button class="hidden">Back</ons-back-button>
+            </div>
+            <div class="center">
+                Makkelijk geld verdienen
+            </div>
+        </ons-toolbar>
+        <div style="padding: 0 10px">
+            <div class="page-content">
+                <div class="row geld-verdienen-row">
+    <div class="col-xs-12 col-sm-6">
+        <h2 style="margin-top: 0">Geld verdienen</h2>
+        <p>
+            Wil je makkelijk geld verdienen? Dan zijn er een aantal manieren om zonder veel moeite mee te beginnen.
+        </p>
+        <p>
+            Inloggen op een website om wat betaalde maitjes te klikken, enquêtes invullen. Er zijn vele manieren om via het internet
+            geld te verdienen. Vaak is het niet realistisch om te denken dat je heel snel veel geld te verdienen maar elke
+            maand wat extra over hebben is altijd welkom.
+        </p>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+        <ol>
+            <li>Artikelen schrijven
+                <span class="rating-number">
+                    4.5
+                    <em>/ 5</em>
+                </span>
+
+                <span class="ratingValue">
+                    <span class="active" style="width: 90%;">4.5</span>
+                </span>
+            </li>
+            <li>Enquêtes invullen
+                <span>
+                    <span class="rating-number">
+                        4.5
+                        <em>/ 5</em>
+                    </span>
+
+                    <span class="ratingValue">
+                        <span class="active" style="width: 90%;">4.5</span>
+                    </span>
+                </span>
+            </li>
+            <li>Spaarprogramma’s
+                <span class="rating-number">
+                    4.4
+                    <em>/ 5</em>
+                </span>
+
+                <span class="ratingValue">
+                    <span class="active" style="width: 88%;">4.4</span>
+                </span>
+            </li>
+            <li>Google Adsense
+                <span class="rating-number">
+                    4.2
+                    <em>/ 5</em>
+                </span>
+
+                <span class="ratingValue">
+                    <span class="active" style="width: 84%;">4.2</span>
+                </span>
+            </li>
+            <li>Oppassen
+                <span class="rating-number">
+                    4.1
+                    <em>/ 5</em>
+                </span>
+
+                <span class="ratingValue">
+                    <span class="active" style="width: 82%;">4.1</span>
+                </span>
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 verdienen-links">
+        <h3>Thuiswerk (websites)</h3>
+        <p>
+            Veel mensen verdienen aardig wat geld door artiekelen te schrijven voor websites. Zelf een website maken kan ook heel winstgevend zijn.
+            Beginnen met een website is niet altijd even makkelijk maar als je eenmaal klaar bent en je hebt reclames dan heb je wel een passief inkomen.
+        </p>
+        <div class="col col-xs-12 col-sm-4">
+            <a target="_system" href="https://click.linksynergy.com/fs-bin/click?id=gX56itLGvIE&amp;offerid=579862.34&amp;subid=0&amp;type=4" class="btn btn-primary">Web Developer Cursus</a>
+            <br />
+            <br />
+            <a target="_system" href="https://click.linksynergy.com/fs-bin/click?id=gX56itLGvIE&amp;offerid=579862.34&amp;subid=0&amp;type=4">
+                <img class="img-responsive" border="0" alt="Quickstart Web Developer Bootcamp (Frontend Web Dev)" src="https://ad.linksynergy.com/fs-bin/show?id=gX56itLGvIE&amp;bids=579862.34&amp;subid=0&amp;type=4&amp;gridnum=13" />
+            </a>
+        </div>
+        <div class="col col-xs-12 col-sm-4">
+            <a target="_system" href="https://click.linksynergy.com/fs-bin/click?id=gX56itLGvIE&amp;offerid=579862.34&amp;subid=0&amp;type=4" class="btn btn-primary">QuickStart IT Cursussen</a>
+            <br />
+            <br />
+            <a target="_system" href="https://click.linksynergy.com/fs-bin/click?id=gX56itLGvIE&amp;offerid=579862.39&amp;subid=0&amp;type=4">
+                <img class="img-responsive" border="0" alt="QuickStart" src="https://ad.linksynergy.com/fs-bin/show?id=gX56itLGvIE&amp;bids=579862.39&amp;subid=0&amp;type=4&amp;gridnum=14" />
+            </a>
+        </div>
+        <div class="col col-xs-12 col-sm-4">
+            <a target="_system" class="btn btn-primary" href="https://click.linksynergy.com/deeplink?id=gX56itLGvIE&amp;mid=42440&amp;u1=sp&amp;murl=https%3A%2F%2Fwww.quickstart.com%2Fwordpress.html">
+                Wordpress Leren</a>
+            <br />
+            <br />
+            <a target="_system" href="https://click.linksynergy.com/deeplink?id=gX56itLGvIE&amp;mid=42440&amp;u1=sp&amp;murl=https%3A%2F%2Fwww.quickstart.com%2Fwordpress.html">
+                <img class="img-responsive" src="./assets/img/wordpress.png" />
+            </a>
+            <img alt="icon" width="1" height="1" src="https://ad.linksynergy.com/fs-bin/show?id=gX56itLGvIE&amp;bids=579862.1&amp;type=10" />
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Thuiswerk (enquêtes)</h3>
+        <p>
+            Betaald enquetes invullen is een goed manier om wat extra geld te verdienen. Het is niet moelijk en een enquete invullen kost niet veel tijd.
+            Het ligt er natuurlijk aan hoeveel je er invult maar je kunt met deze manier van geld verdienen zeker een extra 100 euro per maand verdienen.
+            Dit zijn goede nederlandse enquete sites:
+        </p>
+        <h4><a href="https://html.dt51.net/8433/1516076/?wi=303265&amp;ws=prijsvergelijk" target="blank">Opinieland</a></h4>
+        <h4><a target="_system" href="https://ds1.nl/c/?si=8400&amp;li=1538332&amp;wi=303265&amp;ws=prijsvergelijk">Global Test Market</a></h4>
+        <h4><a target="_system" href="https://ds1.nl/c/?si=8373&amp;li=1477114&amp;wi=303265&amp;ws=prijsvergelijk">Toluna</a></h4>
+        <h4><a target="_system" href="https://lt45.net/c/?si=10710&amp;li=1486752&amp;wi=303265&amp;ws=prijsvergelijk">PanelClix</a></h4>
+        <h4><a target="_system" href="https://ds1.nl/c/?si=8413&amp;li=1457813&amp;wi=303265&amp;ws=prijsvergelijk">I-Say</a></h4>
+        <h4><a target="_system" href="https://dt51.net/c/?si=8783&amp;li=1563874&amp;wi=303265&amp;ws=prijsvergelijk">SAMSAM</a></h4>
+        <h4><a target="_system" href="https://lt45.net/c/?si=13199&amp;li=1579751&amp;wi=303265&amp;ws=prijsvergelijk">Mobrog</a></h4>
+    </div>
+</div>
+
+
+            </div>
+        </div>
+    </ons-page>
+</template>
+
+
+<template style="display: none" id="/besparen/plan">
+    <ons-page class="plain-page app-page" id="/besparen/plan-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button class="hidden page-toolbar-back-button" onclick="fn.open()">
+                    <ons-icon icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+                <ons-back-button class="hidden">Back</ons-back-button>
+            </div>
+            <div class="center">
+                Bespaar Plan
+            </div>
+        </ons-toolbar>
+        <div style="padding: 0 10px">
+            <div class="page-content">
+                <h2>Plan</h2>
+<p>
+    Geld besparen kun je op veel verschillende manieren doen. Hieronder hebben we een lijstje met stappen
+    gemaakt waarmee je kunt beginnen. Deze stappen kun je gebruiken om om meer geld te besparen.
+</p>
+<ul>
+    <li><ons-button onclick="fn.navigator.pushPage('/besparen/apps')">Gebruik apps die je kunnen helpen met besparen</ons-button></li>
+    <li><ons-button onclick="fn.navigator.pushPage('/besparen/coupons')">Gebruik kortings codes</ons-button></li>
+    <li><ons-button onclick="fn.navigator.pushPage('/vergelijken/zorgverzekering')">Kies de goedkoopste zorgverzekering</ons-button></li>
+    <li><ons-button onclick="fn.navigator.pushPage('/vergelijken/alles-in-een')">Kies het meest voordelige alles in één pakket</ons-button></li>
+    <li><ons-button onclick="fn.navigator.pushPage('/vergelijken/energie')">Gebruik onze energie vergelijker</ons-button></li>
+    <li><ons-button onclick="fn.load('/')">Bekijk de blog posts voor besparings tips</ons-button></li>
+</ul>
+
+            </div>
+        </div>
+    </ons-page>
+</template>
+
+
+<!-- vergelijkers -->
+
+
+<template style="display: none" id="/vergelijken/alles-in-een">
+    <ons-page class="app-page vergelijker-page" id="/vergelijken/alles-in-een-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button class="hidden page-toolbar-back-button" onclick="fn.open()">
+                    <ons-icon icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+                <ons-back-button class="hidden">Back</ons-back-button>
+            </div>
+            <div class="center">
+                Alles in één Vergelijker
+            </div>
+        </ons-toolbar>
+        <div style="padding: 10px">
+            <div class="page-content">
+                <script type="text/javascript" src="https://developers.affiliateprogramma.eu/allesin1/general.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://developers.affiliateprogramma.eu/allesin1/style.css" />
+
+<div class="daisyconAllesineenContainer" data-mediaid="303265" data-subid="prijsvergelijk" data-filters="y" data-actioncolor="FF8201" data-basiccolor="3498DB" data-buttontext="Bekijken" data-view="normaal" data-order="regularprice" data-package="internettvbellen" data-limit="10" data-advertiser="all"></div>
+
+            </div>
+        </div>
+    </ons-page>
+</template>
+
+
+<template style="display: none" id="/vergelijken/boekhouden">
+    <ons-page class="app-page vergelijker-page" id="/vergelijken/boekhouden-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button class="hidden page-toolbar-back-button" onclick="fn.open()">
+                    <ons-icon icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+                <ons-back-button class="hidden">Back</ons-back-button>
+            </div>
+            <div class="center">
+                Boekhouden Vergelijker
+            </div>
+        </ons-toolbar>
+        <div style="padding: 10px">
+            <div class="page-content">
+                <script type="text/javascript" src="https://developers.affiliateprogramma.eu/boekhouding/general.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://developers.affiliateprogramma.eu/boekhouding/css/default.css" />
+
+<div class="daisyconBoekhoudComparator" data-mediaid="303265" data-subid="boekhouden" data-aanbieders-tonen="" data-boekhoud-opties-click="" data-package="daisyconBoekhoud_starter" data-selectedmodule="1" data-button="FF8201" data-color="3498DB" data-button-text="Bekijken"></div>
+
+            </div>
+        </div>
+    </ons-page>
+</template>
+
+
+<template style="display: none" id="/vergelijken/dating">
+    <ons-page class="app-page vergelijker-page" id="/vergelijken/dating-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button class="hidden page-toolbar-back-button" onclick="fn.open()">
+                    <ons-icon icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+                <ons-back-button class="hidden">Back</ons-back-button>
+            </div>
+            <div class="center">
+                Dating Vergelijker
+            </div>
+        </ons-toolbar>
+        <div style="padding: 10px">
+            <div class="page-content">
+                <script type="text/javascript" src="https://developers.affiliateprogramma.eu/datingsitevergelijker/vergelijker.js"></script>
+<link rel="stylesheet" type="text/css" href="https://developers.affiliateprogramma.eu/datingsitevergelijker/example.css" />
+
+<div class="daisycon-dating-comperator" undefined="" data-mediaid="303265" data-subid="prijsvergelijk" data-app="no" data-videochat="no" data-personality="no" data-safedating="no" data-mobile="no" data-events="no" data-dating="no" data-relationship="no" data-sex="no" data-cheating="no" data-friendship="no" data-general="no" data-single_parents="no" data-christian="no" data-gay="no" data-highly_educated="no" data-seniors="no" data-age="" data-youth="no" data-country="nl" data-orientation="" data-programs="all" data-advertisers="10" data-float="left" data-button-text="Bekijken" data-button-border="FFFFFF" data-button="FF8201" data-color="3498DB"></div>
+
+            </div>
+        </div>
+    </ons-page>
+</template>
+
+
+<template style="display: none" id="/vergelijken/energie">
+    <ons-page class="app-page vergelijker-page" id="/vergelijken/energie-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button class="hidden page-toolbar-back-button" onclick="fn.open()">
+                    <ons-icon icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+                <ons-back-button class="hidden">Back</ons-back-button>
+            </div>
+            <div class="center">
+                Energie Vergelijker
+            </div>
+        </ons-toolbar>
+        <div style="padding: 10px">
+            <div class="page-content">
+                <script type="text/javascript" src="https://developers.affiliateprogramma.eu/Energievergelijker/general.js"></script>
+<link rel="stylesheet" type="text/css" href="https://developers.affiliateprogramma.eu/Energievergelijker/style.css" />
+
+<div class="daisyconEnergyComparator" data-business="false" data-daisyconenergyactioncolor="FF8201" data-daisyconenergyactionpackets="all" data-daisyconenergyamount="10" data-daisyconenergybasecolor="3498DB" data-daisyconenergycompanies="all" data-daisyconenergyduration="all" data-daisyconenergyduurzaam="all" data-daisyconenergymediaid="303265" data-daisyconenergymeter="enkel" data-daisyconenergypackets="all" data-daisyconenergysave="1" data-daisyconenergyshowactiontable="true" data-daisyconenergysubid="" data-daisyconenergyurl="" data-daisyconenergyview="all"> <div class="daisyconEnergyFilters"></div> <div class="daisyconEnergyTableContainer"></div></div>
+
+            </div>
+        </div>
+    </ons-page>
+</template>
+
+
+<template style="display: none" id="/vergelijken/loterijen">
+    <ons-page class="app-page vergelijker-page" id="/vergelijken/loterijen-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button class="hidden page-toolbar-back-button" onclick="fn.open()">
+                    <ons-icon icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+                <ons-back-button class="hidden">Back</ons-back-button>
+            </div>
+            <div class="center">
+                Loterijen Vergelijker
+            </div>
+        </ons-toolbar>
+        <div style="padding: 10px">
+            <div class="page-content">
+                <script type="text/javascript" src="https://developers.affiliateprogramma.eu/lottery/lottery.js"></script>
+<div class="daisyconLottery" data-buttoncolor="FF8201" data-color="3498DB" data-buttontext="Bekijken" data-filter="showFilters" data-mediaid="303265" data-order="drawing" data-program="all" data-subid="prijsvergelijk" data-view="normaal"></div>
+
+            </div>
+        </div>
+    </ons-page>
+</template>
+
+
+<template style="display: none" id="/vergelijken/sim-only">
+    <ons-page class="app-page vergelijker-page" id="/vergelijken/sim-only-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button class="hidden page-toolbar-back-button" onclick="fn.open()">
+                    <ons-icon icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+                <ons-back-button class="hidden">Back</ons-back-button>
+            </div>
+            <div class="center">
+                Sim-only Vergelijker
+            </div>
+        </ons-toolbar>
+        <div style="padding: 10px">
+            <div class="page-content">
+                <p>
+  	Vind het sim-only abonnement dat het best bij je past. Met deze vergelijk tool kun je alle sim-only abonnementen vergelijken van alle grote 
+telecom maatschappijen.
+</p>
+
+<script type="text/javascript" src="https://developers.affiliateprogramma.eu/Simonlyvergelijker/simonly.js"></script>
+
+<div class="daisyconSimonly" data-4g="0" data-actioncolor="FF8201" data-buttontext="Bekijken" data-color="3498DB" data-duration="all" data-internet="200" data-limit="10" data-mediaid="303265" data-minutes="100" data-network="all" data-order="price" data-price="100" data-program="undefined" data-provider="all" data-renewal="0" data-sms="1000" data-subid="prijsvergelijk" data-view="normal"></div>
+
+            </div>
+        </div>
+    </ons-page>
+</template>
+
+
+<template style="display: none" id="/vergelijken/telecom">
+    <ons-page class="app-page vergelijker-page" id="/vergelijken/telecom-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button class="hidden page-toolbar-back-button" onclick="fn.open()">
+                    <ons-icon icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+                <ons-back-button class="hidden">Back</ons-back-button>
+            </div>
+            <div class="center">
+                Telecom Vergelijker
+            </div>
+        </ons-toolbar>
+        <div style="padding: 10px">
+            <div class="page-content">
+                <script type="text/javascript" src="https://developers.affiliateprogramma.eu/mobielvergelijker/general.js"></script>
+<link rel="stylesheet" type="text/css" href="https://developers.affiliateprogramma.eu/mobielvergelijker/example.min.css" />
+<div class="mobile-comparator-wrapper" data-4g="0" data-actioncolor="FF8201" data-basiccolor="3498DB" data-button_text="Bekijken" data-condition="" data-duration="0" data-entry="10" data-filter_view="all" data-maxab="100" data-maxmob="1000" data-mediaid="303265" data-minint="200" data-minmin="100" data-mobiles="all" data-programs="all" data-provider="all" data-renewal="0" data-subid="prijsvergelijk" data-v="2"></div>
+
+            </div>
+        </div>
+    </ons-page>
+</template>
+
+
+<template style="display: none" id="/vergelijken/uitvaartkosten">
+    <ons-page class="app-page vergelijker-page" id="/vergelijken/uitvaartkosten-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button class="hidden page-toolbar-back-button" onclick="fn.open()">
+                    <ons-icon icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+                <ons-back-button class="hidden">Back</ons-back-button>
+            </div>
+            <div class="center">
+                Uitvaartkosten
+            </div>
+        </ons-toolbar>
+        <div style="padding: 10px">
+            <div class="page-content">
+                <script type="text/javascript" src="https://developers.affiliateprogramma.eu/uitvaart/general.js"></script>
+<link rel="stylesheet" type="text/css" href="https://developers.affiliateprogramma.eu/uitvaart/style.css" />
+
+<div class="daisyconUitvaartComperator" data-buttoncolor="00AEEF" data-mediaid="303265" data-subid="prijsvergelijk" data-programs="all"></div>
+
+            </div>
+        </div>
+    </ons-page>
+</template>
+
+
+<template style="display: none" id="/vergelijken/vakantie">
+    <ons-page class="app-page vergelijker-page" id="/vergelijken/vakantie-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button class="hidden page-toolbar-back-button" onclick="fn.open()">
+                    <ons-icon icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+                <ons-back-button class="hidden">Back</ons-back-button>
+            </div>
+            <div class="center">
+                Vakantie Vergelijker
+            </div>
+        </ons-toolbar>
+        <div style="padding: 10px">
+            <div class="page-content">
+                <script src="https://daisycon.io/widgets/vacation/scripts/dai-verg-gmap.js" data-config="{&quot;sourcePublisher&quot;:{&quot;mediaId&quot;:303265,&quot;subId&quot;:&quot;prijsvergelijk&quot;}}"></script>
+
+
+            </div>
+        </div>
+    </ons-page>
+</template>
+
+
+<template style="display: none" id="/vergelijken/wellness">
+    <ons-page class="app-page vergelijker-page" id="/vergelijken/wellness-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button class="hidden page-toolbar-back-button" onclick="fn.open()">
+                    <ons-icon icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+                <ons-back-button class="hidden">Back</ons-back-button>
+            </div>
+            <div class="center">
+                Wellness Tool
+            </div>
+        </ons-toolbar>
+        <div style="padding: 10px">
+            <div class="page-content">
+                <script src="https://daisycon.io/widgets/wellness-tool/scripts/maps.js" data-config="{&quot;sourcePublisher&quot;:{&quot;mediaId&quot;:303265,&quot;subId&quot;:&quot;prijsvergelijk&quot;}}"></script>
+
+
+            </div>
+        </div>
+    </ons-page>
+</template>
+
+
+<template style="display: none" id="/vergelijken/whitelabeled-energie">
+    <ons-page class="app-page vergelijker-page" id="/vergelijken/whitelabeled-energie-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button class="hidden page-toolbar-back-button" onclick="fn.open()">
+                    <ons-icon icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+                <ons-back-button class="hidden">Back</ons-back-button>
+            </div>
+            <div class="center">
+                Whitelabeled Energie Vergelijker
+            </div>
+        </ons-toolbar>
+        <div style="padding: 10px">
+            <div class="page-content">
+                <script type="text/javascript" src="https://daisycon-energie.whitelabeled.nl/ext/include/lPVhgBfZFJGw5IZe-116"></script>
+
+
+            </div>
+        </div>
+    </ons-page>
+</template>
+
+
+<template style="display: none" id="/vergelijken/zorgverzekering">
+    <ons-page class="app-page vergelijker-page" id="/vergelijken/zorgverzekering-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button class="hidden page-toolbar-back-button" onclick="fn.open()">
+                    <ons-icon icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+                <ons-back-button class="hidden">Back</ons-back-button>
+            </div>
+            <div class="center">
+                Zorgverzekering Vergelijken
+            </div>
+        </ons-toolbar>
+        <div style="padding: 10px">
+            <div class="page-content">
+                <p>
+  Met deze onafhankelijke zorgverkering vergelijker kun je gemakkelijk de goedkoopste	zorgverzekering vinden. Vergelijk zorgverzekeringen die het best bij je passen. 
+</p>
+
+<script src="https://daisycon.io/widgets/healthinsurance/?media_id=303265&amp;code=e6RIi&amp;sub_id=prijsvergelijk"></script>
+
+
+            </div>
+        </div>
+    </ons-page>
+</template>
+
+
+<!-- default pages -->
+
+
+<template style="display: none" id="/besparen/coupons">
+    <ons-page class="default-page app-page" id="/besparen/coupons-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button class="hidden page-toolbar-back-button" onclick="fn.open()">
+                    <ons-icon icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+                <ons-back-button class="hidden">Back</ons-back-button>
+            </div>
+            <div class="center">
+                Kortings Codes
+            </div>
+        </ons-toolbar>
+        <div style="padding: 0 10px">
+            <div class="page-content">
+                <div class="banner-coupon">
+    <div class="container">
+        <h1>Kortings Codes</h1>
+        <p>Kortingscodes zijn een goed manier om geld te besparen. Bekijk de pagina om de belangrijkste couponcodes en coupon websites in de gaten te houden.</p>
+    </div>
+</div>
+
+<div class="container">
+    <h2>Coupon aanbieders</h2>
+    <p>&nbsp;</p>
+    <ul class="link-list">
+        <li>
+            <h4><a href="https://ds1.nl/c/?si=7645&amp;li=1357392&amp;wi=303265&amp;ws=prijsvergelijk" rel="nofollow" target="_system">DealeXtreme - (50% Korting)</a></h4>
+        </li>
+        <li>
+            <h4><a href="https://ds1.nl/c/?si=3758&amp;li=1488474&amp;wi=303265&amp;ws=prijsvergelijk" rel="nofollow" target="_system">Vouchervandaag.nl - De nieuwste coupon codes</a></h4>
+        </li>
+        <li>
+            <h4><a href="https://ds1.nl/c/?si=7630&amp;li=1566982&amp;wi=303265&amp;ws=" rel="nofollow" target="_system">Aliexpress.com
+                    - Coupon codes</a></h4>
+        </li>
+        <li>
+            <h4><a href="https://lt45.net/c/?si=12906&amp;li=1568103&amp;wi=303265&amp;ws=prijsvergelijk" rel="nofollow" target="_system">Cashze.nl - Bespaar elke keer, dat je online shopt!</a></h4>
+        </li>
+    </ul>
+    <p>&nbsp;</p>
+    <h3>De laatse Deals</h3>
+    <p>&nbsp;</p>
+    <div id="product-feed"></div>
+    <script>
+        function processFeed(data) {
+            var products = data.datafeed.programs[0].products;
+            for (var i = 0; i < products.length; i++) {
+                (function (product) {
+                    document.getElementById('product-feed').innerHTML =
+                        '<a class="col col-xxs-12 col-xs-6 col-sm-4 col-lg-3" target="_system" href="' + product.product_info.link + '">\
+<article class="panel panel-primary">\
+<div class="panel-heading">' + product.product_info.title + '</div>\
+<img alt="' + product.product_info.images[0].type + '" \
+src="' + product.product_info.images[0].location + '" \
+style="width: 100%" class="img-responsive">\
+<div class="panel-body">' + product.product_info.description + '<br><br><br>\
+<span class="price-wrapper">\
+<span class="price">' + product.product_info.price + '</span>\
+<span class="priceold">' + product.product_info.price_old + '</span>\
+</span>\
+</div>\
+</article></a>';
+                })(products[i]);
+            }
+            // Create the event.
+            var event = document.createEvent('Event');
+            event.initEvent('productfeed', true, true);
+            document.dispatchEvent(event);
+        }
+    </script>
+    <script async="" defer="" src="https://ess-server.herokuapp.com/daisycon-proxy-jsonp/?filter_id=46958&amp;settings_id=7178&amp;sub_id=prijsvergelijk&amp;callback=processFeed"></script>
+</div>
+
+            </div>
+        </div>
+    </ons-page>
+</template>
+
+
+<template style="display: none" id="/">
+    <ons-page class="default-page app-page" id="/-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button class="hidden page-toolbar-back-button" onclick="fn.open()">
+                    <ons-icon icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+                <ons-back-button class="hidden">Back</ons-back-button>
+            </div>
+            <div class="center">
+                Welkom
+            </div>
+        </ons-toolbar>
+        <div style="padding: 0 10px">
+            <div class="page-content">
+                <div class="banner-main">
+    <div class="container">
+        <div class="banner-content">
+            <h1>Vergelijk en Bespaar!</h1>
+            <p><ons-button onclick="fn.load('/vergelijken/overzicht')">Vergelijk</ons-button></p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+       <div class="col-xs-12 col-sm-6">
+    <h2>Besparen</h2>
+    <p class="besparen-description">
+        Geld besparen kun je op veel verschillende manieren doen. Hieronder hebben we een lijstje met stappen
+        gemaakt waarmee je kunt beginnen. Deze stappen kun je gebruiken om om meer geld te besparen.
+
+        <ons-button onclick="fn.navigator.pushPage('/besparen/plan')">Maak een bespaar plan</ons-button>
+    </p>
+    <ul class="btn-list">
+        <li><ons-button onclick="fn.navigator.pushPage('/besparen/apps')">Apps die je kunnen helpen met besparen</ons-button></li>
+        <li><ons-button onclick="fn.navigator.pushPage('/besparen/coupons')">Gebruik kortings codes</ons-button></li>
+        <li><ons-button onclick="fn.navigator.pushPage('/vergelijken/zorgverzekering')">Kies de goedkoopste zorgverzekering</ons-button></li>
+        <li><ons-button onclick="fn.navigator.pushPage('/vergelijken/alles-in-een')">Kies het meest voordelige alles in één pakket</ons-button></li>
+        <li><ons-button onclick="fn.navigator.pushPage('/vergelijken/energie')">Gebruik onze energie vergelijker</ons-button></li>
+        <li><ons-button onclick="fn.navigator.pushPage('/vergelijken/energie')">Bekijk de blog posts hieronder voor besparings tips</ons-button></li>
+    </ul>
+</div>
+
+
+<div class="col-xs-12 col-sm-6">
+    <h2>Vergelijken</h2>
+    <div class="container-fluid beste-vergelijkers">
+        <div class="row">
+            <ons-button onclick="fn.navigator.pushPage('/vergelijken/alles-in-een')">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Alles in één Vergelijker</div>
+                    <img class="img-responsive" src="./assets/img/alles-in-een.png" />
+                </div>
+            </ons-button>
+            <ons-button onclick="fn.navigator.pushPage('/vergelijken/energie')">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Energie Vergelijker</div>
+                    <img class="img-responsive" src="./assets/img/energie.png" />
+                </div>
+            </ons-button>
+            <ons-button onclick="fn.navigator.pushPage('/vergelijken/zorgverzekering')">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Zorgverzekering Vergelijker</div>
+                    <img class="img-responsive" src="./assets/img/zorgverzekeringen.png" />
+                </div>
+            </ons-button>
+            <ons-button onclick="fn.navigator.pushPage('/vergelijken/sim-only')">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Sim-only Vergelijker</div>
+                    <img class="img-responsive" src="./assets/img/sim-only.png" />
+                </div>
+            </ons-button>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <ons-button onclick="fn.load('/vergelijken/overzicht')">Bekijk alle vergelijksers</ons-button>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Blog</h2>
+            
+            <article class="first">
+                <div class="article-head">
+                    <h3 class="title"><div class="clickable" onclick="fn.navigator.pushPage('/blog/bespaartips-een-vaatwasser-of-met-de-hand-afwassen/')">Bespaartips: Een vaatwasser of met de hand afwassen?</div></h3>
+                    <p class="date">Sep 29, 2018</p>
+                </div>
+                <div class="article-content">
+                    Wie zegt dat besparen niet leuk kan zijn heeft het mis! Je zou denken dat met de hand afwassen je meer geld bespaard maar dat blijkt niet het geval te zijn. Over het algemeen kunt u het beste een vaatwassen gebruiken in plaats van met de hand afwassen. We verspillen onnodig veel kostbare tijd, water en energie aan de afwas terwijl een vaatwasser dit veel zuiniger kan.
+                    <ons-button onclick="fn.navigator.pushPage('/blog/bespaartips-een-vaatwasser-of-met-de-hand-afwassen/')">Read more</ons-button>
+                </div>
+            </article>
+            
+            
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </ons-page>
+</template>
+
+
+<template style="display: none" id="/vergelijken/overzicht">
+    <ons-page class="default-page app-page" id="/vergelijken/overzicht-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button class="hidden page-toolbar-back-button" onclick="fn.open()">
+                    <ons-icon icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+                <ons-back-button class="hidden">Back</ons-back-button>
+            </div>
+            <div class="center">
+                Overzicht
+            </div>
+        </ons-toolbar>
+        <div style="padding: 0 10px">
+            <div class="page-content">
+                <div class="banner-vergelijken">
+    <div class="container">
+        <h1>Vergelijk en bespaar!</h1>
+        <p>Overzicht van alle manieren op te besparen.</p>
+    </div>
+</div>
+
+<div class="vergelijkers-overzicht container">
+    <div class="container-fluid">
+        <div class="row">
+            
+            
+            <div data-show-on-site="false" data-show-on-app="false" class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Alles in één Vergelijker</div>
+                    <img class="img-responsive img-rounded" src="./assets/img/alles-in-een.png" />
+                    <div class="panel-body">
+                        <div class="text">
+                            Alles-in-één-vergelijker, vergelijk internet, bellen en televisie.
+                        </div>
+                        <div>
+                            <ons-button onclick="fn.navigator.pushPage('/vergelijken/alles-in-een')">Start</ons-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div data-show-on-site="" data-show-on-app="" class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Boekhouden Vergelijker</div>
+                    <img class="img-responsive img-rounded" src="./assets/img/boekhouden.png" />
+                    <div class="panel-body">
+                        <div class="text">
+                            Vergelijk online boekhoudpaketten.
+                        </div>
+                        <div>
+                            <ons-button onclick="fn.navigator.pushPage('/vergelijken/boekhouden')">Start</ons-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div data-show-on-site="" data-show-on-app="" class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Dating Vergelijker</div>
+                    <img class="img-responsive img-rounded" src="./assets/img/dating.png" />
+                    <div class="panel-body">
+                        <div class="text">
+                            Vergelijk het brede aanbod van datingwebsites.
+                        </div>
+                        <div>
+                            <ons-button onclick="fn.navigator.pushPage('/vergelijken/dating')">Start</ons-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div data-show-on-site="" data-show-on-app="" class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Energie Vergelijker</div>
+                    <img class="img-responsive img-rounded" src="./assets/img/energie.png" />
+                    <div class="panel-body">
+                        <div class="text">
+                            Vergelijk de belangrijkste Nederlandse energiemaatschappijen.
+                        </div>
+                        <div>
+                            <ons-button onclick="fn.navigator.pushPage('/vergelijken/energie')">Start</ons-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div data-show-on-site="" data-show-on-app="" class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Loterijen Vergelijker</div>
+                    <img class="img-responsive img-rounded" src="./assets/img/loterijen.png" />
+                    <div class="panel-body">
+                        <div class="text">
+                            Vergelijk loterijen.
+                        </div>
+                        <div>
+                            <ons-button onclick="fn.navigator.pushPage('/vergelijken/loterijen')">Start</ons-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div data-show-on-site="" data-show-on-app="" class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Sim-only Vergelijker</div>
+                    <img class="img-responsive img-rounded" src="./assets/img/sim-only.png" />
+                    <div class="panel-body">
+                        <div class="text">
+                            Vind het sim-only abonnement dat het best bij je past ✅ Met deze vergelijk tool kun je alle sim-only abonnementen vergelijken van alle grote telecom maatschappijen.
+                        </div>
+                        <div>
+                            <ons-button onclick="fn.navigator.pushPage('/vergelijken/sim-only')">Start</ons-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div data-show-on-site="" data-show-on-app="" class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Telecom Vergelijker</div>
+                    <img class="img-responsive img-rounded" src="./assets/img/telecom.png" />
+                    <div class="panel-body">
+                        <div class="text">
+                            Vergelijk mobiele telefoons + abonnement.
+                        </div>
+                        <div>
+                            <ons-button onclick="fn.navigator.pushPage('/vergelijken/telecom')">Start</ons-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div data-show-on-site="false" data-show-on-app="false" class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Uitvaartkosten</div>
+                    <img class="img-responsive img-rounded" src="./assets/img/uitvaartkosten.png" />
+                    <div class="panel-body">
+                        <div class="text">
+                            Uitvaartkosten
+                        </div>
+                        <div>
+                            <ons-button onclick="fn.navigator.pushPage('/vergelijken/uitvaartkosten')">Start</ons-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div data-show-on-site="" data-show-on-app="false" class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Vakantie Vergelijker</div>
+                    <img class="img-responsive img-rounded" src="./assets/img/vakanties.png" />
+                    <div class="panel-body">
+                        <div class="text">
+                            Bekijk op een kaart alle beschikbare accommodaties op een locatie.
+                        </div>
+                        <div>
+                            <ons-button onclick="fn.navigator.pushPage('/vergelijken/vakantie')">Start</ons-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div data-show-on-site="" data-show-on-app="false" class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Wellness Tool</div>
+                    <img class="img-responsive img-rounded" src="./assets/img/wellness.png" />
+                    <div class="panel-body">
+                        <div class="text">
+                            Met de wellness tool zoek je wellness locaties bij jou in de buurt ✅
+                        </div>
+                        <div>
+                            <ons-button onclick="fn.navigator.pushPage('/vergelijken/wellness')">Start</ons-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div data-show-on-site="false" data-show-on-app="false" class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Whitelabeled Energie Vergelijker</div>
+                    <img class="img-responsive img-rounded" src="./assets/img/whitelabeled-energie.png" />
+                    <div class="panel-body">
+                        <div class="text">
+                            De energievergelijker van Whitelabeled verkleint de complexiteit van de energiemarkt en biedt een duidelijk overzicht van alle energiecontracten.
+                        </div>
+                        <div>
+                            <ons-button onclick="fn.navigator.pushPage('/vergelijken/whitelabeled-energie')">Start</ons-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div data-show-on-site="" data-show-on-app="" class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Zorgverzekering Vergelijken</div>
+                    <img class="img-responsive img-rounded" src="./assets/img/zorgverzekeringen.png" />
+                    <div class="panel-body">
+                        <div class="text">
+                            Zorgverzekeringen vergelijken? ✅ Vind de goedkoopste of beste zorgverzekering ✅
+                        </div>
+                        <div>
+                            <ons-button onclick="fn.navigator.pushPage('/vergelijken/zorgverzekering')">Start</ons-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </ons-page>
+</template>
+
+
+
+
+
+    <noscript>
+        <!-- The No-Script Modal -->
+        <div id="noscript-modal" class="modal" role="dialog" aria-expanded="true" style="position: fixed; z-index: 200000; padding-top: 100px; left: 0px; top: 0px; width: 100%; height: 100%; overflow: auto; background-color: rgba(0, 0, 0, 0.9); transition: padding-top 100ms ease-out; box-sizing: border-box; font-family: 'Ubuntu', sans-serif, Verdana, Geneva, Tahoma;">
+            <div class="modal-content" style="margin: auto; display: block; width: 80%; max-width: 700px; padding: 40px; background: white; box-sizing: border-box; ;">
+                <h2 class="text-danger mt-1 mb-4" style="color: rgb(236, 78, 32); margin-top: 6px; margin-bottom: 36px; box-sizing: border-box; ;">Belangrijk!</h2>
+                <p class="noscript-msg" style="box-sizing: border-box; ;">
+                    Deze website vereist het gebruik van javascript.
+                    <br>
+                    <a href="https://www.enable-javascript.com/" target="_system" class="text-primary" style="background-color: transparent; color: rgb(1, 111, 185); box-sizing: border-box; text-decoration: none; ;">
+                        Hier vind u instructies voor het aanzetten van javascript</a>.
+                </p>
+            </div>
+        </div>
+    </noscript>
+
+
+    <!-- ******************************************************************************************************************************** -->
+
+    <!-- This may not be loaded when in webview and offline (sw will cache it offline in modern browsers). Lets hope android webviews dont need any polyfills -->
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script> <!-- only load for widgets so script does not have to be installed locally -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

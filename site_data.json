@@ -1,0 +1,24 @@
+---
+---
+{
+    "data": {{ site.data | jsonify }},
+    "pages": {{ site.pages | jsonify }},
+    "posts": {{ site.posts | jsonify }},
+    "static_files": {{ site.static_files | jsonify }},
+    "keywords": {{ site.keywords | jsonify  }},
+    "description": {{ site.description | jsonify  }},
+    "logo": {{ site.logo | jsonify  }},
+    "theme_color": {{ site.theme_color | jsonify  }},
+    "dribbble_username": {{ site.dribbble_username | jsonify  }},
+    "facebook_username": {{ site.facebook_username  | jsonify }},
+    "flickr_username": {{ site.flickr_username | jsonify  }},
+    "github_username": {{ site.github_username | jsonify  }},
+    "instagram_username": {{ site.instagram_username | jsonify  }},
+    "linkedin_username": {{ site.linkedin_username | jsonify  }},
+    "pinterest_username": {{ site.pinterest_username | jsonify  }},
+    "twitter_username": {{ site.twitter_username | jsonify  }},
+    "youtube_username": {{ site.youtube_username | jsonify  }},
+    "googleplus_username": {{ site.googleplus_username | jsonify  }},
+    "lang": {{ site.lang  | jsonify }},
+    "google_analytics": {{ site.google_analytics | jsonify  }}
+}

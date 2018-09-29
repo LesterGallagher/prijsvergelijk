@@ -1,35 +1,40 @@
 - title: Geld Verdienen
-  url: /geld-verdienen.html
+  url: /geld-verdienen
+  icon: ion-cash
 - title: Besparings apps
-  url: /besparen/apps.html
+  url: /besparen/apps
+  icon: ion-leaf
 - title: Korting codes
-  url: /besparen/coupons.html
+  url: /besparen/coupons
+  icon: fa-scissors
 - title: Vergelijken
   url: /vergelijken
+  icon: fa-balance-scale
   sublinks:
   - title: Overzicht
-    url: /vergelijken/overzicht.html
+    url: /vergelijken/overzicht
+    icon: md-view_module
   - title: separator
   - title: Alles in één
-    url: /vergelijken/alles-in-een.html
+    url: /vergelijken/alles-in-een
   - title: Dating
-    url: /vergelijken/dating.html
+    url: /vergelijken/dating
   - title: Loterijen
-    url: /vergelijken/loterijen.html
+    url: /vergelijken/loterijen
   - title: Telecom
-    url: /vergelijken/telecom.html
+    url: /vergelijken/telecom
   - title: Vakantie
-    url: /vergelijken/vakantie.html
+    url: /vergelijken/vakantie
   - title: Whitelabeled Energie
-    url: /vergelijken/whitelabeled-energie.html
+    url: /vergelijken/whitelabeled-energie
   - title: Boekhouden
-    url: /vergelijken/boekhouden.html
+    url: /vergelijken/boekhouden
   - title: Sim-only
-    url: /vergelijken/sim-only.html
+    url: /vergelijken/sim-only
   - title: Uitvaartkosten
-    url: /vergelijken/uitvaartkosten.html
+    url: /vergelijken/uitvaartkosten
   - title: Wellness
-    url: /vergelijken/wellness.html
+    url: /vergelijken/wellness
   - title: Zorgverzkering
-    url: /vergelijken/zorgverzekering.html
+    url: /vergelijken/zorgverzekering
 

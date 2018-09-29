@@ -1,202 +1,36 @@
 ---
 title: Overzicht
 layout: default
-description: Overzicht van alle manieren op te besparen
+description: Overzicht van alle manieren op te besparen.
 ---
 
 <div class="banner-vergelijken">
     <div class="container">
         <h1>Vergelijk en bespaar!</h1>
-        <p></p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+        <p>{{ page.description }}</p>
     </div>
 </div>
 
 <div class="vergelijkers-overzicht container">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
+            {% assign vergelijkers = site.pages | where: "layout", "vergelijker" %}
+            {% for page in vergelijkers %}
+            <div data-show-on-site="{{ page.show_on_site }}" data-show-on-app="{{ page.show_on_app }}" class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
                 <div class="panel panel-primary">
-                    <div class="panel-heading">Alles in één Vergelijker</div>
-                    <img class="img-responsive" src="{{ '/assets/img/alles-in-een.png' | absolute_url }}" class="img-rounded">
+                    <div class="panel-heading">{{ page.title }}</div>
+                    <img class="img-responsive img-rounded" src="{{ page.image }}">
                     <div class="panel-body">
                         <div class="text">
-
-                            Alles-in-één-vergelijker, vergelijk internet, bellen en televisie.
+                            {{ page.short_description | default: page.description }}
                         </div>
                         <div>
-                            <a href="alles-in-een.html" class="btn btn-primary">Start</a>
+                            <a href="{{ page.url | replace: '.html', '' }}" class="btn btn-primary">Start</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">Dating Vergelijker</div>
-                    <img class="img-responsive" src="{{ '/assets/img/dating.png' | absolute_url }}" class="img-rounded">
-                    <div class="panel-body">
-                        <div class="text">
-                            Vergelijk het brede aanbod van datingwebsites.
-
-                        </div>
-                        <div>
-                            <a href="dating.html" class="btn btn-primary">Start</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">Energie Vergelijker</div>
-                    <img class="img-responsive" src="{{ '/assets/img/energie.png' | absolute_url }}" class="img-rounded">
-                    <div class="panel-body">
-                        <div class="text">
-                            Vergelijk de belangrijkste Nederlandse energiemaatschappijen.
-
-                        </div>
-                        <div>
-                            <a href="energie.html" class="btn btn-primary">Start</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">Uitvaartkosten</div>
-                    <img class="img-responsive" src="{{ '/assets/img/uitvaartkosten.png' | absolute_url }}" class="img-rounded">
-                    <div class="panel-body">
-                        <div class="text">
-
-                            Uitvaartkosten.
-                        </div>
-                        <div>
-                            <a href="uitvaartkosten.html" class="btn btn-primary">Start</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">Zorgverzekering Vergelijker</div>
-                    <img class="img-responsive" src="{{ '/assets/img/zorgverzekeringen.png' | absolute_url }}" class="img-rounded">
-                    <div class="panel-body">
-                        <div class="text">
-
-                            Vergeljik zorgverzekeringen.
-                        </div>
-                        <div>
-                            <a href="zorgvezekering.html" class="btn btn-primary">Start</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">Vakantie Vergelijker</div>
-                    <img class="img-responsive" src="{{ '/assets/img/vakanties.png' | absolute_url }}" class="img-rounded">
-                    <div class="panel-body">
-                        <div class="text">
-                            Bekijk op een kaart alle beschikbare accommodaties op een locatie.
-
-                        </div>
-                        <div>
-                            <a href="vakantie.html" class="btn btn-primary">Start</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">Loterijen Vergelijker</div>
-                    <img class="img-responsive" src="{{ '/assets/img/loterijen.png' | absolute_url }}" class="img-rounded">
-                    <div class="panel-body">
-                        <div class="text">
-
-                            Vergelijk loterijen.
-                        </div>
-                        <div>
-                            <a href="loterijen.html" class="btn btn-primary">Start</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">Sim-only Vergeljker</div>
-                    <img class="img-responsive" src="{{ '/assets/img/sim-only.png' | absolute_url }}" class="img-rounded">
-                    <div class="panel-body">
-                        <div class="text">
-
-                            Vergelijk sim-only abonnementen.
-                        </div>
-                        <div>
-                            <a href="sim-only.html" class="btn btn-primary">Start</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">Telecom Vergelijker</div>
-                    <img class="img-responsive" src="{{ '/assets/img/telecom.png' | absolute_url }}" class="img-rounded">
-                    <div class="panel-body">
-                        <div class="text">
-                            Vergelijk mobiele telefoons + abonnement.
-                        </div>
-                        <div>
-                            <a href="telecom.html" class="btn btn-primary">Start</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">Wellness Vergelijker</div>
-                    <img class="img-responsive" src="{{ '/assets/img/wellness.png' | absolute_url }}" class="img-rounded">
-                    <div class="panel-body">
-                        <div class="text">
-                            Bekijk een een kaart met alle beschikbare welness accommodaties in Nederland.
-                        </div>
-                        <div>
-                            <a href="wellness.html" class="btn btn-primary">Start</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">Whitelabeled Energie Vergelijker</div>
-                    <img class="img-responsive" src="{{ '/assets/img/whitelabeled-energie.png' | absolute_url }}" class="img-rounded">
-                    <div class="panel-body">
-                        <div class="text">
-                            De energievergelijker van Whitelabeled verkleint de complexiteit van de
-                            energiemarkt en biedt een duidelijk overzicht van alle energiecontracten.
-                        </div>
-                        <div>
-                            <a href="whitelabeled-energie.html" class="btn btn-primary">Start</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">Boekhouden Vergelijker</div>
-                    <img class="img-responsive" src="{{ '/assets/img/boekhouden.png' | absolute_url }}" class="img-rounded">
-                    <div class="panel-body">
-                        <div class="text">
-                            Vergelijk online boekhoudpaketten.
-                        </div>
-                        <div>
-                            <a href="boekhouden.html" class="btn btn-primary">Start</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            {% endfor %}
         </div>
     </div>
 </div>

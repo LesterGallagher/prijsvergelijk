@@ -1,0 +1,131 @@
+---
+---
+<!-- splitter -->
+<template style="display: none" id="splitter">
+    <ons-page id="splitter-page">
+        <ons-splitter>
+            <ons-splitter-side id="menu" side="left" width="220px" collapse>
+                <ons-page>
+                    <ons-list>
+                        <ons-list-item onclick="fn.load('/')" tappable>
+                            <ons-icon icon="md-home"></ons-icon>&nbsp; Overview
+                        </ons-list-item>
+                        {% assign links = site.data.navigation %}
+                        {% for link in links %}
+                        {% if link.url == '/vergelijken' %}{% assign url = '/vergelijken/overzicht' %}
+                        {% else %}{% assign url = link.url %}
+                        {% endif %}
+                        <ons-list-item onclick="fn.load('{{ url }}')" tappable>
+                            <ons-icon icon="{{ link.icon }}"></ons-icon>&nbsp; {{ link.title }}
+                        </ons-list-item>
+                        {% endfor %}
+                    </ons-list>
+                </ons-page>
+            </ons-splitter-side>
+            <ons-splitter-content id="content" page="/"></ons-splitter-content>
+        </ons-splitter>
+    </ons-page>
+</template>
+
+<!-- posts -->
+
+{% for post in site.posts %}
+<template style="display: none" id="{{ post.url }}/">
+    <ons-page class="app-page post" id="{{ post.url }}-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-back-button>Back</ons-back-button>
+            </div>
+            <div class="center">
+                {{ post.title }}
+            </div>
+        </ons-toolbar>
+        <div style="padding: 0 10px">
+            <div class="article-head">
+                <h1 class="title">{{ post.title }}</h1>
+                <p class="date">{{ post.date | date: "%b %d, %Y" }}</p>
+            </div>
+            <div class="article-content">
+                {{ post.content | markdownify }}
+            </div>
+        </div>
+    </ons-page>
+</template>
+{% if forloop.last %}{% else %}{% endif %}
+{% endfor %}
+<!-- pages -->
+{% assign pages = site.pages | where: "layout", "page" %}
+{% for page in pages %}
+<template style="display: none" id="{{ page.url |  replace: '.html', '' }}">
+    <ons-page class="plain-page app-page" id="{{ page.url |  replace: '.html', '' }}-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button class="hidden page-toolbar-back-button" onclick="fn.open()">
+                    <ons-icon icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+                <ons-back-button class="hidden">Back</ons-back-button>
+            </div>
+            <div class="center">
+                {{ page.title }}
+            </div>
+        </ons-toolbar>
+        <div style="padding: 0 10px">
+            <div class="page-content">
+                {{ page.content | markdownify }}
+            </div>
+        </div>
+    </ons-page>
+</template>
+{% if forloop.last %}{% else %}{% endif %}
+{% endfor %}
+<!-- vergelijkers -->
+{% assign vergelijkers = site.pages | where: "layout", "vergelijker" %}
+{% for page in vergelijkers %}
+<template style="display: none" id="{{ page.url |  replace: '.html', '' }}">
+    <ons-page class="app-page vergelijker-page" id="{{ page.url |  replace: '.html', '' }}-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button class="hidden page-toolbar-back-button" onclick="fn.open()">
+                    <ons-icon icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+                <ons-back-button class="hidden">Back</ons-back-button>
+            </div>
+            <div class="center">
+                {{ page.title }}
+            </div>
+        </ons-toolbar>
+        <div style="padding: 10px">
+            <div class="page-content">
+                <iframe class="vergelijker-iframe" src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </ons-page>
+</template>
+{% if forloop.last %}{% else %}{% endif %}
+{% endfor %}
+<!-- default pages -->
+{% assign defaultpages = site.pages | where: "layout", "default" %}
+{% for page in defaultpages %}
+<template style="display: none" id="{{ page.url |  replace: '.html', '' }}">
+    <ons-page class="default-page app-page" id="{{ page.url |  replace: '.html', '' }}-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button class="hidden page-toolbar-back-button" onclick="fn.open()">
+                    <ons-icon icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+                <ons-back-button class="hidden">Back</ons-back-button>
+            </div>
+            <div class="center">
+                {{ page.title }}
+            </div>
+        </ons-toolbar>
+        <div style="padding: 0 10px">
+            <div class="page-content">
+                {{ page.content | markdownify }}
+            </div>
+        </div>
+    </ons-page>
+</template>
+{% if forloop.last %}{% else %}{% endif %}
+{% endfor %}
+

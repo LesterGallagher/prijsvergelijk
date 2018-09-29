@@ -25,7 +25,7 @@ function daisyconFeed(params, container) {
         for(var i = 0; i < products.length; i++) {
             (function(product) {
                 $(container).append($(
-'<a class="col col-xxs-12 col-xs-6 col-sm-4 col-lg-3" target="_blank" href="' + product.product_info.link + '"><article class="panel panel-primary">\
+'<a class="col col-xxs-12 col-xs-6 col-sm-4 col-lg-3" target="_system" href="' + product.product_info.link + '"><article class="panel panel-primary">\
 <div class="panel-heading">' + product.product_info.title + '</div>\
 <img alt="' + product.product_info.images[0].type + '" \
 src="' + product.product_info.images[0].location + '" \

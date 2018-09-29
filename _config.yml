@@ -11,6 +11,15 @@ description: BespaarMaar geeft je tips over besparen en helpt helpt je met het v
     Wij bieden een groot aantal verschillende onafhankelijke vergelijkings tools aan die je kunt gebruiken om de beste leverancier te vinden. 
 theme_color: '#FF8201'
 baseurl: 
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - package.json
+  - Gruntfile.js
+  - node_modules
+  - app
 collections:
   posts:
     title: Posts
@@ -25,6 +34,17 @@ defaults:
     description: ''
     title: ''
     layout: post
+- scope:
+    path: 'vergelijken'
+  values:
+    description: ''
+    title: ''
+    layout: vergelijker
+    show_on_site: true
+    show_on_app: true
+    short_description: 
+    description: 
+    iamge: 
 dribbble_username: es_studio
 facebook_username: ES-Studio-2052606714783317
 flickr_username: es_studio
