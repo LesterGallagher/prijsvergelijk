@@ -10,7 +10,7 @@ body {
 }
 
 a {
-    color: #f28227!important;
+    color: #FF8201!important;
 }
 
 a:link {
@@ -72,7 +72,7 @@ ons-button {
 }
 
 .link-list .ons-icon {
-    color: #f28227;
+    color: #FF8201;
     font-size: 20px;
 }
 
@@ -152,6 +152,7 @@ ons-button {
 
 .besparen-description ons-button {
     margin-right: 100%;
+    margin-top: 5px;
 }
 
 .article-content ons-button {
@@ -160,8 +161,45 @@ ons-button {
     margin-bottom: 20px;
 }
 
-.btn-list .list-item {
-    text-transform: capitalize;
+.vergelijker-iframe {
+    width: 100%;
+    height: calc(100vh - 44px);
+}
+
+.vergelijker-page .page__content {
+    overflow-y: hidden;
+}
+
+
+.rating-number {
+    display: block;
+    float: right;
+    font-weight: bold;
+}
+
+.ratingValue {
+    width: 100px;
+    height: 18.75px;
+    background: url('../assets/img/stars.png') no-repeat left center;
+    background-size: cover;
+    display: inline-block;
+    position: relative;
+    float: right;
+    color: transparent;
+}
+
+.ratingValue span {
+    background: url('../assets/img/stars-full.png') no-repeat left center;
+    background-size: cover;
+    display: block;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+}
+
+.geld-verdienen-row li::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 @media screen and (max-width: 992px) {

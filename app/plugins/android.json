@@ -24,6 +24,12 @@
     },
     "cordova-plugin-browsersync": {
       "PACKAGE_NAME": "com.EchoSierraStudio.Kadaster_Kaart"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.EchoSierraStudio.BespaarMaar"
+    },
+    "cordova-plugin-headercolor": {
+      "PACKAGE_NAME": "com.EchoSierraStudio.BespaarMaar"
     }
   },
   "dependent_plugins": {}

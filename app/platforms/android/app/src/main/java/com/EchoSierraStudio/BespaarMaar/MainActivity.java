@@ -17,7 +17,7 @@
        under the License.
  */
 
-package com.EchoSierraStudio.Kadaster_Kaart;
+package com.EchoSierraStudio.BespaarMaar;
 
 import android.os.Bundle;
 import org.apache.cordova.*;

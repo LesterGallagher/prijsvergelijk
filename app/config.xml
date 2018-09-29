@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.EchoSierraStudio.Kadaster_Kaart" version="1.2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Kadaster Kaart</name>
+<widget id="com.EchoSierraStudio.BespaarMaar" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>BespaarMaar</name>
     <description>
-        Met de Kadaster kaart app kunt u gemakkelijk informatie opzoeken over percelen die geregistreerd staan bij het Kadaster.
+        BespaarMaar geeft je tips over besparen en helpt helpt je met het vergelijken van verzekering, abonnementen, etc.
+        Wij bieden een groot aantal verschillende onafhankelijke vergelijkings tools aan die je kunt gebruiken om de beste leverancier te vinden. 
     </description>
-    <author email="polyismstudio@gmail.com" href="https://esstudio.site/">
+    <author email="support@esstudio.site" href="https://esstudio.site/">
         Sem Postma
     </author>
     <content src="index.html" />
@@ -12,7 +13,7 @@
     <allow-navigation href="https://echosierrastudio.github.io/EchoSierraStudio/privacy-policy.html" />
     <allow-navigation href="https://esstudio.site/*" />
     <allow-navigation href="https://esstudio.site" />
-    <allow-navigation href="mailto:polyismstudio@gmail.com" />
+    <allow-navigation href="mailto:contact@esstudio.site" />
     <allow-navigation href="http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -20,6 +21,7 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <preference name="StatusBarBackgroundColor" value="#e47400" />
     <platform name="android">
         <icon density="ldpi" src="res/icon/android/ldpi.png" />
         <icon density="mdpi" src="res/icon/android/mdpi.png" />
@@ -34,6 +36,7 @@
         <splash density="port-xxhdpi" src="res/screen/android/splash-port-xxhdpi.png" />
         <splash density="port-xxxhdpi" src="res/screen/android/splash-port-xxxhdpi.png" />
         <allow-intent href="market:*" />
+        <preference name="HeaderColor" value="#ff8201" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
@@ -81,6 +84,8 @@
     <plugin name="cordova-plugin-extension" spec="^1.5.4" />
     <plugin name="cordova-plugin-admobpro" spec="^2.31.6" />
     <plugin name="cordova-plugin-browsersync" spec="^1.1.0" />
+    <plugin name="cordova-plugin-statusbar" spec="^2.4.2" />
+    <plugin name="cordova-plugin-headercolor" spec="^1.0.0" />
     <engine name="browser" spec="^5.0.3" />
     <engine name="android" spec="^7.0.0" />
 </widget>

@@ -37,7 +37,9 @@
       "cordova-plugin-extension": {},
       "cordova-plugin-whitelist": {},
       "cordova-plugin-admobpro": {},
-      "cordova-plugin-browsersync": {}
+      "cordova-plugin-browsersync": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-headercolor": {}
     },
     "platforms": [
       "browser",
