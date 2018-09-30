@@ -18,6 +18,7 @@ fields:
   label: categories
   description: pagina catagorien
 pages:
+- _posts/bespaartips-voor-het-koken.md
 - _posts/2018-09-30-bespaartips-voor-gas-en-energieverbruik.md
 - _posts/2018-09-29-bespaartips-een-vaatwasser-of-met-de-hand-afwassen.md
 - _posts/2018-09-29-geld-besparen-op-printer-inkt.md
