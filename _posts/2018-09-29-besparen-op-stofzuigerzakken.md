@@ -7,6 +7,7 @@ image: ''
 categories: []
 
 ---
+![](/uploads/vacuum-cleaner-657719_1920.jpg)
 
 Omdat stofzuigerzakken aardig prijzig zijn valt hier ook makkelijk te besparen. De meeste stofzuigerzakken zijn wel duurzaam, maar worden niet duurzaam gebruikt. Men gooit natuurlijk de stofzuigerzak weg nadat deze vol zit, terwijl het een hele kleine moeite is om deze even te legen in de prullenbak. Mocht het mondstuk van de stofzuigerzak losraken dan kunt u deze makkelijk nieten met de simpelste nietjes.
 
