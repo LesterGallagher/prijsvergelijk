@@ -8,7 +8,7 @@
                 <ons-page>
                     <ons-list>
                         <ons-list-item onclick="fn.load('/')" tappable>
-                            <ons-icon icon="md-home"></ons-icon>&nbsp; Overview
+                            <ons-icon icon="md-home"></ons-icon>&nbsp; Overzicht
                         </ons-list-item>
                         {% assign links = site.data.navigation %}
                         {% for link in links %}
@@ -20,7 +20,7 @@
                         </ons-list-item>
                         {% endfor %}
                         <ons-list-item onclick="fn.load('/about.html')" tappable>
-                            <ons-icon icon="fa-cog"></ons-icon>&nbsp; Overview
+                            <ons-icon icon="fa-cog"></ons-icon>&nbsp; Over deze App
                         </ons-list-item>
                     </ons-list>
                 </ons-page>
@@ -37,12 +37,12 @@
                 <ons-toolbar-button class="hidden page-toolbar-back-button" onclick="fn.open()">
                     <ons-icon icon="md-menu"></ons-icon>
                 </ons-toolbar-button>
-                <ons-back-button class="hidden">Back</ons-back-button>
+                <ons-back-button class="hidden">Terug</ons-back-button>
             </div>
-            <div class="center">About</div>
+            <div class="center">Overzicht</div>
         </ons-toolbar>
         <div style="padding: 0 10px">
-            <h2>About</h2>
+            <h2>Over deze App</h2>
             <p>
                 {{ site.description }}
             </p>

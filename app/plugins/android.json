@@ -7,28 +7,28 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.EchoSierraStudio.Kadaster_Kaart"
-    },
-    "cordova-plugin-device": {
-      "PACKAGE_NAME": "com.EchoSierraStudio.Kadaster_Kaart"
-    },
-    "cordova-plugin-dialogs": {
-      "PACKAGE_NAME": "com.EchoSierraStudio.Kadaster_Kaart"
-    },
-    "cordova-plugin-extension": {
-      "PACKAGE_NAME": "com.EchoSierraStudio.Kadaster_Kaart"
-    },
     "cordova-plugin-admobpro": {
-      "PACKAGE_NAME": "com.EchoSierraStudio.Kadaster_Kaart"
+      "PACKAGE_NAME": "com.EchoSierraStudio.BespaarMaar"
     },
     "cordova-plugin-browsersync": {
-      "PACKAGE_NAME": "com.EchoSierraStudio.Kadaster_Kaart"
+      "PACKAGE_NAME": "com.EchoSierraStudio.BespaarMaar"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.EchoSierraStudio.BespaarMaar"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.EchoSierraStudio.BespaarMaar"
+    },
+    "cordova-plugin-extension": {
+      "PACKAGE_NAME": "com.EchoSierraStudio.BespaarMaar"
+    },
+    "cordova-plugin-headercolor": {
+      "PACKAGE_NAME": "com.EchoSierraStudio.BespaarMaar"
     },
     "cordova-plugin-statusbar": {
       "PACKAGE_NAME": "com.EchoSierraStudio.BespaarMaar"
     },
-    "cordova-plugin-headercolor": {
+    "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.EchoSierraStudio.BespaarMaar"
     }
   },
