@@ -6,7 +6,9 @@ image: ''
 categories: []
 
 ---
-Naast tips om te besparen op je vaste lasten die we allemaal wel eens voorbij hebben zien komen, zijn er ook veel bespaartips om op andere manieren geld te besparen. We weten allemaal dat je er meer aan zou kunnen doen om kosten te besparen binnenshuis maar de vraag is altijd: 'Waar moet je beginnen?' 
+![](/uploads/bar-blur-bulb-1123262.jpg)
+
+Naast tips om te besparen op je vaste lasten die we allemaal wel eens voorbij hebben zien komen, zijn er ook veel bespaartips om op andere manieren geld te besparen. We weten allemaal dat je er meer aan zou kunnen doen om kosten te besparen binnenshuis maar de vraag is altijd: 'Waar moet je beginnen?'
 
 Hieronder vermelden wij daarom een aantal gratis veranderingen die je zowel geld als energiebesparing kunnen opbrengen:
 
