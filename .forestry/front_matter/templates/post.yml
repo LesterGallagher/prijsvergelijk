@@ -18,7 +18,7 @@ fields:
   label: categories
   description: pagina catagorien
 pages:
-- _posts/boodschappen-bespaartips.md
+- _posts/2018-09-30-boodschappen-bespaartips.md
 - _posts/2018-09-30-bespaartips-voor-gas-en-energieverbruik.md
 - _posts/2018-09-29-besparen-op-stofzuigerzakken.md
 - _posts/2018-09-30-bespaartips-voor-het-doen-van-de-was.md
