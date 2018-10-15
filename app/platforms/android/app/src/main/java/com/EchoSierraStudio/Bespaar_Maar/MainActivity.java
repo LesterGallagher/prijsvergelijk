@@ -17,7 +17,7 @@
        under the License.
  */
 
-package com.EchoSierraStudio.BespaarMaar;
+package com.EchoSierraStudio.Bespaar_Maar;
 
 import android.os.Bundle;
 import org.apache.cordova.*;

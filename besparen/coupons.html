@@ -17,45 +17,54 @@ description: Kortingscodes zijn een goed manier om geld te besparen.
     <ul class="link-list">
         <li>
             <h4><a href="https://ds1.nl/c/?si=7645&amp;li=1357392&amp;wi=303265&amp;ws=prijsvergelijk" rel="nofollow"
-                    target="_system">DealeXtreme - (50% Korting)</a></h4>
+                target="_system">DealeXtreme - (50% Korting)</a></h4>
         </li>
         <li>
             <h4><a href="https://ds1.nl/c/?si=3758&amp;li=1488474&amp;wi=303265&amp;ws=prijsvergelijk" rel="nofollow"
-                    target="_system">Vouchervandaag.nl - De nieuwste coupon codes</a></h4>
+                target="_system">Vouchervandaag.nl - De nieuwste coupon codes</a></h4>
         </li>
         <li>
             <h4><a href="https://ds1.nl/c/?si=7630&amp;li=1566982&amp;wi=303265&amp;ws=" rel="nofollow" target="_system">Aliexpress.com
-                    - Coupon codes</a></h4>
+                - Coupon codes</a></h4>
         </li>
         <li>
             <h4><a href="https://lt45.net/c/?si=12906&amp;li=1568103&amp;wi=303265&amp;ws=prijsvergelijk" rel="nofollow"
-                    target="_system">Cashze.nl - Bespaar elke keer, dat je online shopt!</a></h4>
+                target="_system">Cashze.nl - Bespaar elke keer, dat je online shopt!</a></h4>
         </li>
     </ul>
     <h3>De laatse Deals</h3>
     <div id="product-feed"></div>
     <script>
         function processFeed(data) {
-            var products = data.datafeed.programs[0].products;
-            for (var i = 0; i < products.length; i++) {
-                (function (product) {
-                    document.getElementById('product-feed').innerHTML =
-                        '<a class="col col-xxs-12 col-xs-6 col-sm-4 col-lg-3" target="_system" href="' + product.product_info.link + '">\
+            var feedRoot = document.getElementById('product-feed');
+            while(feedRoot.firstChild) feedRoot.removeChild(feedRoot);
+            for (var j = 0; j < data.datafeed.programs.length; j++) {
+                (function (program) {
+                    var products = program.products;
+                    for (var i = 0; i < products.length; i++) {
+                        (function (product) {
+                            var article = document.createElement('span');
+                            article.innerHTML =
+                                '<a class="col col-xxs-12 col-xs-6 col-sm-4 col-lg-3" target="_system" href="' + product.product_info.link + '">\
 <article class="panel panel-primary card card--material">\
-<div class="panel-heading card__title card--material__title">' 
-+ product.product_info.title + '</div>\
-<img alt="' + product.product_info.images[0].type + '" \
+<div class="panel-heading card__title card--material__title">'
+                                + product.product_info.title + '</div>\
+<div class="article-img-wrapper"><img alt="' + product.product_info.images[0].type + '" \
 src="' + product.product_info.images[0].location + '" \
-style="width: 100%" class="img-responsive">\
-<div class="panel-body card__content card--material__content">' 
-+ product.product_info.description + '<br><br><br>\
+style="width: 100%" class="img-responsive"></div>\
+<div class="panel-body card__content card--material__content">'
+                                + product.product_info.description + '<br><br><br>\
+<div class="article-footer">\
 <span class="price-wrapper">\
 <span class="price">' + product.product_info.price + '</span>\
 <span class="priceold">' + product.product_info.price_old + '</span>\
-</span>\
+</div></span>\
 </div>\
 </article></a>';
-                })(products[i]);
+                            feedRoot.appendChild(article);
+                        })(products[i]);
+                    }
+                })(data.datafeed.programs[j]);
             }
         }
     </script>

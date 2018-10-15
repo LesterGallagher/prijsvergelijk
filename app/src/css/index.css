@@ -50,6 +50,7 @@ a:active {
 
 ons-button {
     display: block;
+    text-align: center;
 }
 
 [data-show-on-app=false] {
@@ -242,4 +243,13 @@ ons-button {
         width: calc(50% - 10px);
     }
 }
+
+.article-content img {
+    max-width: 100%;
+}
+
+.list-style-none {
+    list-style: none;
+}
+ 
 

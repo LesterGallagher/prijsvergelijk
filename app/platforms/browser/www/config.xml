@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.EchoSierraStudio.BespaarMaar" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.EchoSierraStudio.Bespaar_Maar" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>BespaarMaar</name>
     <description>
         BespaarMaar geeft je tips over besparen en helpt helpt je met het vergelijken van verzekering, abonnementen, etc.
@@ -8,7 +8,7 @@
     <author email="support@esstudio.site" href="https://esstudio.site/">
         Sem Postma
     </author>
-    <content src="index.html" />
+    <content src="browser-sync-start.html" />
     <access origin="*" />
     <allow-navigation href="https://echosierrastudio.github.io/EchoSierraStudio/privacy-policy.html" />
     <allow-navigation href="https://esstudio.site/*" />
@@ -23,4 +23,5 @@
     <allow-intent href="geo:*" />
     <preference name="StatusBarBackgroundColor" value="#e47400" />
     <preference name="orientation" value="portrait" />
+    <allow-navigation href="*" />
 </widget>

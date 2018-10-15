@@ -3,14 +3,7 @@
 
 <head>
 
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src ws: 'unsafe-inline' 'self' data: gap: https://bespaarmaar.esstudio.site https://esstudio.site https://ssl.gstatic.com http://*.tile.osm.org https://*.googleapis.com; 
-        style-src 'self' http://code.komparu.com https://daisycon.io http://developers.affiliateprogramma.eu 'unsafe-inline' https://*.gstatic.com http://*.tile.osm.org https://*.googleapis.com;
-        media-src *; 
-        font-src 'self' https://s3.amazonaws.com https://*.gstatic.com http://*.tile.osm.org https://*.googleapis.com;
-        img-src 'self' http://code.komparu.com https://stats.g.doubleclick.net http://developers.affiliateprogramma.eu https://www.google-analytics.com http://daisycon.io https://cdn.vouchervandaag.nl https://mproxy.banner.linksynergy.com https://ad.linksynergy.com https://*.openstreetmap.org https://*.google.com https://*.nationaalgeoregister.nl https://*.gstatic.com https://*.googleapis.com data: content:;
-        script-src https://developers.google.com https://code.jquery.com/jquery-3.3.1.js https://www.google-analytics.com https://www.googletagmanager.com https://code.komparu.com http://developers.affiliateprogramma.eu https://daisycon-energie.whitelabeled.nl 'self' https://daisycon.io https://developers.affiliateprogramma.eu https://ess-server.herokuapp.com 'unsafe-inline' 'unsafe-eval' https://*.polyfill.io https://*.gstatic.com http://*.tile.osm.org https://maps.googleapis.com;
-        connect-src 'self' http://code.komparu.com https://daisycon.io https://*.teleport.org https://epsg.io https://*.nationaalgeoregister.nl https://*.gstatic.com https://*.googleapis.com; ">
+    <meta http-equiv="Content-Security-Policy" content="default-src ws: 'unsafe-inline' 'self' data: gap: https://bespaarmaar.esstudio.site https://esstudio.site https://ssl.gstatic.com http://*.tile.osm.org https://*.googleapis.com ws: 'unsafe-inline'; style-src 'self' http://code.komparu.com https://daisycon.io http://developers.affiliateprogramma.eu 'unsafe-inline' https://*.gstatic.com http://*.tile.osm.org https://*.googleapis.com; media-src *; font-src 'self' https://s3.amazonaws.com https://*.gstatic.com http://*.tile.osm.org https://*.googleapis.com; img-src 'self' http://* https://* data: content:; script-src https://developers.google.com https://code.jquery.com/jquery-3.3.1.js https://www.google-analytics.com https://www.googletagmanager.com https://code.komparu.com http://developers.affiliateprogramma.eu https://daisycon-energie.whitelabeled.nl 'self' https://daisycon.io https://developers.affiliateprogramma.eu https://ess-server.herokuapp.com 'unsafe-inline' 'unsafe-eval' https://*.polyfill.io https://*.gstatic.com http://*.tile.osm.org https://maps.googleapis.com; connect-src 'self' http://code.komparu.com https://daisycon.io https://*.teleport.org https://epsg.io https://*.nationaalgeoregister.nl https://*.gstatic.com https://*.googleapis.com;">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -55,8 +48,8 @@
     <meta name="author" content="Sem Postma, sem.postma@gmail.com">
     <meta name="keywords" content="Kadaster, App, Informatie, Percelen, Perceel, Browser, Google, Play">
 
-    <link rel="stylesheet" href="css/lib/onsen/css/onsenui.min.css" />
-    <link rel="stylesheet" href="css/lib/onsen/css/onsen-css-components.min.css" />
+    <link rel="stylesheet" href="css/lib/onsen/css/onsenui.min.css">
+    <link rel="stylesheet" href="css/lib/onsen/css/onsen-css-components.min.css">
 
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
 
@@ -90,36 +83,36 @@
 <template style="display: none" id="splitter">
     <ons-page id="splitter-page">
         <ons-splitter>
-            <ons-splitter-side id="menu" side="left" width="220px" collapse>
+            <ons-splitter-side id="menu" side="left" width="220px" collapse="">
                 <ons-page>
                     <ons-list>
-                        <ons-list-item onclick="fn.load('/')" tappable>
-                            <ons-icon icon="md-home"></ons-icon>&nbsp; Overview
+                        <ons-list-item onclick="fn.load('/')" tappable="">
+                            <ons-icon icon="md-home"></ons-icon>&nbsp; Overzicht
                         </ons-list-item>
                         
                         
                         
-                        <ons-list-item onclick="fn.load('/geld-verdienen')" tappable>
+                        <ons-list-item onclick="fn.load('/geld-verdienen')" tappable="">
                             <ons-icon icon="ion-cash"></ons-icon>&nbsp; Geld Verdienen
                         </ons-list-item>
                         
                         
-                        <ons-list-item onclick="fn.load('/besparen/apps')" tappable>
+                        <ons-list-item onclick="fn.load('/besparen/apps')" tappable="">
                             <ons-icon icon="ion-leaf"></ons-icon>&nbsp; Besparings apps
                         </ons-list-item>
                         
                         
-                        <ons-list-item onclick="fn.load('/besparen/coupons')" tappable>
+                        <ons-list-item onclick="fn.load('/besparen/coupons')" tappable="">
                             <ons-icon icon="fa-scissors"></ons-icon>&nbsp; Korting codes
                         </ons-list-item>
                         
                         
-                        <ons-list-item onclick="fn.load('/vergelijken/overzicht')" tappable>
+                        <ons-list-item onclick="fn.load('/vergelijken/overzicht')" tappable="">
                             <ons-icon icon="fa-balance-scale"></ons-icon>&nbsp; Vergelijken
                         </ons-list-item>
                         
-                        <ons-list-item onclick="fn.load('/about.html')" tappable>
-                            <ons-icon icon="fa-cog"></ons-icon>&nbsp; Overview
+                        <ons-list-item onclick="fn.load('/about.html')" tappable="">
+                            <ons-icon icon="fa-cog"></ons-icon>&nbsp; Over deze App
                         </ons-list-item>
                     </ons-list>
                 </ons-page>
@@ -136,12 +129,12 @@
                 <ons-toolbar-button class="hidden page-toolbar-back-button" onclick="fn.open()">
                     <ons-icon icon="md-menu"></ons-icon>
                 </ons-toolbar-button>
-                <ons-back-button class="hidden">Back</ons-back-button>
+                <ons-back-button class="hidden">Terug</ons-back-button>
             </div>
-            <div class="center">About</div>
+            <div class="center">Overzicht</div>
         </ons-toolbar>
         <div style="padding: 0 10px">
-            <h2>About</h2>
+            <h2>Over deze App</h2>
             <p>
                 BespaarMaar geeft je tips over besparen en helpt helpt je met het vergelijken van verzekering, abonnementen, etc ✅ Wij bieden een groot aantal verschillende onafhankelijke vergelijkings tools aan die je kunt gebruiken om de beste leverancier te vinden.
             </p>
@@ -169,15 +162,183 @@
                     over cookies en de EU cookies wet kunt u
                     <a href="http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm">hier</a> vinden.
                 </p>
-                <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"
-                        title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
-                        title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+                <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
             </ons-card>
         </div>
     </ons-page>
 </template>
 
 <!-- posts -->
+
+
+<template style="display: none" id="/blog/bespaartips-voor-de-auto/">
+    <ons-page class="app-page post" id="/blog/bespaartips-voor-de-auto-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-back-button>Back</ons-back-button>
+            </div>
+            <div class="center">
+                Bespaartips voor de auto
+            </div>
+        </ons-toolbar>
+        <div style="padding: 0 10px">
+            <div class="article-head">
+                <h1 class="title">Bespaartips voor de auto</h1>
+                <p class="date">Sep 30, 2018</p>
+            </div>
+            <div class="article-content">
+                <p><img src="./uploads/asphalt-car-classic-253096.jpg" alt=""></p>
+
+<p>Een auto kost veel geld misschien wel tot duizenden euro’s per jaar. Elke euro die je kan uitsparen is daarom altijd mooi meegenomen.</p>
+
+<p>Onderhoud, benzine, rijstijl onderhoud enz. zijn allemaal punten waarop je geld kan besparen. Soms kan dit op een eenvoudige manier en soms op onverwachte wijze.</p>
+
+<p>Rijden met de auto kost veel meer dan alleen brandstof. Vaak moet je de auto zelf betalen, het onderhoud, de autoverzekering, belasting, parkeergeld en soms zelfs verkeersboetes. De prijs van simpele autorit loopt snel op.</p>
+
+<ul>
+  <li>De fiets nemen voor korte afstanden is niet alleen gezond maar ook veel goedkoper, en vaak ben je er zelfs sneller dan met de auto, zeker in de stad. In de stad verlies je bovendien nog meer tijd (en geld) met het zoeken van een parkeerplaats voor je auto.</li>
+  <li>Carpoolen is goed voor het fileprobleem: elke persoon in een carpoolwagen is een auto minder op de weg. Het is ook goed voor het milieu: elke auto minder op de baan is een diesel- of benzinemotor minder en dus ook minder CO2-uitstoot.</li>
+  <li>Zoek het meest voordelige tankstation online. Online kunt u namelijk veel informatie vinden waar u de goedkoopste brandstof kunt verkrijgen, daarnaast kunt u ook kijken welk tankstation het meest gunstig gelegen is.</li>
+  <li>Verzorg uw auto goed. Het is goedkoper om uw auto goed te verzorgen dan elke keer naar een garage te moeten voor reparaties.</li>
+  <li>Een APK bij kleine garages is meestal goedkoper. Vergelijk eerst de prijzen op internet voordat u naar een garage gaat.</li>
+</ul>
+
+            </div>
+        </div>
+    </ons-page>
+</template>
+
+
+<template style="display: none" id="/blog/boodschappen-bespaartips/">
+    <ons-page class="app-page post" id="/blog/boodschappen-bespaartips-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-back-button>Back</ons-back-button>
+            </div>
+            <div class="center">
+                Boodschappen bespaartips
+            </div>
+        </ons-toolbar>
+        <div style="padding: 0 10px">
+            <div class="article-head">
+                <h1 class="title">Boodschappen bespaartips</h1>
+                <p class="date">Sep 30, 2018</p>
+            </div>
+            <div class="article-content">
+                <p><img src="./uploads/assorted-assortment-booth-375897.jpg" alt=""></p>
+
+<p>Deze boodschappen tips kunnen je helpen om honderden euro’s te besparen. Geld besparen bij het doen van boodschappen is niet zo moeilijk maar je moet wel goed weten waar je op moet letten.</p>
+
+<p>Zoek op of er supermarkten bij jou in de buurt zitten, je kunt bijvoorbeeld kijken tot een afstand van 5 kilometer, dat is ongeveer een kwartier met de fiets en 7 minuten met de auto.</p>
+
+<p><strong>Boodschappenlijstje</strong></p>
+
+<p>Het klinkt cliché, maar er zijn vele onderzoeken naar gedaan, wie boodschappen doet zonder lijstje koopt meer dan vooraf van plan was. Het is dus handig om een boodschappenlijstje mee te nemen</p>
+
+<p>Je kunt zoveel besparen op eten als je wilt maar het is niet verstandig te bezuinigen op gezondheid. Elke dag heb je fruit en groente nodig dus zorg ervoor dat je altijd fruit en groenten in huis hebt maar dat betekend niet dat je ook goed geld kunt besparen op het kopen van groenten en fruit.</p>
+
+<p><strong>Folders</strong></p>
+
+<p>Je kunt het meeste besparen op boodschappen door te letten op de aanbiedingen, maar dan moet je wel weten welke aanbiedingen er allemaal zijn. Zorg ervoor dat je folders ontvangt, deze kan je op papier of digitaal bekijken. En als je van je supermarkt geen folders ontvangt dan kun je jezelf meestal online aanmelden. Letten op de aanbiedingen in de winkels is een van de beste manieren om geld te besparen.</p>
+
+            </div>
+        </div>
+    </ons-page>
+</template>
+
+
+<template style="display: none" id="/blog/bespaartips-voor-het-doen-van-de-was/">
+    <ons-page class="app-page post" id="/blog/bespaartips-voor-het-doen-van-de-was-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-back-button>Back</ons-back-button>
+            </div>
+            <div class="center">
+                Bespaartips voor het doen van de was
+            </div>
+        </ons-toolbar>
+        <div style="padding: 0 10px">
+            <div class="article-head">
+                <h1 class="title">Bespaartips voor het doen van de was</h1>
+                <p class="date">Sep 30, 2018</p>
+            </div>
+            <div class="article-content">
+                <p><img src="./uploads/laundry-1368552_1920.jpg" alt=""></p>
+
+            </div>
+        </div>
+    </ons-page>
+</template>
+
+
+<template style="display: none" id="/blog/bespaartips-voor-het-koken/">
+    <ons-page class="app-page post" id="/blog/bespaartips-voor-het-koken-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-back-button>Back</ons-back-button>
+            </div>
+            <div class="center">
+                Bespaartips voor het koken
+            </div>
+        </ons-toolbar>
+        <div style="padding: 0 10px">
+            <div class="article-head">
+                <h1 class="title">Bespaartips voor het koken</h1>
+                <p class="date">Sep 30, 2018</p>
+            </div>
+            <div class="article-content">
+                <p><img src="./uploads/buffet-chicken-cooking-5938.jpg" alt=""></p>
+
+<p>Of je nu graag kookt of niet, het is altijd goed om deze bespaartips in gedachten te houden.</p>
+
+<ul>
+  <li>Gebruik de juiste plaat op het fornuis. Het is namelijk helemaal niet nodig om een kleine pan op een grote inductie plaat te zetten. De platen zijn niet voor niks van verschillende formaten.</li>
+  <li>Je kunt je huis verwarmen wanneer je aan het koken bent, laat de ovendeur open staan nadat je gekookt hebt. Dit geeft warmte en het is natuurlijk zonde om de warme gelijk weg te laten gaan via het ventilatiesysteem.</li>
+  <li>Bespaar tijd door een voorraad te maken. Wanneer je de oven gebruikt, doe dat dan om een paar maaltijden achter elkaar te verwarmen. Het is logisch dat het op warmen van een oven enorm veel energie kost en eten voor de komende week voorgaren is helemaal geen slecht idee.</li>
+  <li>Wanneer je de koelkast of vriezer helemaal vol stopt kost dit meer energie om koud te houden, wat helemaal nergens voor nodig is. Leeg eens in de zoveel tijd je vriezer of koelkast want de bak chinees van 3 maanden geleden kun je gewoon weg gooien.</li>
+  <li>Een manier om energie te besparen is om de deur van uw koel- en vrieskast zo kort mogelijk te openen en warme gerechten te laten afkoelen voordat ze de koelkast in gaan. Ingevroren productie kunt u ontdooien in de koelkast. De kou van de bevroren producten wordt dan gebruikt voor de koeling van de koelkast. Let op dat u geen producten in de koelkast bewaart die daar niet horen, zoals onaangebroken conserven en vruchtgroenten zoals paprika, courgette, tomaten, komkommer en aubergine.</li>
+  <li>Koken op gas kost gemiddeld zo’n €40,- per jaar en dit is aanzienlijk goedkoper dan koken op elektriciteit waar je €100,- voor kwijt bent. Ook keramische en halogeen kookplaten verbruiken gemiddeld €100,- per jaar, daarnaast kost het (eveneens elektrische) ‘inductiekoken’ zo’n €80,- per jaar.</li>
+</ul>
+
+            </div>
+        </div>
+    </ons-page>
+</template>
+
+
+<template style="display: none" id="/blog/bespaartips-voor-gas-en-energieverbruik/">
+    <ons-page class="app-page post" id="/blog/bespaartips-voor-gas-en-energieverbruik-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-back-button>Back</ons-back-button>
+            </div>
+            <div class="center">
+                Bespaartips voor gas en energieverbruik
+            </div>
+        </ons-toolbar>
+        <div style="padding: 0 10px">
+            <div class="article-head">
+                <h1 class="title">Bespaartips voor gas en energieverbruik</h1>
+                <p class="date">Sep 30, 2018</p>
+            </div>
+            <div class="article-content">
+                <p><img src="./uploads/bar-blur-bulb-1123262.jpg" alt=""></p>
+
+<p>Naast tips om te besparen op je vaste lasten die we allemaal wel eens voorbij hebben zien komen, zijn er ook veel bespaartips om op andere manieren geld te besparen. We weten allemaal dat je er meer aan zou kunnen doen om kosten te besparen binnenshuis maar de vraag is altijd: ‘Waar moet je beginnen?’</p>
+
+<p>Hieronder vermelden wij daarom een aantal gratis veranderingen die je zowel geld als energiebesparing kunnen opbrengen:</p>
+
+<ul>
+  <li>Houd het warm in huis, maar bespaar wel kosten. Door de thermostaat 1°C omlaag te zetten bespaar je al gauw €80,- op jaarbasis.\</li>
+  <li>Een belangrijk punt is dat je de verwarming op een constant niveau houdt. De wisseling tussen temperaturen zorgt voor extra kosten die makkelijk te voorkomen zijn. Zorg er dus voor dat je goed op de hoogte bent van de functionaliteiten van je warmteregelaar.</li>
+  <li>Soms kan je zonder dat je het door hebt erg lang onder de douche staan, daarom is het misschien een idee om een timer te gebruiken. Lang onder de douche staan is niet alleen slecht voor je huid, maar ook voor je energierekening. Let daarom op hoe lang je de douche gebruikt.</li>
+  <li>Led TL lampen staan erom bekend dat ze tot ongeveer 70% van je energiekosten besparen, ten opzichte van oudere TL lampen. Daarom raden we je aan om je huidige lampen te vervangen voor TL led alternatieven. Je hoeft het armatuur niet aan te passen en dit zorgt er voor dat je gemakkelijk de lampen kunt vervangen. Daarnaast gaat Led TL verlichting ook lang mee, wat ook een enorme winst voor je portemonnee is.</li>
+</ul>
+
+            </div>
+        </div>
+    </ons-page>
+</template>
 
 
 <template style="display: none" id="/blog/besparen-op-stofzuigerzakken/">
@@ -196,15 +357,15 @@
                 <p class="date">Sep 29, 2018</p>
             </div>
             <div class="article-content">
-                <p>Omdat stofzuigerzakken aardig prijzig zijn valt hier ook makkelijk te besparen. De meeste stofzuigerzakken zijn wel duurzaam, maar worden niet duurzaam gebruikt. Men gooit natuurlijk de stofzuigerzak weg nadat deze vol zit, terwijl het een hele kleine moeite is om deze even te legen in de prullenbak. Mocht het mondstuk van de stofzuigerzak losraken dan kunt u deze makkelijk nieten met de simpelste nietjes.</p>
+                <p><img src="./uploads/vacuum-cleaner-657719_1920.jpg" alt=""></p>
+
+<p>Omdat stofzuigerzakken aardig prijzig zijn valt hier ook makkelijk te besparen. De meeste stofzuigerzakken zijn wel duurzaam, maar worden niet duurzaam gebruikt. Men gooit natuurlijk de stofzuigerzak weg nadat deze vol zit, terwijl het een hele kleine moeite is om deze even te legen in de prullenbak. Mocht het mondstuk van de stofzuigerzak losraken dan kunt u deze makkelijk nieten met de simpelste nietjes.</p>
 
 <p>Natuurlijk moet u de stofzuigerzakken niet met geweld legen, u kunt zich wel voorstellen dat als dit niet voorzichtig gedaan wordt, er veel stof vrij kan komen en ook is het goed om natuurlijk eens in de zoveel tijd een nieuwe stofzuigerzak te gebruiken.Ook zijn er in de winkels stofzuigerzakken te koop die een rits hebben. Nadat de stofzuigerzak vol is maakt u simpel de rits los, en u kunt de stof met gemak legen. Deze stofzuigerzakken met rits kosten nog geen 3 euro.</p>
 
-<p> Sommige moderne stofzuigers zijn uitgerust met een bak waarin het stof wordt opgevangen, nadat de bak vol is kunt u deze legen en keer op keer gebruiken. U hoeft dus nooit meer een stofzuigerzak te kopen. </p>
+<p>Sommige moderne stofzuigers zijn uitgerust met een bak waarin het stof wordt opgevangen, nadat de bak vol is kunt u deze legen en keer op keer gebruiken. U hoeft dus nooit meer een stofzuigerzak te kopen.</p>
 
 <p>Doordat u geen stofzuigerzakken meer nodig heeft bespaart u het milieu behoorlijk wat afval, en uzelf veel geld. Kies echter wel een zuinig merk, want het aantal Watt staat niet gelijk aan de zuigkracht.</p>
-
-<p> </p>
 
             </div>
         </div>
@@ -228,9 +389,9 @@
                 <p class="date">Sep 29, 2018</p>
             </div>
             <div class="article-content">
-                <p>Huisdieren zijn leuk en ze brengen u een hoop gezelligheid, toch kosten ze geld om goed te kunnen verzorgen, daarom is het handig om te kijken hoe u geld kan besparen als het om het verzorgen van uw huisdieren gaat. Hier kunt u wat tips lezen die u gegarandeerd kunnen helpen.</p>
+                <p><img src="./uploads/animal-cat-cute-46024.jpg" alt=""></p>
 
-<p> </p>
+<p>Huisdieren zijn leuk en ze brengen u een hoop gezelligheid, toch kosten ze geld om goed te kunnen verzorgen, daarom is het handig om te kijken hoe u geld kan besparen als het om het verzorgen van uw huisdieren gaat. Hier kunt u wat tips lezen die u gegarandeerd kunnen helpen.</p>
 
 <p>Koop goed premium voer in grote verpakkingen voor uw huisdier. Ze eten er minder van en het is gezonder dan de goedkope merken brokken. Daardoor ben je uiteindelijk vaak toch goedkoper uit. Let erop dat de eerste ingrediënten op de ingrediëntenlijst voornamelijk vlees en visproducten zijn en dat er natuurlijke conserveermiddelen gebruikt worden. Kijk onder andere ook op Internet om op uw gemak prijzen te vergelijken en het juiste voer voor uw huisdier uit te zoeken.</p>
 
@@ -240,7 +401,7 @@
 
 <p>Koop dingen zoals manden, transportkooien, dekens, kussens, speelgoed en nog veel meer goedkoop en net zo leuk als nieuw bij kringloopwinkels, kofferbakverkopen, rommelmarkten en op Internet bij b.v. marktplaats. Maak deze tweedehands aankopen schoon en u kunt ze weer als nieuw gebruiken.</p>
 
-<p>Verzorg je huisdier: genoeg tot ruim voldoende lichaamsbeweging, geef goed, maar niet teveel voer en niet snoepen, aandacht voor veiligheid, ruim vers water, zeer geregeld borstelen en nakijken van ogen, oren, bek, voetjes en de rest van het lijf, goede preventie (jaarlijkse enting, teken, vlooien, wormen), schone bakken en ligplaatsen maken alles bij elkaar de kans veel kleiner dat je dier ziek wordt, een ongeluk krijgt, of een blessure oploopt en daarmee (veel) geld kost. </p>
+<p>Verzorg je huisdier: genoeg tot ruim voldoende lichaamsbeweging, geef goed, maar niet teveel voer en niet snoepen, aandacht voor veiligheid, ruim vers water, zeer geregeld borstelen en nakijken van ogen, oren, bek, voetjes en de rest van het lijf, goede preventie (jaarlijkse enting, teken, vlooien, wormen), schone bakken en ligplaatsen maken alles bij elkaar de kans veel kleiner dat je dier ziek wordt, een ongeluk krijgt, of een blessure oploopt en daarmee (veel) geld kost.</p>
 
 <p><strong>Nieuw huisdier?</strong></p>
 
@@ -248,7 +409,7 @@
 
 <p><strong>Overige bespaartips</strong></p>
 
-<p>Houd een spaarpotje bij voor onverwachte uitgaven want dieren en apparatuur hebben de nare gewoonte om soms ‘kapot’ te gaan. Zo’n spaarpotje is goedkoper dan een verzekering sluiten voor als er een dure dierenartsbehandeling nodig is. Ook is het een goed idee om te zoeken naar alternatieven voor een pension als je het dier niet mee neemt op vakantie of bij eventuele andere (nood) gevallen. Denk aan buren, vrienden, familie, kennissen hetzij als oppas aan huis, hetzij als logeeradres voor je dier. Biedt bijvoorbeeld in ruil aan dat jij op hun dier past als zij op vakantie gaan. </p>
+<p>Houd een spaarpotje bij voor onverwachte uitgaven want dieren en apparatuur hebben de nare gewoonte om soms ‘kapot’ te gaan. Zo’n spaarpotje is goedkoper dan een verzekering sluiten voor als er een dure dierenartsbehandeling nodig is. Ook is het een goed idee om te zoeken naar alternatieven voor een pension als je het dier niet mee neemt op vakantie of bij eventuele andere (nood) gevallen. Denk aan buren, vrienden, familie, kennissen hetzij als oppas aan huis, hetzij als logeeradres voor je dier. Biedt bijvoorbeeld in ruil aan dat jij op hun dier past als zij op vakantie gaan.</p>
 
             </div>
         </div>
@@ -272,13 +433,15 @@
                 <p class="date">Sep 29, 2018</p>
             </div>
             <div class="article-content">
-                <p>Zoals iedereen weet zijn de kosten van printer inkt enorm hoog en daarom is het een goed idee om stil te staan bij de mogelijkheden om hierop te besparen. Allereerst is het goed om te weten dat er verschillende soorten printers en verschillende soort inkt zijn en dat u altijd moet letten op welk merk inkt en wat soort printer u heeft.</p>
+                <p><img src="./uploads/buttons-close-up-depth-of-field-193057.jpg" alt=""></p>
+
+<p>Zoals iedereen weet zijn de kosten van printer inkt enorm hoog en daarom is het een goed idee om stil te staan bij de mogelijkheden om hierop te besparen. Allereerst is het goed om te weten dat er verschillende soorten printers en verschillende soort inkt zijn en dat u altijd moet letten op welk merk inkt en wat soort printer u heeft.</p>
 
 <p><strong>Instellingen</strong></p>
 
 <p>Bij elke printer kunt u instellen hoe de afdrukkwaliteit moet zijn,  zet deze kwaliteit lager als u zwart-wit gaat printen.</p>
 
-<p> Een andere tip is als u bijvoorbeeld informatie van het internet wilt printen, gebruik dan altijd de printer vriendelijke versie, want anders kunt u misschien de fout maken van uw hele webpagina te printen waarbij allerlei kleuren en afbeeldingen komen te zitten. Deze dingen heeft u natuurlijk niet nodig. Onder deze tip heeft u bijvoorbeeld een printer vriendelijker(e) versie. </p>
+<p>Een andere tip is als u bijvoorbeeld informatie van het internet wilt printen, gebruik dan altijd de printer vriendelijke versie, want anders kunt u misschien de fout maken van uw hele webpagina te printen waarbij allerlei kleuren en afbeeldingen komen te zitten. Deze dingen heeft u natuurlijk niet nodig. Onder deze tip heeft u bijvoorbeeld een printer vriendelijker(e) versie.</p>
 
 <p>Heeft een website geen printervriendelijke versie, dan kunt u de tekst selecteren met uw muis, dan op de rechtermuisknop klikken en de tekst “kopiëren” vervolgens opent u uw teksteditor (kladblok, word) en dan met de rechter muisknop op het witte tekst vak klikken en optie “plakken” zo heeft u uw tekst op een simpele printer vriendelijke manier.</p>
 
@@ -314,7 +477,9 @@
                 <p class="date">Sep 29, 2018</p>
             </div>
             <div class="article-content">
-                <p>Wie zegt dat besparen niet leuk kan zijn heeft het mis! Je zou denken dat met de hand afwassen je meer geld bespaard maar dat blijkt niet het geval te zijn. Over het algemeen kunt u het beste een vaatwassen gebruiken in plaats van met de hand afwassen. We verspillen onnodig veel kostbare tijd, water en energie aan de afwas terwijl een vaatwasser dit veel zuiniger kan.</p>
+                <p><img src="./uploads/bowl-dirty-dirty-dishes-1385754.jpg" alt=""></p>
+
+<p>Wie zegt dat besparen niet leuk kan zijn heeft het mis! Je zou denken dat met de hand afwassen je meer geld bespaard maar dat blijkt niet het geval te zijn. Over het algemeen kunt u het beste een vaatwassen gebruiken in plaats van met de hand afwassen. We verspillen onnodig veel kostbare tijd, water en energie aan de afwas terwijl een vaatwasser dit veel zuiniger kan.</p>
 
 <p>Als je alleenstaande bent is het natuurlijk logisch dat met de hand afwassen in de meeste gevallen veel zuiniger is als met een vaatwasser. Maar als u zoveel borden vuil maakt dat u elke keer een vaatwasser goed zou kunnen vullen, dan is het uiteraard beter een vaatwasser te nemen. Waarom? Dat leest u hier.</p>
 
@@ -324,7 +489,7 @@
 
 <p><strong>Afwasmiddel</strong></p>
 
-<p>Afwasmiddel is een belangrijk punt als het gaat om besparen, zoals bij bijna elk product is er een goedkope en dure versie, dit is ook het geval bij afwasmiddel. Over het algemeen zijn de duurdere afwasmiddelen veel beter en duurzamer, neem bijvoorbeeld Dreft van wie we altijd horen: “Wast een berg en kost een beetje”, nou ja “Kost een beetje?” In de schappen is Dreft wel duurder dan de meeste andere merken, maar met Dreft kunt u zoveel wassen dat u het geld makkelijk terugverdiend heeft. </p>
+<p>Afwasmiddel is een belangrijk punt als het gaat om besparen, zoals bij bijna elk product is er een goedkope en dure versie, dit is ook het geval bij afwasmiddel. Over het algemeen zijn de duurdere afwasmiddelen veel beter en duurzamer, neem bijvoorbeeld Dreft van wie we altijd horen: “Wast een berg en kost een beetje”, nou ja “Kost een beetje?” In de schappen is Dreft wel duurder dan de meeste andere merken, maar met Dreft kunt u zoveel wassen dat u het geld makkelijk terugverdiend heeft.</p>
 
 <p>Een noodzaak is dan ook om niet te veel afwasmiddel te gebruikt wat op zich voor zichzelf spreekt want veel afwasmiddel gebruiken is nergens voor nodig. Per keer heeft u maar enkele druppels nodig, in tegenstelling tot de goedkopere merken waarbij u vaker een redelijke “kneep” uit moet halen om hetzelfde te krijgen. Ook is het natuurlijk beter voor het milieu als u minder flessen weg moet gooien, dat is natuurlijk een bijzaak met het is leuk meegenomen.</p>
 
@@ -332,11 +497,7 @@
 
 <p>Het gebruik van een vaatwasser kan enorm veel voordelen met zich mee brengen, al denken mensen vaak het tegenovergestelde, afwassen met de vaatwasser is namelijk veel zuiniger. Over het algemeen nemen machines het over en zijn ze veel efficiënter dan wij en in dit geval kunnen wij hier goed gebruik van maken aangezien we bijna allemaal een hekel hebben aan de afwas doen en we een reden hebben om de vaatwasser te gebruiken.</p>
 
-<p> </p>
-
 <p>De efficiëntie van een vaatwasser is dat deze is ingesteld om de juiste hoeveelheden water, wasmiddel, warmte, en ga zo maar door te gebruiken. De vaatwasser bespaart het meeste als deze goed gevuld is, u kunt dus gerust een tijdje de afwas opsparen (niet te lang natuurlijk, dat zou niet heel hygiënisch zijn).</p>
-
-<p> </p>
 
 <p>Wat ik net al schreef is dat u goed moet opletten dat de vaatwasser goed gevuld is, ga dus niet wassen met een paar bordjes maar vul de vaatwasser zo goed als maar kan. Ook hoeft u uw afwas niet af te spoelen, maar is het wel verstandig om de grovere etensresten te verwijderen aangezien het filter hierdoor vol kan lopen. Zorg er ook voor dat u het juiste afwas programma instelt. Voor de zware afwas het grove geschut, en voor de licht vuile afwas de spaarstand of een lagere temperatuur.</p>
 
@@ -349,14 +510,13 @@
 <p>Natuurlijk wilt u het liefst dat uw vaatwasser zo lang mogelijk efficiënt blijft. Als u uw vaatwasser niet onderhoudt, dan wordt deze steeds inefficiënter. Probeer dit zo veel mogelijk te voorkomen door:</p>
 
 <ul>
-  <li>Nadat u de afwas eruit haalt kijken of er nog resten zijn achtergebleven, zo ja deze verwijderen. </li>
-  <li>Het filter op tijd te reinigen i.v.m. verstoppingen. </li>
-  <li>Bekijk zo nu en dan of de sproeiarmen niet verstopt zijn geraakt. </li>
-  <li>Zo’n 2 keer per jaar zult u uw vaatwasser moeten ontkalken. </li>
+  <li>Nadat u de afwas eruit haalt kijken of er nog resten zijn achtergebleven, zo ja deze verwijderen.</li>
+  <li>Het filter op tijd te reinigen i.v.m. verstoppingen.</li>
+  <li>Bekijk zo nu en dan of de sproeiarmen niet verstopt zijn geraakt.</li>
+  <li>Zo’n 2 keer per jaar zult u uw vaatwasser moeten ontkalken.</li>
 </ul>
 
 <p>Door met beleid af te wassen, en water niet onnodig te verspillen bespaart u vanzelf op geld en milieu. Met alle apparaten, dus ook de vaatwassers geldt over het algemeen: hoe nieuwer hoe zuiniger. En met een van de nieuwere vaatwassers hoeft u nooit meer zelf af te wassen.</p>
-
 
             </div>
         </div>
@@ -383,7 +543,7 @@
         <div style="padding: 0 10px">
             <div class="page-content">
                 <h2><b>404</b></h2>
-<p><br />
+<p><br>
 <a class="btn btn-danger" href="#" onclick="window.history.back()">Back to safety</a></p>
 
             </div>
@@ -439,7 +599,7 @@
 </div>
 
 <div class="container">
-    <img style="width: 90px; float: left; margin-right: 10px;" src="./assets/img/money-app.png" alt="" class="img-responsive" />
+    <img style="width: 90px; float: left; margin-right: 10px;" src="./assets/img/money-app.png" alt="" class="img-responsive">
     <h3 style="margin-top: 0">Besparings Apps</h3>
     <p>
         Het gebruik van deze apps is een goede manier om geld te besparen.
@@ -465,7 +625,8 @@
         <li>
             <h3><a target="blank" href="http://www.jip.nl/benzine/">2. Jip</a></h3>
             <p>
-                Met Jip kun je de prijs van benzine in de gaten houden. De prijs van benzine schommelt voortdurent heen en weer en verschild ook op per plaats of per penzinestation.
+                Met Jip kun je de prijs van benzine in de gaten houden. De prijs van benzine schommelt voortdurent heen
+                en weer en verschild ook op per plaats of per penzinestation.
                 Met deze app kun je heel gemakkelijk het goedkoopste benzinestation vinden.
 
             </p>
@@ -475,15 +636,24 @@
             <h3><a target="blank" href="https://hangouts.google.com/">3. Hangouts</a></h3>
             <p>
                 Google hangouts is helemaal gratis en is makkelijk te gebruiken met andere google producten.
-                Nu Whatsapp betaald is geworden, is Hangouts een goed alternatief om gratis berichten te sturen. Ook kun je gratis bestanden en foto's sturen.
+                Nu Whatsapp betaald is geworden, is Hangouts een goed alternatief om gratis berichten te sturen. Ook
+                kun je gratis bestanden en foto's sturen.
             </p>
         </li>
 
         <li>
-            <h3><a target="blank" href="https://www.voedingscentrum.nl/nl/nieuws/voedingscentrum-lanceert-unieke-receptenapp-slim-koken-.aspx">4. Slim Koken App</a></h3>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9732535637352249" data-ad-slot="8708059720" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+        </li>
+
+        <li>
+            <h3><a target="blank" href="https://www.voedingscentrum.nl/nl/nieuws/voedingscentrum-lanceert-unieke-receptenapp-slim-koken-.aspx">4.
+                    Slim Koken App</a></h3>
 
             <p>
-                Met deze app van het Voedingscentrum kunt u voedselverspilling tegen gaan. 
+                Met deze app van het Voedingscentrum kunt u voedselverspilling tegen gaan.
                 De app geeft bewaartips, goede recepten, en de juiste bereidingshoeveelheden.
             </p>
         </li>
@@ -492,26 +662,33 @@
             <h3><a target="blank" href="https://scoupy.com/nl">5. Scoupy</a></h3>
             <p>
                 Scoupy is een nederlandse app waarmee je kortingsacties van bedrijven kunt vinden.
-                Wanneer u scoupy opstart ziet u automatisch een lijst met kortingscodes voor bedrijven bij u in de buurt.
-
+                Wanneer u scoupy opstart ziet u automatisch een lijst met kortingscodes voor bedrijven bij u in de
+                buurt.
             </p>
-
         </li>
 
         <li>
             <h3><a target="blank" href="https://www.groupon.nl/">6. Groupon</a></h3>
             <p>
-                Groupon de meest populaire coupon website van nederland. 
+                Groupon de meest populaire coupon website van nederland.
                 Je kunt er alle soorten kortingen vinden. De groupon app is beschikbaar op alle bekende platforms.
             </p>
+        </li>
+
+        <li>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9732535637352249" data-ad-slot="8708059720" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
         </li>
 
         <li>
             <h3><a target="blank" href="https://esstudio.site/ov-fiets-app/">7. OV Fiets App</a></h3>
             <p>
                 Met deze app kun je gemakkelijk kijken hoeveel ov fietsen er op een ov fiets locaatie staan.
-                De ov fiets pakken kan heel voordelig zijn wanneer je al een ov chip kaart hebt. 
-                Het kan ook veel tijd schelen, je hoeft niet te lopen of te wachten op een bus wanneer je al in de buurt bent.
+                De ov fiets pakken kan heel voordelig zijn wanneer je al een ov chip kaart hebt.
+                Het kan ook veel tijd schelen, je hoeft niet te lopen of te wachten op een bus wanneer je al in de
+                buurt bent.
             </p>
         </li>
 
@@ -527,28 +704,39 @@
             <h3><a target="_system" href="https://www.joinhoney.com/">9. Honey</a></h3>
             <p>
                 Honey is eigenlijk geen app maar we zetten deze chrome extensie toch in dit lijstje.
-                Honey voegt automatisch de beste coupon codes toe aan je shopping cart. 
-                Dit kan je echt honderden per jaar schelen als je veel op internet besteld. 
+                Honey voegt automatisch de beste coupon codes toe aan je shopping cart.
+                Dit kan je echt honderden per jaar schelen als je veel op internet besteld.
                 Je kunt honey met twee klikken installeren op je extensie balk.
             </p>
         </li>
 
-        <li><h3><a target="_system" href="https://www.reclamefolder.nl/app">10. Reclamefolder App</a></h3>
+        <li>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9732535637352249" data-ad-slot="8708059720" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+        </li>
+
+        <li>
+            <h3><a target="_system" href="https://www.reclamefolder.nl/app">10. Reclamefolder App</a></h3>
             <p>
-                Inplaats van de kilo's papier die u normaal in uw brievenbus krijgt kunt ook deze app gebruiken om reclamefolders te gebruiken.
-                De app gebruikt je GPS locatie om meteen te achterhalen welke reclamefolders er bij jou in de wijk verspreid worden.
+                Inplaats van de kilo's papier die u normaal in uw brievenbus krijgt kunt ook deze app gebruiken om
+                reclamefolders te gebruiken.
+                De app gebruikt je GPS locatie om meteen te achterhalen welke reclamefolders er bij jou in de wijk
+                verspreid worden.
             </p>
         </li>
-        
+
 
         <li>
             <h3><a target="blank" href="https://www.marktplaats.nl/">11. Marktplaats</a></h3>
             <p>
-                Marktplaats kun je natuurlijk niet over het hooft zien. 
-                Met marktplaats kun je zonder winkel dingen aan elkaar verkopen. Auto's, fietsen, desktops, huisdieren, je kunt er bijna alles vinden.
+                Marktplaats kun je natuurlijk niet over het hooft zien.
+                Met marktplaats kun je zonder winkel dingen aan elkaar verkopen. Auto's, fietsen, desktops, huisdieren,
+                je kunt er bijna alles vinden.
             </p>
         </li>
-       
+
     </ul>
 </div>
 
@@ -643,6 +831,14 @@
     </div>
 </div>
 <div class="row">
+    <div class="col-xs-12">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9732535637352249" data-ad-slot="8708059720" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </div>
+</div>
+<div class="row">
     <div class="col-xs-12 verdienen-links">
         <h3>Thuiswerk (websites)</h3>
         <p>
@@ -651,32 +847,40 @@
         </p>
         <div class="col col-xs-12 col-sm-4">
             <a target="_system" href="https://click.linksynergy.com/fs-bin/click?id=gX56itLGvIE&amp;offerid=579862.34&amp;subid=0&amp;type=4" class="btn btn-primary">Web Developer Cursus</a>
-            <br />
-            <br />
+            <br>
+            <br>
             <a target="_system" href="https://click.linksynergy.com/fs-bin/click?id=gX56itLGvIE&amp;offerid=579862.34&amp;subid=0&amp;type=4">
-                <img class="img-responsive" border="0" alt="Quickstart Web Developer Bootcamp (Frontend Web Dev)" src="https://ad.linksynergy.com/fs-bin/show?id=gX56itLGvIE&amp;bids=579862.34&amp;subid=0&amp;type=4&amp;gridnum=13" />
+                <img class="img-responsive" border="0" alt="Quickstart Web Developer Bootcamp (Frontend Web Dev)" src="https://ad.linksynergy.com/fs-bin/show?id=gX56itLGvIE&amp;bids=579862.34&amp;subid=0&amp;type=4&amp;gridnum=13">
             </a>
         </div>
         <div class="col col-xs-12 col-sm-4">
             <a target="_system" href="https://click.linksynergy.com/fs-bin/click?id=gX56itLGvIE&amp;offerid=579862.34&amp;subid=0&amp;type=4" class="btn btn-primary">QuickStart IT Cursussen</a>
-            <br />
-            <br />
+            <br>
+            <br>
             <a target="_system" href="https://click.linksynergy.com/fs-bin/click?id=gX56itLGvIE&amp;offerid=579862.39&amp;subid=0&amp;type=4">
-                <img class="img-responsive" border="0" alt="QuickStart" src="https://ad.linksynergy.com/fs-bin/show?id=gX56itLGvIE&amp;bids=579862.39&amp;subid=0&amp;type=4&amp;gridnum=14" />
+                <img class="img-responsive" border="0" alt="QuickStart" src="https://ad.linksynergy.com/fs-bin/show?id=gX56itLGvIE&amp;bids=579862.39&amp;subid=0&amp;type=4&amp;gridnum=14">
             </a>
         </div>
         <div class="col col-xs-12 col-sm-4">
             <a target="_system" class="btn btn-primary" href="https://click.linksynergy.com/deeplink?id=gX56itLGvIE&amp;mid=42440&amp;u1=sp&amp;murl=https%3A%2F%2Fwww.quickstart.com%2Fwordpress.html">
                 Wordpress Leren</a>
-            <br />
-            <br />
+            <br>
+            <br>
             <a target="_system" href="https://click.linksynergy.com/deeplink?id=gX56itLGvIE&amp;mid=42440&amp;u1=sp&amp;murl=https%3A%2F%2Fwww.quickstart.com%2Fwordpress.html">
-                <img class="img-responsive" src="./assets/img/wordpress.png" />
+                <img class="img-responsive" src="./assets/img/wordpress.png">
             </a>
-            <img alt="icon" width="1" height="1" src="https://ad.linksynergy.com/fs-bin/show?id=gX56itLGvIE&amp;bids=579862.1&amp;type=10" />
+            <img alt="icon" width="1" height="1" src="https://ad.linksynergy.com/fs-bin/show?id=gX56itLGvIE&amp;bids=579862.1&amp;type=10">
         </div>
     </div>
 </div>
+<div class="row">
+        <div class="col-xs-12">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9732535637352249" data-ad-slot="8708059720" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+        </div>
+    </div>
 <div class="row">
     <div class="col-xs-12">
         <h3>Thuiswerk (enquêtes)</h3>
@@ -755,8 +959,7 @@
         </ons-toolbar>
         <div>
             <div class="page-content">
-                <iframe class="vergelijker-iframe" src="https://bespaarmaar.esstudio.site/onsen_dist/iframe-alles-in-een.html"
-                    frameborder="0"></iframe>
+                <iframe class="vergelijker-iframe" src="https://bespaarmaar.esstudio.site/onsen_dist/iframe-alles-in-een.html" frameborder="0"></iframe>
             </div>
         </div>
     </ons-page>
@@ -778,8 +981,7 @@
         </ons-toolbar>
         <div>
             <div class="page-content">
-                <iframe class="vergelijker-iframe" src="https://bespaarmaar.esstudio.site/onsen_dist/iframe-boekhouden.html"
-                    frameborder="0"></iframe>
+                <iframe class="vergelijker-iframe" src="https://bespaarmaar.esstudio.site/onsen_dist/iframe-boekhouden.html" frameborder="0"></iframe>
             </div>
         </div>
     </ons-page>
@@ -801,8 +1003,7 @@
         </ons-toolbar>
         <div>
             <div class="page-content">
-                <iframe class="vergelijker-iframe" src="https://bespaarmaar.esstudio.site/onsen_dist/iframe-dating.html"
-                    frameborder="0"></iframe>
+                <iframe class="vergelijker-iframe" src="https://bespaarmaar.esstudio.site/onsen_dist/iframe-dating.html" frameborder="0"></iframe>
             </div>
         </div>
     </ons-page>
@@ -824,8 +1025,7 @@
         </ons-toolbar>
         <div>
             <div class="page-content">
-                <iframe class="vergelijker-iframe" src="https://bespaarmaar.esstudio.site/onsen_dist/iframe-energie.html"
-                    frameborder="0"></iframe>
+                <iframe class="vergelijker-iframe" src="https://bespaarmaar.esstudio.site/onsen_dist/iframe-energie.html" frameborder="0"></iframe>
             </div>
         </div>
     </ons-page>
@@ -847,8 +1047,7 @@
         </ons-toolbar>
         <div>
             <div class="page-content">
-                <iframe class="vergelijker-iframe" src="https://bespaarmaar.esstudio.site/onsen_dist/iframe-loterijen.html"
-                    frameborder="0"></iframe>
+                <iframe class="vergelijker-iframe" src="https://bespaarmaar.esstudio.site/onsen_dist/iframe-loterijen.html" frameborder="0"></iframe>
             </div>
         </div>
     </ons-page>
@@ -870,8 +1069,7 @@
         </ons-toolbar>
         <div>
             <div class="page-content">
-                <iframe class="vergelijker-iframe" src="https://bespaarmaar.esstudio.site/onsen_dist/iframe-sim-only.html"
-                    frameborder="0"></iframe>
+                <iframe class="vergelijker-iframe" src="https://bespaarmaar.esstudio.site/onsen_dist/iframe-sim-only.html" frameborder="0"></iframe>
             </div>
         </div>
     </ons-page>
@@ -893,8 +1091,7 @@
         </ons-toolbar>
         <div>
             <div class="page-content">
-                <iframe class="vergelijker-iframe" src="https://bespaarmaar.esstudio.site/onsen_dist/iframe-telecom.html"
-                    frameborder="0"></iframe>
+                <iframe class="vergelijker-iframe" src="https://bespaarmaar.esstudio.site/onsen_dist/iframe-telecom.html" frameborder="0"></iframe>
             </div>
         </div>
     </ons-page>
@@ -916,8 +1113,7 @@
         </ons-toolbar>
         <div>
             <div class="page-content">
-                <iframe class="vergelijker-iframe" src="https://bespaarmaar.esstudio.site/onsen_dist/iframe-uitvaartkosten.html"
-                    frameborder="0"></iframe>
+                <iframe class="vergelijker-iframe" src="https://bespaarmaar.esstudio.site/onsen_dist/iframe-uitvaartkosten.html" frameborder="0"></iframe>
             </div>
         </div>
     </ons-page>
@@ -939,8 +1135,7 @@
         </ons-toolbar>
         <div>
             <div class="page-content">
-                <iframe class="vergelijker-iframe" src="https://bespaarmaar.esstudio.site/onsen_dist/iframe-vakantie.html"
-                    frameborder="0"></iframe>
+                <iframe class="vergelijker-iframe" src="https://bespaarmaar.esstudio.site/onsen_dist/iframe-vakantie.html" frameborder="0"></iframe>
             </div>
         </div>
     </ons-page>
@@ -962,8 +1157,7 @@
         </ons-toolbar>
         <div>
             <div class="page-content">
-                <iframe class="vergelijker-iframe" src="https://bespaarmaar.esstudio.site/onsen_dist/iframe-wellness.html"
-                    frameborder="0"></iframe>
+                <iframe class="vergelijker-iframe" src="https://bespaarmaar.esstudio.site/onsen_dist/iframe-wellness.html" frameborder="0"></iframe>
             </div>
         </div>
     </ons-page>
@@ -985,8 +1179,7 @@
         </ons-toolbar>
         <div>
             <div class="page-content">
-                <iframe class="vergelijker-iframe" src="https://bespaarmaar.esstudio.site/onsen_dist/iframe-whitelabeled-energie.html"
-                    frameborder="0"></iframe>
+                <iframe class="vergelijker-iframe" src="https://bespaarmaar.esstudio.site/onsen_dist/iframe-whitelabeled-energie.html" frameborder="0"></iframe>
             </div>
         </div>
     </ons-page>
@@ -1008,8 +1201,7 @@
         </ons-toolbar>
         <div>
             <div class="page-content">
-                <iframe class="vergelijker-iframe" src="https://bespaarmaar.esstudio.site/onsen_dist/iframe-zorgverzekering.html"
-                    frameborder="0"></iframe>
+                <iframe class="vergelijker-iframe" src="https://bespaarmaar.esstudio.site/onsen_dist/iframe-zorgverzekering.html" frameborder="0"></iframe>
             </div>
         </div>
     </ons-page>
@@ -1052,7 +1244,7 @@
         </li>
         <li>
             <h4><a href="https://ds1.nl/c/?si=7630&amp;li=1566982&amp;wi=303265&amp;ws=" rel="nofollow" target="_system">Aliexpress.com
-                    - Coupon codes</a></h4>
+                - Coupon codes</a></h4>
         </li>
         <li>
             <h4><a href="https://lt45.net/c/?si=12906&amp;li=1568103&amp;wi=303265&amp;ws=prijsvergelijk" rel="nofollow" target="_system">Cashze.nl - Bespaar elke keer, dat je online shopt!</a></h4>
@@ -1062,30 +1254,39 @@
     <div id="product-feed"></div>
     <script>
         function processFeed(data) {
-            var products = data.datafeed.programs[0].products;
-            for (var i = 0; i < products.length; i++) {
-                (function (product) {
-                    document.getElementById('product-feed').innerHTML =
-                        '<a class="col col-xxs-12 col-xs-6 col-sm-4 col-lg-3" target="_system" href="' + product.product_info.link + '">\
+            var feedRoot = document.getElementById('product-feed');
+            while(feedRoot.firstChild) feedRoot.removeChild(feedRoot);
+            for (var j = 0; j < data.datafeed.programs.length; j++) {
+                (function (program) {
+                    var products = program.products;
+                    for (var i = 0; i < products.length; i++) {
+                        (function (product) {
+                            var article = document.createElement('span');
+                            article.innerHTML =
+                                '<a class="col col-xxs-12 col-xs-6 col-sm-4 col-lg-3" target="_system" href="' + product.product_info.link + '">\
 <article class="panel panel-primary card card--material">\
-<div class="panel-heading card__title card--material__title">' 
-+ product.product_info.title + '</div>\
-<img alt="' + product.product_info.images[0].type + '" \
+<div class="panel-heading card__title card--material__title">'
+                                + product.product_info.title + '</div>\
+<div class="article-img-wrapper"><img alt="' + product.product_info.images[0].type + '" \
 src="' + product.product_info.images[0].location + '" \
-style="width: 100%" class="img-responsive">\
-<div class="panel-body card__content card--material__content">' 
-+ product.product_info.description + '<br><br><br>\
+style="width: 100%" class="img-responsive"></div>\
+<div class="panel-body card__content card--material__content">'
+                                + product.product_info.description + '<br><br><br>\
+<div class="article-footer">\
 <span class="price-wrapper">\
 <span class="price">' + product.product_info.price + '</span>\
 <span class="priceold">' + product.product_info.price_old + '</span>\
-</span>\
+</div></span>\
 </div>\
 </article></a>';
-                })(products[i]);
+                            feedRoot.appendChild(article);
+                        })(products[i]);
+                    }
+                })(data.datafeed.programs[j]);
             }
         }
     </script>
-    <script async="" defer="" src="https://ess-server.herokuapp.com/daisycon-proxy-jsonp/?filter_id=46958&amp;settings_id=7178&amp;sub_id=prijsvergelijk&amp;callback=processFeed"></script>
+    <script async defer src="https://ess-server.herokuapp.com/daisycon-proxy-jsonp/?filter_id=46958&amp;settings_id=7178&amp;sub_id=prijsvergelijk&amp;callback=processFeed"></script>
 </div>
 
             </div>
@@ -1120,7 +1321,7 @@ style="width: 100%" class="img-responsive">\
 
 <div class="container">
     <div class="row">
-       <div class="col-xs-12 col-sm-6">
+        <div class="col-xs-12 col-sm-6">
     <h2>Besparen</h2>
     <p class="besparen-description">
         Geld besparen kun je op veel verschillende manieren doen. Hieronder hebben we een lijstje met stappen
@@ -1146,26 +1347,26 @@ style="width: 100%" class="img-responsive">\
             <ons-button onclick="fn.navigator.pushPage('/vergelijken/alles-in-een')">
                 <div class="panel panel-primary">
                     <div class="panel-heading">Alles in één Vergelijker</div>
-                    <img class="img-responsive" src="./assets/img/alles-in-een.png" />
+                    <img class="img-responsive" src="./assets/img/alles-in-een.png">
                 </div>
             </ons-button>
             <ons-button onclick="fn.navigator.pushPage('/vergelijken/energie')">
                 <div class="panel panel-primary">
                     <div class="panel-heading">Energie Vergelijker</div>
-                    <img class="img-responsive" src="./assets/img/energie.png" />
+                    <img class="img-responsive" src="./assets/img/energie.png">
                 </div>
             </ons-button>
             <div class="col-visible-xxs-6 clearfix"></div>
             <ons-button onclick="fn.navigator.pushPage('/vergelijken/zorgverzekering')">
                 <div class="panel panel-primary">
                     <div class="panel-heading">Zorgverzekering Vergelijker</div>
-                    <img class="img-responsive" src="./assets/img/zorgverzekeringen.png" />
+                    <img class="img-responsive" src="./assets/img/zorgverzekeringen.png">
                 </div>
             </ons-button>
             <ons-button onclick="fn.navigator.pushPage('/vergelijken/sim-only')">
                 <div class="panel panel-primary">
                     <div class="panel-heading">Sim-only Vergelijker</div>
-                    <img class="img-responsive" src="./assets/img/sim-only.png" />
+                    <img class="img-responsive" src="./assets/img/sim-only.png">
                 </div>
             </ons-button>
         </div>
@@ -1178,19 +1379,100 @@ style="width: 100%" class="img-responsive">\
 </div>
     </div>
     <div class="row">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9732535637352249" data-ad-slot="8708059720" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </div>
+    <div class="row">
         <div class="col-xs-12">
             <h2>Blog</h2>
             
             <article class="first">
+                <div class="article-head">
+                    <h3 class="title"><div class="clickable" onclick="fn.navigator.pushPage('/blog/bespaartips-voor-de-auto/')">Bespaartips voor de auto</div></h3>
+                    <p class="date">Sep 30, 2018</p>
+                </div>
+                <div class="article-content">
+                    Een auto kost veel geld misschien wel tot duizenden euro's per jaar. Elke euro die je kan uitsparen is daarom altijd mooi meegenomen
+                    <ons-button onclick="fn.navigator.pushPage('/blog/bespaartips-voor-de-auto/')">Meer lezen</ons-button>
+                </div>
+            </article>
+            
+            
+            <div class="post-separater"></div>
+            
+            <article class="middle">
+                <div class="article-head">
+                    <h3 class="title"><div class="clickable" onclick="fn.navigator.pushPage('/blog/boodschappen-bespaartips/')">Boodschappen bespaartips</div></h3>
+                    <p class="date">Sep 30, 2018</p>
+                </div>
+                <div class="article-content">
+                    Deze boodschappen bespaartips helpen je honderden euro’s per jaar te besparen.
+                    <ons-button onclick="fn.navigator.pushPage('/blog/boodschappen-bespaartips/')">Meer lezen</ons-button>
+                </div>
+            </article>
+            
+            
+            <div class="post-separater"></div>
+            
+            <article class="middle">
+                <div class="article-head">
+                    <h3 class="title"><div class="clickable" onclick="fn.navigator.pushPage('/blog/bespaartips-voor-het-doen-van-de-was/')">Bespaartips voor het doen van de was</div></h3>
+                    <p class="date">Sep 30, 2018</p>
+                </div>
+                <div class="article-content">
+                    
+                    <ons-button onclick="fn.navigator.pushPage('/blog/bespaartips-voor-het-doen-van-de-was/')">Meer lezen</ons-button>
+                </div>
+            </article>
+            
+            
+            <div class="post-separater"></div>
+            
+            <article class="middle">
+                <div class="article-head">
+                    <h3 class="title"><div class="clickable" onclick="fn.navigator.pushPage('/blog/bespaartips-voor-het-koken/')">Bespaartips voor het koken</div></h3>
+                    <p class="date">Sep 30, 2018</p>
+                </div>
+                <div class="article-content">
+                    Lees hier de belangrijkste bespaartips als het gaat om koken
+                    <ons-button onclick="fn.navigator.pushPage('/blog/bespaartips-voor-het-koken/')">Meer lezen</ons-button>
+                </div>
+            </article>
+            
+            <div class="col-xs-12"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9732535637352249" data-ad-slot="8708059720" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+            <div class="post-separater"></div>
+            
+            <article class="middle">
+                <div class="article-head">
+                    <h3 class="title"><div class="clickable" onclick="fn.navigator.pushPage('/blog/bespaartips-voor-gas-en-energieverbruik/')">Bespaartips voor gas en energieverbruik</div></h3>
+                    <p class="date">Sep 30, 2018</p>
+                </div>
+                <div class="article-content">
+                    Bespaartips voor gas en energieverbruik
+                    <ons-button onclick="fn.navigator.pushPage('/blog/bespaartips-voor-gas-en-energieverbruik/')">Meer lezen</ons-button>
+                </div>
+            </article>
+            
+            
+            <div class="post-separater"></div>
+            
+            <article class="middle">
                 <div class="article-head">
                     <h3 class="title"><div class="clickable" onclick="fn.navigator.pushPage('/blog/besparen-op-stofzuigerzakken/')">Besparen op stofzuigerzakken</div></h3>
                     <p class="date">Sep 29, 2018</p>
                 </div>
                 <div class="article-content">
                     Omdat stofzuigerzakken aardig prijzig zijn valt hier ook makkelijk te besparen.
-                    <ons-button onclick="fn.navigator.pushPage('/blog/besparen-op-stofzuigerzakken/')">Read more</ons-button>
+                    <ons-button onclick="fn.navigator.pushPage('/blog/besparen-op-stofzuigerzakken/')">Meer lezen</ons-button>
                 </div>
             </article>
+            
+            
             <div class="post-separater"></div>
             
             <article class="middle">
@@ -1200,9 +1482,11 @@ style="width: 100%" class="img-responsive">\
                 </div>
                 <div class="article-content">
                     Huisdieren zijn leuk en ze brengen u een hoop gezelligheid, toch kosten ze geld om goed te kunnen verzorgen, daarom is het handig om te kijken hoe u geld kan besparen als het om het verzorgen van uw huisdieren gaat. Hier kunt u wat tips lezen die u gegarandeerd kunnen helpen.
-                    <ons-button onclick="fn.navigator.pushPage('/blog/geld-besparen-op-uw-huisdieren!/')">Read more</ons-button>
+                    <ons-button onclick="fn.navigator.pushPage('/blog/geld-besparen-op-uw-huisdieren!/')">Meer lezen</ons-button>
                 </div>
             </article>
+            
+            
             <div class="post-separater"></div>
             
             <article class="middle">
@@ -1212,9 +1496,11 @@ style="width: 100%" class="img-responsive">\
                 </div>
                 <div class="article-content">
                     Zoals iedereen weet zijn de kosten van printer inkt enorm hoog en daarom is het een goed idee om stil te staan bij de mogelijkheden om hierop te besparen.
-                    <ons-button onclick="fn.navigator.pushPage('/blog/geld-besparen-op-printer-inkt/')">Read more</ons-button>
+                    <ons-button onclick="fn.navigator.pushPage('/blog/geld-besparen-op-printer-inkt/')">Meer lezen</ons-button>
                 </div>
             </article>
+            
+            
             <div class="post-separater"></div>
             
             <article class="last">
@@ -1224,9 +1510,14 @@ style="width: 100%" class="img-responsive">\
                 </div>
                 <div class="article-content">
                     Wie zegt dat besparen niet leuk kan zijn heeft het mis! Je zou denken dat met de hand afwassen je meer geld bespaard maar dat blijkt niet het geval te zijn. Over het algemeen kunt u het beste een vaatwassen gebruiken in plaats van met de hand afwassen. We verspillen onnodig veel kostbare tijd, water en energie aan de afwas terwijl een vaatwasser dit veel zuiniger kan.
-                    <ons-button onclick="fn.navigator.pushPage('/blog/bespaartips-een-vaatwasser-of-met-de-hand-afwassen/')">Read more</ons-button>
+                    <ons-button onclick="fn.navigator.pushPage('/blog/bespaartips-een-vaatwasser-of-met-de-hand-afwassen/')">Meer lezen</ons-button>
                 </div>
             </article>
+            
+            <div class="col-xs-12"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9732535637352249" data-ad-slot="8708059720" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
             
             
         </div>
@@ -1269,7 +1560,7 @@ style="width: 100%" class="img-responsive">\
             <div data-show-on-site="false" data-show-on-app="false" class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
                 <div class="panel panel-primary">
                     <div class="panel-heading">Alles in één Vergelijker</div>
-                    <img class="img-responsive img-rounded" src="./assets/img/alles-in-een.png" />
+                    <img class="img-responsive img-rounded" src="./assets/img/alles-in-een.png">
                     <div class="panel-body">
                         <div class="text">
                             Alles-in-één-vergelijker, vergelijk internet, bellen en televisie.
@@ -1284,7 +1575,7 @@ style="width: 100%" class="img-responsive">\
             <div data-show-on-site="true" data-show-on-app="true" class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
                 <div class="panel panel-primary">
                     <div class="panel-heading">Boekhouden Vergelijker</div>
-                    <img class="img-responsive img-rounded" src="./assets/img/boekhouden.png" />
+                    <img class="img-responsive img-rounded" src="./assets/img/boekhouden.png">
                     <div class="panel-body">
                         <div class="text">
                             Vergelijk online boekhoudpaketten.
@@ -1299,7 +1590,7 @@ style="width: 100%" class="img-responsive">\
             <div data-show-on-site="true" data-show-on-app="true" class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
                 <div class="panel panel-primary">
                     <div class="panel-heading">Dating Vergelijker</div>
-                    <img class="img-responsive img-rounded" src="./assets/img/dating.png" />
+                    <img class="img-responsive img-rounded" src="./assets/img/dating.png">
                     <div class="panel-body">
                         <div class="text">
                             Vergelijk het brede aanbod van datingwebsites.
@@ -1314,7 +1605,7 @@ style="width: 100%" class="img-responsive">\
             <div data-show-on-site="true" data-show-on-app="true" class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
                 <div class="panel panel-primary">
                     <div class="panel-heading">Energie Vergelijker</div>
-                    <img class="img-responsive img-rounded" src="./assets/img/energie.png" />
+                    <img class="img-responsive img-rounded" src="./assets/img/energie.png">
                     <div class="panel-body">
                         <div class="text">
                             Vergelijk de belangrijkste Nederlandse energiemaatschappijen.
@@ -1329,7 +1620,7 @@ style="width: 100%" class="img-responsive">\
             <div data-show-on-site="true" data-show-on-app="true" class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
                 <div class="panel panel-primary">
                     <div class="panel-heading">Loterijen Vergelijker</div>
-                    <img class="img-responsive img-rounded" src="./assets/img/loterijen.png" />
+                    <img class="img-responsive img-rounded" src="./assets/img/loterijen.png">
                     <div class="panel-body">
                         <div class="text">
                             Vergelijk loterijen.
@@ -1344,7 +1635,7 @@ style="width: 100%" class="img-responsive">\
             <div data-show-on-site="true" data-show-on-app="true" class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
                 <div class="panel panel-primary">
                     <div class="panel-heading">Sim-only Vergelijker</div>
-                    <img class="img-responsive img-rounded" src="./assets/img/sim-only.png" />
+                    <img class="img-responsive img-rounded" src="./assets/img/sim-only.png">
                     <div class="panel-body">
                         <div class="text">
                             Vind het sim-only abonnement dat het best bij je past ✅ Met deze vergelijk tool kun je alle sim-only abonnementen vergelijken van alle grote telecom maatschappijen.
@@ -1359,7 +1650,7 @@ style="width: 100%" class="img-responsive">\
             <div data-show-on-site="true" data-show-on-app="true" class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
                 <div class="panel panel-primary">
                     <div class="panel-heading">Telecom Vergelijker</div>
-                    <img class="img-responsive img-rounded" src="./assets/img/telecom.png" />
+                    <img class="img-responsive img-rounded" src="./assets/img/telecom.png">
                     <div class="panel-body">
                         <div class="text">
                             Vergelijk mobiele telefoons + abonnement.
@@ -1374,7 +1665,7 @@ style="width: 100%" class="img-responsive">\
             <div data-show-on-site="false" data-show-on-app="false" class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
                 <div class="panel panel-primary">
                     <div class="panel-heading">Uitvaartkosten</div>
-                    <img class="img-responsive img-rounded" src="./assets/img/uitvaartkosten.png" />
+                    <img class="img-responsive img-rounded" src="./assets/img/uitvaartkosten.png">
                     <div class="panel-body">
                         <div class="text">
                             Uitvaartkosten
@@ -1389,7 +1680,7 @@ style="width: 100%" class="img-responsive">\
             <div data-show-on-site="true" data-show-on-app="false" class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
                 <div class="panel panel-primary">
                     <div class="panel-heading">Vakantie Vergelijker</div>
-                    <img class="img-responsive img-rounded" src="./assets/img/vakanties.png" />
+                    <img class="img-responsive img-rounded" src="./assets/img/vakanties.png">
                     <div class="panel-body">
                         <div class="text">
                             Bekijk op een kaart alle beschikbare accommodaties op een locatie.
@@ -1404,7 +1695,7 @@ style="width: 100%" class="img-responsive">\
             <div data-show-on-site="true" data-show-on-app="false" class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
                 <div class="panel panel-primary">
                     <div class="panel-heading">Wellness Tool</div>
-                    <img class="img-responsive img-rounded" src="./assets/img/wellness.png" />
+                    <img class="img-responsive img-rounded" src="./assets/img/wellness.png">
                     <div class="panel-body">
                         <div class="text">
                             Met de wellness tool zoek je wellness locaties bij jou in de buurt ✅
@@ -1419,7 +1710,7 @@ style="width: 100%" class="img-responsive">\
             <div data-show-on-site="false" data-show-on-app="false" class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
                 <div class="panel panel-primary">
                     <div class="panel-heading">Whitelabeled Energie Vergelijker</div>
-                    <img class="img-responsive img-rounded" src="./assets/img/whitelabeled-energie.png" />
+                    <img class="img-responsive img-rounded" src="./assets/img/whitelabeled-energie.png">
                     <div class="panel-body">
                         <div class="text">
                             De energievergelijker van Whitelabeled verkleint de complexiteit van de energiemarkt en biedt een duidelijk overzicht van alle energiecontracten.
@@ -1434,7 +1725,7 @@ style="width: 100%" class="img-responsive">\
             <div data-show-on-site="true" data-show-on-app="true" class="col-xs-6 col-sm-6 col-lg-4 col vergelijker">
                 <div class="panel panel-primary">
                     <div class="panel-heading">Zorgverzekering Vergelijken</div>
-                    <img class="img-responsive img-rounded" src="./assets/img/zorgverzekeringen.png" />
+                    <img class="img-responsive img-rounded" src="./assets/img/zorgverzekeringen.png">
                     <div class="panel-body">
                         <div class="text">
                             Zorgverzekeringen vergelijken? ✅ Vind de goedkoopste of beste zorgverzekering ✅
@@ -1476,10 +1767,7 @@ style="width: 100%" class="img-responsive">\
     <!-- ******************************************************************************************************************************** -->
 
     <!-- This may not be loaded when in webview and offline (sw will cache it offline in modern browsers). Lets hope android webviews dont need any polyfills -->
-    <script
-        src="https://code.jquery.com/jquery-3.3.1.js"
-        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous"></script> <!-- only load for widgets so script does not have to be installed locally -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script> <!-- only load for widgets so script does not have to be installed locally -->
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <script src="cordova.js"></script>
     <script src="js/app.min.js"></script>

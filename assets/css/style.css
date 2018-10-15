@@ -4,9 +4,9 @@ main {
     padding: 50px 0;
 }
 
-.navbar ul.nav > li.active > a {
+.navbar ul.nav>li.active>a {
     margin-bottom: -4px;
-    height: 54px; 
+    height: 54px;
     display: block;
     border-bottom: 5px solid #FF8201;
 }
@@ -22,12 +22,12 @@ main {
 .navbar-brand img {
     height: 50px;
     display: inline-block;
-    margin-top: -1px;;
+    margin-top: -1px;
+    ;
     margin-right: 7px;
 }
 
-.navbar .dropdown-menu li.active a {
-}
+.navbar .dropdown-menu li.active a {}
 
 .rating-number {
     display: block;
@@ -51,7 +51,10 @@ main {
     background-size: cover;
     display: block;
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .banner-content {
@@ -59,19 +62,18 @@ main {
     color: #fff;
 }
 
-.banner-content > * {
+.banner-content>* {
     color: #fff;
 }
 
 .banner-main {
     background: url('../img/money-orange.jpg') no-repeat center center;
-    
     background-size: cover;
     height: 450px;
 }
 
 .banner-custom {
-    background: rgba(255,255,255,0) no-repeat center center;
+    background: rgba(255, 255, 255, 0) no-repeat center center;
     background-size: cover;
     height: 450px;
     margin-bottom: 50px;
@@ -93,11 +95,10 @@ main {
     height: 450px;
 }
 
-
 .banner-coupon {
     background: url('../img/adult-application-orange.jpg') no-repeat center center;
     background-size: cover;
-    height: 450px;  
+    height: 450px;
 }
 
 .banner-coupon * {
@@ -128,30 +129,30 @@ footer ul {
 }
 
 footer a {
-    color: #fff!important;
+    color: #fff !important;
 }
 
 .svg-icon {
-	width: 30px;
-	height: 30px;
-	display: inline-block;
-	fill: #fff;
-	padding-right: 5px;
-	vertical-align: text-top;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    fill: #fff;
+    padding-right: 5px;
+    vertical-align: text-top;
 }
 
 .social-media-list {
-	list-style-type: none;
-	margin-left: 0;
+    list-style-type: none;
+    margin-left: 0;
 }
 
 .social-media-list li {
-	padding-top: 5px;
-	display: inline-block;
+    padding-top: 5px;
+    display: inline-block;
 }
 
 .social-media-list .username {
-	display: none;
+    display: none;
 }
 
 .vergelijkers-overzicht {
@@ -173,8 +174,8 @@ footer a {
 
 @media screen and (min-width: 892px) {
     .vergelijkers-overzicht {
-       padding-left: 50px;
-       padding-right: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
     }
 }
 
@@ -224,7 +225,6 @@ footer a {
     width: 100%;
 }
 
-
 .list-style-none {
     list-style: none;
 }
@@ -232,6 +232,23 @@ footer a {
 #product-feed article {
     position: relative;
     min-height: 500px;
+}
+
+@media screen and (min-width: 512px) {
+    #product-feed .article-footer {
+        height: 40px;
+        box-shadow: 0 -10px 15px #fff, 0 -10px 15px #fff;
+        position: absolute;
+        background: #fff;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    #product-feed article {
+        overflow-y: hidden;
+        height: 500px;
+    }
 }
 
 #product-feed .price-wrapper {
@@ -279,4 +296,6 @@ footer a {
     }
 }
 
-
+.enter-content img {
+    max-width: 100%;
+}

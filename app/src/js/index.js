@@ -51,7 +51,7 @@ document.addEventListener("deviceready", function () {
 		document.body.appendChild(document.createElement('script')).src = './js/browser.js';
 	}
 	if (navigator.onLine === false) {
-		
+		document.body.appendChild(document.createElement('script')).src = './js/admob.js';
 	}
 }, false);
 

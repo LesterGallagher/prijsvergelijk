@@ -59,28 +59,28 @@
   },
   "installed_plugins": {
     "cordova-plugin-extension": {
-      "PACKAGE_NAME": "com.EchoSierraStudio.BespaarMaar"
+      "PACKAGE_NAME": "com.EchoSierraStudio.Bespaar_Maar"
     },
     "cordova-plugin-admobpro": {
-      "PACKAGE_NAME": "com.EchoSierraStudio.BespaarMaar"
+      "PACKAGE_NAME": "com.EchoSierraStudio.Bespaar_Maar"
     },
     "cordova-plugin-browsersync": {
-      "PACKAGE_NAME": "com.EchoSierraStudio.BespaarMaar"
+      "PACKAGE_NAME": "com.EchoSierraStudio.Bespaar_Maar"
     },
     "cordova-plugin-device": {
-      "PACKAGE_NAME": "com.EchoSierraStudio.BespaarMaar"
+      "PACKAGE_NAME": "com.EchoSierraStudio.Bespaar_Maar"
     },
     "cordova-plugin-dialogs": {
-      "PACKAGE_NAME": "com.EchoSierraStudio.BespaarMaar"
+      "PACKAGE_NAME": "com.EchoSierraStudio.Bespaar_Maar"
     },
     "cordova-plugin-headercolor": {
-      "PACKAGE_NAME": "com.EchoSierraStudio.BespaarMaar"
+      "PACKAGE_NAME": "com.EchoSierraStudio.Bespaar_Maar"
     },
     "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "com.EchoSierraStudio.BespaarMaar"
+      "PACKAGE_NAME": "com.EchoSierraStudio.Bespaar_Maar"
     },
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.EchoSierraStudio.BespaarMaar"
+      "PACKAGE_NAME": "com.EchoSierraStudio.Bespaar_Maar"
     }
   },
   "dependent_plugins": {},
