@@ -35,7 +35,7 @@ description: Overzicht van alle manieren op te besparen ✅
                 </div>
             </article>
             {% assign i = forloop.index | modulo: 5 %}
-            {% if i == 4 %}<div class="col-xs-12">{% include ad.html %}</div>{% endif %}
+            {% if i == 4 %}<div style="margin-top: 10px">{% include ad.html %}</div>{% endif %}
             {% if forloop.last %}{% else %}<div class="post-separater"></div>{% endif %}
             {% endfor %}
         </div>
