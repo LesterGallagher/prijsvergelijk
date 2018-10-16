@@ -12,7 +12,10 @@ layout: default
   <div class="row">
     {% include besparen-vergelijken.html %}
   </div>
-  <div class="col-xs-12 col-md-9">
+  <div class="col-xs-12 pull-right col-md-3 nopadding">
+    {% include ad-text.html %}
+  </div>
+  <div class="col-xs-12 col-md-9 pull-left">
     <div class="container-fluid">
       <article class="row">
         <header class="blog-header text-center">
@@ -30,4 +33,8 @@ layout: default
       </article>
     </div>
   </div>
+  <div class="col-xs-12 col-md-3 pull-right nopadding">
+    {% include ad-text.html %}
+  </div>
+  <div class="clearfix"></div>
 </div>
