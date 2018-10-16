@@ -26,12 +26,12 @@ description: Overzicht van alle manieren op te besparen ✅
             {% for post in site.posts %}
             <article class="{% if forloop.first %}first{% elsif forloop.last %}last{% else %}middle{% endif %}">
                 <div class="article-head">
-                    <h3 class="title"><a data-tagname="div" href="{{ post.url }}/">{{ post.title }}</a></h3>
+                    <h3 class="title"><a data-tagname="div" href="{{ post.url }}">{{ post.title }}</a></h3>
                     <p class="date">{{ post.date | date: "%b %d, %Y" }}</p>
                 </div>
                 <div class="article-content">
                     {{ post.description }}
-                    <a href="{{ post.url }}/" class="full-post-link">Meer lezen</a>
+                    <a href="{{ post.url }}" class="full-post-link">Meer lezen</a>
                 </div>
             </article>
             {% assign i = forloop.index | modulo: 5 %}
