@@ -45,13 +45,21 @@
   <link rel="manifest" href="{{ "/manifest.json" | absolute_url }}">
   {% if page.image || post.image %}
   <link rel="image_src" href="{{ page.image || post.image }}">{% endif %}
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic">
-
+  
   <link href="{{ 'assets/css/boostrap-lumen.min.css' | absolute_url }}" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | absolute_url }}">
+  
   <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+  crossorigin="anonymous"></script>
+
+  <link href="https://adservice.google.nl" rel="preconnect" crossorigin>
+  <link href="https://pagead2.googlesyndication.com" rel="preconnect" crossorigin>
+  <link href="https://adservice.google.com" rel="preconnect" crossorigin>
+  <link href="https://googleads.g.doubleclick.net" rel="preconnect" crossorigin>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  {% feed_meta %}
+  {% if jekyll.environment == 'production' and site.google_analytics %}
+    {% include google-analytics.html %}
+  {% endif %}
 </head>

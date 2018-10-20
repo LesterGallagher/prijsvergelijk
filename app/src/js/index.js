@@ -49,9 +49,10 @@ document.addEventListener("deviceready", function () {
 	cordova_ready = true;
 	if (cordova.platformId === 'browser') {
 		document.body.appendChild(document.createElement('script')).src = './js/browser.js';
+	} else {
+		document.body.appendChild(document.createElement('script')).src = './js/admob.js';
 	}
 	if (navigator.onLine === false) {
-		document.body.appendChild(document.createElement('script')).src = './js/admob.js';
 	}
 }, false);
 
