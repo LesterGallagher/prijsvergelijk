@@ -15,7 +15,7 @@ Huisdieren zijn leuk en ze brengen u een hoop gezelligheid. Toch kosten ze geld 
 
 **Verzorging**
 
-Uw huisdier zal gegarandeerd een keer naar de dierenarts moeten, of het nu voor controle of inentingen is. Een goede tip is om de prijzen te vergelijken van verschillende dierenartsen, sommige zijn 2x zo duur als andere en dit is goed om in gedachten te houden.
+Uw huisdier zal gegarandeerd een keer naar de dierenarts moeten, of het nu voor controle of inentingen is. Een goede tip is om de prijzen te vergelijken van verschillende dierenartsen. Sommige zijn 2x zo duur als andere en dit is goed om in gedachten te houden.
 
 Koop dingen zoals manden, transportkooien, dekens, kussens, speelgoed en nog veel meer goedkoop en net zo leuk als nieuw bij kringloopwinkels, kofferbakverkopen, rommelmarkten en op Internet bij b.v. marktplaats. Maak deze tweedehands aankopen schoon en u kunt ze weer als nieuw gebruiken.
 
