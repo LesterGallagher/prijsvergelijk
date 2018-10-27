@@ -28,11 +28,11 @@ Een noodzaak is dan ook om niet te veel afwasmiddel te gebruiken wat op zich voo
 
 **Waarom een vaatwasser?**
 
-Het gebruik van een vaatwasser kan enorm veel voordelen met zich mee brengen, al denken mensen vaak het tegenovergestelde, afwassen met de vaatwasser is namelijk veel zuiniger. Over het algemeen nemen machines het over en zijn ze veel efficiënter dan wij en in dit geval kunnen wij hier goed gebruik van maken aangezien we bijna allemaal een hekel hebben aan de afwas doen en we een reden hebben om de vaatwasser te gebruiken.
+Het gebruik van een vaatwasser kan enorm veel voordelen met zich mee brengen, al denken mensen vaak het tegenovergestelde. Afwassen met de vaatwasser is namelijk veel zuiniger. Over het algemeen nemen machines het over en zijn ze veel efficiënter dan wij en in dit geval kunnen wij hier goed gebruik van maken aangezien we bijna allemaal een hekel hebben aan de afwas doen en we een reden hebben om de vaatwasser te gebruiken.
 
-De efficiëntie van een vaatwasser is dat deze is ingesteld om de juiste hoeveelheden water, wasmiddel, warmte, en ga zo maar door te gebruiken. De vaatwasser bespaart het meeste als deze goed gevuld is, u kunt dus gerust een tijdje de afwas opsparen (niet te lang natuurlijk, dat zou niet heel hygiënisch zijn).
+De efficiëntie van een vaatwasser is dat deze is ingesteld om de juiste hoeveelheden water, wasmiddel, warmte en ga zo maar door te gebruiken. De vaatwasser bespaart het meeste als deze goed gevuld is. U kunt dus gerust een tijdje de afwas opsparen (niet te lang natuurlijk, dat zou niet heel hygiënisch zijn).
 
-Wat ik net al schreef is dat u goed moet opletten dat de vaatwasser goed gevuld is, ga dus niet wassen met een paar bordjes maar vul de vaatwasser zo goed als maar kan. Ook hoeft u uw afwas niet af te spoelen, maar is het wel verstandig om de grovere etensresten te verwijderen aangezien het filter hierdoor vol kan lopen. Zorg er ook voor dat u het juiste afwas programma instelt. Voor de zware afwas het grove geschut, en voor de licht vuile afwas de spaarstand of een lagere temperatuur.
+Wat ik net al schreef is dat u goed moet opletten dat de vaatwasser goed gevuld is. Ga dus niet wassen met een paar bordjes maar vul de vaatwasser zo goed als maar kan. Ook hoeft u uw afwas niet af te spoelen, maar is het wel verstandig om de grovere etensresten te verwijderen aangezien het filter hierdoor vol kan lopen. Zorg er ook voor dat u het juiste afwas programma instelt. Voor de zware afwas het grove geschut en voor de licht vuile afwas de spaarstand of een lagere temperatuur.
 
 **Pannen en potten**
 
