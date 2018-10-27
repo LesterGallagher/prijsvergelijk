@@ -17,14 +17,14 @@ Bij elke printer kunt u instellen hoe de afdrukkwaliteit moet zijn,  zet deze k
 
 Een andere tip is als u bijvoorbeeld informatie van het internet wilt printen, gebruik dan altijd de printer vriendelijke versie, want anders kunt u misschien de fout maken van uw hele webpagina te printen waarbij allerlei kleuren en afbeeldingen komen te zitten. Deze dingen heeft u natuurlijk niet nodig.
 
-Heeft een website geen printervriendelijke versie, dan kunt u de tekst selecteren met uw muis, dan op de rechtermuisknop klikken en de tekst "kopiëren". Vervolgens opent u uw teksteditor (kladblok, word) en dan met de rechter muisknop op het witte tekst vak klikken en optie "plakken" zo heeft u uw tekst op een simpele printer vriendelijke manier.
+Heeft een website geen printervriendelijke versie, dan kunt u de tekst selecteren met uw muis, dan op de rechtermuisknop klikken en de tekst "kopiëren". Vervolgens opent u uw teksteditor (kladblok, word) en dan met de rechter muisknop op het witte tekst vak klikken en optie "plakken". Zo heeft u uw tekst op een simpele printer vriendelijke manier.
 
 **Is uw inkt bijna op?**
 
 U zal op een gegeven moment een melding krijgen dat de cartridge van uw printer bijna leeg is en misschien merkt u ook dat de afdrukkwaliteit zichtbaar slechter wordt. Wanneer dit gebeurt kunt u het beste (bij de voorkeursinstellingen) de afdrukkwaliteit op “hoog” zetten en zo kunt u nog veel acceptabele A4’tjes printen.
 
-Wist u dat u voor uw lege cartridges geld kunt krijgen, ga naar een winkel of webshop die deze verkoopt en vraag ernaar, dit is natuurlijk altijd goed voor uw portemonnee.
+Wist u dat u voor uw lege cartridges geld kunt krijgen? Ga naar een winkel of webshop die deze verkoopt en vraag ernaar. Dit is natuurlijk altijd goed voor uw portemonnee.
 
 **Zet uw printer uit**
 
-Sommige printers hebben geen aan/uit knop en deze printers staan dus vrijwel altijd standby als uw computer aanstaat. Dit kost uiteraard stroom dat u niet gebruikt en dat is altijd zonde. U kunt voor dit probleem bijvoorbeeld een verlengsnoertje met aan/uit knop kopen en deze aan uw computer koppelen, daarnaast kunt u ook de stekker van uw printer er uit halen wanneer u de printer niet vaak gebruikt bespaart u toch een beetje stroom.
+Sommige printers hebben geen aan/uit knop en deze printers staan dus vrijwel altijd standby als uw computer aan staat. Dit kost uiteraard stroom die u niet gebruikt en dat is altijd zonde. U kunt voor dit probleem bijvoorbeeld een verlengsnoertje met aan/uit knop kopen en deze aan uw computer koppelen. Daarnaast kunt u ook de stekker van uw printer er uit halen. Wanneer u de printer niet vaak gebruikt bespaart u toch een beetje stroom.
