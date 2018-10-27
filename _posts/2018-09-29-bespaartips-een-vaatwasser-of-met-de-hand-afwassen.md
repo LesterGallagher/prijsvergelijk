@@ -36,7 +36,7 @@ Wat ik net al schreef is dat u goed moet opletten dat de vaatwasser goed gevuld 
 
 **Pannen en potten**
 
-De pannen, potten en dergelijke kunt u makkelijk in een vaatwasser doen. Dit is mooi aangezien dat een vervelend en zeer tijdrovende karweitje is om met te hand te doen en dan maar te zwijgen over de verspilling van water bij het wassen van met name (grote) pannen. Zorg er wel voor dat u de grofste resten verwijdert zijn voordat u pannen en/of potten in de vaatwasser stopt.
+De pannen, potten en dergelijke kunt u makkelijk in een vaatwasser doen. Dit is mooi aangezien dat een vervelend en zeer tijdrovende karweitje is om met te hand te doen en dan maar te zwijgen over de verspilling van water bij het wassen van met name (grote) pannen. Zorg er wel voor dat de grofste resten verwijdert zijn voordat u pannen en/of potten in de vaatwasser stopt.
 
 **Belangrijk om te onthouden**
 
