@@ -36,15 +36,15 @@ Wat ik net al schreef is dat u goed moet opletten dat de vaatwasser goed gevuld 
 
 **Pannen en potten**
 
-De pannen, potten en dergelijke kunt u makkelijk in een vaatwasser doen. Dit is mooi aangezien dat een vervelend en zeer tijdrovende karweitje is om met te hand te doen en dan maar te zwijgen over de verspilling van water bij het wassen van met name (grote) pannen. Zorg er wel voor dat de grofste resten verwijdert zijn voordat u pannen en/of potten in de vaatwasser stopt.
+De pannen, potten en dergelijke kunt u makkelijk in een vaatwasser doen. Dit is mooi aangezien dat een vervelend en zeer tijdrovende karweitje is om met te hand te doen en dan maar te zwijgen over de verspilling van water bij het wassen van met name (grote) pannen. Zorg er wel voor dat de grofste resten verwijderd zijn voordat u pannen en/of potten in de vaatwasser stopt.
 
 **Belangrijk om te onthouden**
 
 Natuurlijk wilt u het liefst dat uw vaatwasser zo lang mogelijk efficiënt blijft. Als u uw vaatwasser niet onderhoudt, dan wordt deze steeds inefficiënter. Probeer dit zo veel mogelijk te voorkomen door:
 
-* Nadat u de afwas eruit haalt kijken of er nog resten zijn achtergebleven, zo ja deze verwijderen.
+* Nadat u de afwas eruit haalt kijken of er nog resten zijn achtergebleven. Zo ja deze verwijderen.
 * Het filter op tijd te reinigen i.v.m. verstoppingen.
 * Bekijk zo nu en dan of de sproeiarmen niet verstopt zijn geraakt.
 * Zo'n 2 keer per jaar zult u uw vaatwasser moeten ontkalken.
 
-Door met beleid af te wassen, en water niet onnodig te verspillen bespaart u vanzelf op geld en milieu. Met alle apparaten, dus ook de vaatwassers geldt over het algemeen: hoe nieuwer hoe zuiniger. En met een van de nieuwere vaatwassers hoeft u nooit meer zelf af te wassen.
+Door met beleid af te wassen en water niet onnodig te verspillen bespaart u vanzelf op geld en milieu. Met alle apparaten, dus ook de vaatwassers geldt over het algemeen: hoe nieuwer hoe zuiniger. En met een van de nieuwere vaatwassers hoeft u nooit meer zelf af te wassen.
