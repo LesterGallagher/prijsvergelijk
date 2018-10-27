@@ -18,6 +18,7 @@ fields:
   label: categories
   description: pagina catagorien
 pages:
+- _posts/2018-09-29-geld-besparen-op-printer-inkt.md
 - _posts/2018-09-29-geld-besparen-op-uw-huisdieren!.md
 - _posts/2018-09-30-bespaartips-voor-de-auto.md
 - _posts/2018-09-30-bespaartips-voor-gas-en-energieverbruik.md
@@ -26,4 +27,3 @@ pages:
 - _posts/2018-09-30-boodschappen-bespaartips.md
 - _posts/2018-09-29-besparen-op-stofzuigerzakken.md
 - _posts/2018-09-29-bespaartips-een-vaatwasser-of-met-de-hand-afwassen.md
-- _posts/2018-09-29-geld-besparen-op-printer-inkt.md

@@ -15,9 +15,9 @@ Zoals iedereen weet zijn de kosten van printer inkt enorm hoog en daarom is het 
 
 Bij elke printer kunt u instellen hoe de afdrukkwaliteit moet zijn,  zet deze kwaliteit lager als u zwart-wit gaat printen.
 
-Een andere tip is als u bijvoorbeeld informatie van het internet wilt printen, gebruik dan altijd de printer vriendelijke versie, want anders kunt u misschien de fout maken van uw hele webpagina te printen waarbij allerlei kleuren en afbeeldingen komen te zitten. Deze dingen heeft u natuurlijk niet nodig. Onder deze tip heeft u bijvoorbeeld een printer vriendelijker(e) versie.
+Een andere tip is als u bijvoorbeeld informatie van het internet wilt printen, gebruik dan altijd de printer vriendelijke versie, want anders kunt u misschien de fout maken van uw hele webpagina te printen waarbij allerlei kleuren en afbeeldingen komen te zitten. Deze dingen heeft u natuurlijk niet nodig.
 
-Heeft een website geen printervriendelijke versie, dan kunt u de tekst selecteren met uw muis, dan op de rechtermuisknop klikken en de tekst "kopiëren" vervolgens opent u uw teksteditor (kladblok, word) en dan met de rechter muisknop op het witte tekst vak klikken en optie "plakken" zo heeft u uw tekst op een simpele printer vriendelijke manier.
+Heeft een website geen printervriendelijke versie, dan kunt u de tekst selecteren met uw muis, dan op de rechtermuisknop klikken en de tekst "kopiëren". Vervolgens opent u uw teksteditor (kladblok, word) en dan met de rechter muisknop op het witte tekst vak klikken en optie "plakken" zo heeft u uw tekst op een simpele printer vriendelijke manier.
 
 **Is uw inkt bijna op?**
 
