@@ -1,13 +1,11 @@
 ---
 title: Bespaartips voor gas en energieverbruik
-date: 2018-09-30 12:37:13 +0200
+date: 2018-09-30 10:37:13 +0000
 description: Bespaartips voor gas en energieverbruik
 image: ''
 categories: []
 
 ---
-![](/uploads/bar-blur-bulb-1123262.jpg)
-
 Naast tips om te besparen op je vaste lasten die we allemaal wel eens voorbij hebben zien komen, zijn er ook veel bespaartips om op andere manieren geld te besparen. We weten allemaal dat je er meer aan zou kunnen doen om kosten te besparen binnenshuis maar de vraag is altijd: 'Waar moet je beginnen?'
 
 Hieronder vermelden wij daarom een aantal gratis veranderingen die je zowel geld als energiebesparing kunnen opbrengen:
