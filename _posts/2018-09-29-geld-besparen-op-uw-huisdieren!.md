@@ -1,5 +1,5 @@
 ---
-title: Geld besparen op uw huisdieren!
+title: Geld besparen op uw huisdieren
 date: 2018-09-29 19:01:40 +0000
 description: Huisdieren zijn leuk en ze brengen u een hoop gezelligheid, toch kosten
   ze geld om goed te kunnen verzorgen, daarom is het handig om te kijken hoe u geld
@@ -11,9 +11,7 @@ categories: []
 ---
 ![](/uploads/animal-cat-cute-46024.jpg)
 
-Huisdieren zijn leuk en ze brengen u een hoop gezelligheid, toch kosten ze geld om goed te kunnen verzorgen, daarom is het handig om te kijken hoe u geld kan besparen als het om het verzorgen van uw huisdieren gaat. Hier kunt u wat tips lezen die u gegarandeerd kunnen helpen.
-
-Koop goed premium voer in grote verpakkingen voor uw huisdier. Ze eten er minder van en het is gezonder dan de goedkope merken brokken. Daardoor ben je uiteindelijk vaak toch goedkoper uit. Let erop dat de eerste ingrediënten op de ingrediëntenlijst voornamelijk vlees en visproducten zijn en dat er natuurlijke conserveermiddelen gebruikt worden. Kijk onder andere ook op Internet om op uw gemak prijzen te vergelijken en het juiste voer voor uw huisdier uit te zoeken.
+Huisdieren zijn leuk en ze brengen u een hoop gezelligheid. Toch kosten ze geld om goed te kunnen verzorgen. Daarom is het handig om te kijken hoe u geld kan besparen als het om het verzorgen van uw huisdieren gaat. Hier kunt u wat tips lezen die u gegarandeerd kunnen helpen.
 
 **Verzorging**
 
